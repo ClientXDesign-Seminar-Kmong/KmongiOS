@@ -1,0 +1,6 @@
+framework module Pods_Kmong {
+  umbrella header "Pods-Kmong-umbrella.h"
+
+  export *
+  module * { export * }
+}
