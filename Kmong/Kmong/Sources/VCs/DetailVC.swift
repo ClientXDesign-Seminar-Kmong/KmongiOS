@@ -1,0 +1,90 @@
+//
+//  DetailVC.swift
+//  Kmong
+//
+//  Created by 곽기곤's Mac on 2020/11/15.
+//
+
+import UIKit
+
+class DetailVC: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource {
+    
+    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        
+        headerImages.count
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        
+        guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: HeaderCell.identifier, for: indexPath) as? HeaderCell else {
+            
+            return UICollectionViewCell()
+        }
+        
+        return cell
+    }
+    
+    
+    @IBOutlet weak var headerCollectionView: UICollectionView!
+    @IBOutlet weak var pageNumberView: UIView!
+    @IBOutlet weak var inquiryView: UIButton!
+    @IBOutlet weak var purchaseView: UIButton!
+    @IBOutlet weak var heartView: UIButton!
+    @IBOutlet weak var currentPage: UILabel!
+    
+    var currentPageNumber = 1
+    
+    var headerImages: [String] = ["", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", ""]
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+
+        headerCollectionView.delegate = self
+        headerCollectionView.dataSource = self
+        
+        setInitLayout()
+    }
+    
+    func setInitLayout() {
+        
+        pageNumberView.layer.cornerRadius = 9
+        
+        inquiryView.layer.borderColor = UIColor.systemGray2.cgColor
+        inquiryView.layer.borderWidth = 1
+        inquiryView.layer.cornerRadius = 6
+        
+        purchaseView.layer.cornerRadius = 6
+        
+        heartView.layer.borderColor = UIColor.systemGray2.cgColor
+        heartView.layer.borderWidth = 1
+        heartView.layer.cornerRadius = 6
+    }
+}
+
+extension DetailVC: UICollectionViewDelegateFlowLayout {
+    
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
+        
+        return CGSize(width: collectionView.frame.width, height: collectionView.frame.height)
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAt section: Int) -> CGFloat {
+        
+        return 0
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumInteritemSpacingForSectionAt section: Int) -> CGFloat {
+        
+        return 0
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, insetForSectionAt section: Int) -> UIEdgeInsets {
+        
+        return UIEdgeInsets(top: 0, left: 0, bottom: 0, right: 0)
+    }
+    
+    func scrollViewDidEndDecelerating(_ scrollView: UIScrollView) {
+        
+        
+    }
+}
