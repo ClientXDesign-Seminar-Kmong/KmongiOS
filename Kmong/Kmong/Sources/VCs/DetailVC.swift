@@ -24,15 +24,12 @@ class DetailVC: UIViewController, UICollectionViewDelegate, UICollectionViewData
         return cell
     }
     
-    
     @IBOutlet weak var headerCollectionView: UICollectionView!
     @IBOutlet weak var pageNumberView: UIView!
     @IBOutlet weak var inquiryView: UIButton!
     @IBOutlet weak var purchaseView: UIButton!
     @IBOutlet weak var heartView: UIButton!
     @IBOutlet weak var currentPage: UILabel!
-    
-    var currentPageNumber = 1
     
     var headerImages: [String] = ["", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", ""]
     
