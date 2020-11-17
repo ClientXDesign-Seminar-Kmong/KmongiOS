@@ -35,6 +35,7 @@ class DetailVC: UIViewController, UICollectionViewDelegate, UICollectionViewData
     var headerImages: [String] = ["", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", ""]
     
     override func viewDidLoad() {
+        
         super.viewDidLoad()
 
         headerCollectionView.delegate = self
