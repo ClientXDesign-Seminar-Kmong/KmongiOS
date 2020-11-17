@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import XLPagerTabStrip
 
 class DetailVC: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource {
     
