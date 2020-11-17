@@ -1,0 +1,23 @@
+{
+  "images" : [
+    {
+      "idiom" : "universal",
+      "filename" : "icConsulting.png",
+      "scale" : "1x"
+    },
+    {
+      "filename" : "icConsulting@2x.png",
+      "scale" : "2x",
+      "idiom" : "universal"
+    },
+    {
+      "scale" : "3x",
+      "idiom" : "universal",
+      "filename" : "icConsulting@3x.png"
+    }
+  ],
+  "info" : {
+    "version" : 1,
+    "author" : "xcode"
+  }
+}
