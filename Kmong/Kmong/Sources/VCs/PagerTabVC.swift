@@ -8,20 +8,46 @@
 import UIKit
 import XLPagerTabStrip
 
+public protocol PagerTabStripDelegate: class {
+
+    func updateIndicator(for viewController: PagerTabStripViewController, fromIndex: Int, toIndex: Int)
+}
+
+public protocol PagerTabStripIsProgressiveDelegate : PagerTabStripDelegate {
+
+    func updateIndicator(for viewController: PagerTabStripViewController, fromIndex: Int, toIndex: Int, withProgressPercentage progressPercentage: CGFloat, indexWasChanged: Bool)
+}
+
 class PagerTabVC: ButtonBarPagerTabStripViewController {
+    
+    
 
     override func viewDidLoad() {
-        super.viewDidLoad()
         
-        settings.style.selectedBarHeight = 1
-        settings.style.selectedBarBackgroundColor = .black
-        settings.style.buttonBarBackgroundColor = .white
-        settings.style.buttonBarItemBackgroundColor = .white
+        loadDesign()
+        
+        
+        super.viewDidLoad()
+    }
+    
+    
+    
+    func loadDesign() {
+        
+        settings.style.selectedBarHeight = 2
+        settings.style.selectedBarBackgroundColor = UIColor.black
+        settings.style.buttonBarBackgroundColor = UIColor.white
+        settings.style.buttonBarItemBackgroundColor = UIColor.white
         settings.style.buttonBarItemFont = .boldSystemFont(ofSize: 14)
         settings.style.buttonBarItemTitleColor = .black
-        settings.style.buttonBarItemsShouldFillAvailableWidth = true
         settings.style.buttonBarMinimumInteritemSpacing = 0
+        settings.style.buttonBarItemsShouldFillAvailableWidth = true
         
+        changeCurrentIndexProgressive = { (oldCell: ButtonBarViewCell?, newCell: ButtonBarViewCell?, progressPercentage: CGFloat, changeCurrentIndex: Bool, animated: Bool) -> Void in
+            
+            oldCell?.label.textColor = .systemGray5
+            newCell?.label.textColor = .black
+        }
     }
     
     override func viewControllers(for pagerTabStripController: PagerTabStripViewController) -> [UIViewController] {
