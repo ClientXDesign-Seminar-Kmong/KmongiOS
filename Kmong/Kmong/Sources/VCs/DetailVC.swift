@@ -94,3 +94,11 @@ extension DetailVC: UICollectionViewDelegateFlowLayout {
         
     }
 }
+
+//extension DetailVC: IndicatorInfoProvider {
+//
+//    func indicatorInfo(for pagerTabStripController: PagerTabStripViewController) -> IndicatorInfo {
+//
+//        return IndicatorInfo(title: "서비스 설명")
+//    }
+//}
