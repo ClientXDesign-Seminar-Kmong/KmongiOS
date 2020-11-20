@@ -23,10 +23,6 @@
 		B8218AE7255F9695003AA1AA /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B8218AE5255F9695003AA1AA /* LaunchScreen.storyboard */; };
 		B8218AF2255F97AC003AA1AA /* Home.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B8218AF1255F97AC003AA1AA /* Home.storyboard */; };
 		B8218AF5255F97D2003AA1AA /* Detail.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B8218AF4255F97D2003AA1AA /* Detail.storyboard */; };
-<<<<<<< HEAD
-		B8218AFB255F97EE003AA1AA /* DetailOption.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B8218AFA255F97EE003AA1AA /* DetailOption.storyboard */; };
-=======
->>>>>>> 920921df67b2d670d40e99f3be3d8883be270ee9
 		B8218B02255F9857003AA1AA /* DetailExpertInfo.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B8218B01255F9857003AA1AA /* DetailExpertInfo.storyboard */; };
 		B8218B05255F9862003AA1AA /* DetailReview.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B8218B04255F9862003AA1AA /* DetailReview.storyboard */; };
 		FBCF13B75142D3172FA8E9FC /* Pods_Kmong.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 29B34A15E7E269D7E63C6034 /* Pods_Kmong.framework */; };
@@ -54,10 +50,6 @@
 		B8218AE8255F9695003AA1AA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B8218AF1255F97AC003AA1AA /* Home.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Home.storyboard; sourceTree = "<group>"; };
 		B8218AF4255F97D2003AA1AA /* Detail.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Detail.storyboard; sourceTree = "<group>"; };
-<<<<<<< HEAD
-		B8218AFA255F97EE003AA1AA /* DetailOption.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = DetailOption.storyboard; sourceTree = "<group>"; };
-=======
->>>>>>> 920921df67b2d670d40e99f3be3d8883be270ee9
 		B8218B01255F9857003AA1AA /* DetailExpertInfo.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = DetailExpertInfo.storyboard; sourceTree = "<group>"; };
 		B8218B04255F9862003AA1AA /* DetailReview.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = DetailReview.storyboard; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -132,11 +124,7 @@
 			children = (
 				B8218AF1255F97AC003AA1AA /* Home.storyboard */,
 				B8218AF4255F97D2003AA1AA /* Detail.storyboard */,
-<<<<<<< HEAD
-				B8218AFA255F97EE003AA1AA /* DetailOption.storyboard */,
-=======
 				63487AC62567DABE0005BC68 /* DetailServiceOption.storyboard */,
->>>>>>> 920921df67b2d670d40e99f3be3d8883be270ee9
 				B8218B01255F9857003AA1AA /* DetailExpertInfo.storyboard */,
 				B8218B04255F9862003AA1AA /* DetailReview.storyboard */,
 				B8218AE5255F9695003AA1AA /* LaunchScreen.storyboard */,
