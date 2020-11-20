@@ -8,7 +8,7 @@
 import UIKit
 import XLPagerTabStrip
 
-class DetailExpertVC: UIViewController, IndicatorInfoProvider {
+class DetailExpertInfoVC: UIViewController, IndicatorInfoProvider {
 
     override func viewDidLoad() {
         super.viewDidLoad()
