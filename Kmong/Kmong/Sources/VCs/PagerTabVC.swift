@@ -54,9 +54,9 @@ class PagerTabVC: ButtonBarPagerTabStripViewController {
 
       let child1 = UIStoryboard.init(name: "Detail", bundle: nil).instantiateViewController(withIdentifier: "DetailDescVC") as! DetailDescVC
         
-      let child2 = UIStoryboard.init(name: "DetailOption", bundle: nil).instantiateViewController(withIdentifier: "DetailOptionVC") as! DetailOptionVC
+      let child2 = UIStoryboard.init(name: "DetailServiceOption", bundle: nil).instantiateViewController(withIdentifier: "DetailServiceOptionVC") as! DetailServiceOptionVC
         
-        let child3 = UIStoryboard.init(name: "DetailExpertInfo", bundle: nil).instantiateViewController(withIdentifier: "DetailExpertVC") as! DetailExpertVC
+        let child3 = UIStoryboard.init(name: "DetailExpertInfo", bundle: nil).instantiateViewController(withIdentifier: "DetailExpertVC") as! DetailExpertInfoVC
         
         let child4 = UIStoryboard.init(name: "DetailReview", bundle: nil).instantiateViewController(withIdentifier: "DetailReviewVC") as! DetailReviewVC
 
