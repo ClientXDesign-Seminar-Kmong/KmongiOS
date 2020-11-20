@@ -8,10 +8,10 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Detail ExpertVC-->
+        <!--Detail Expert InfoVC-->
         <scene sceneID="qlx-ER-BoV">
             <objects>
-                <viewController storyboardIdentifier="DetailExpertVC" id="Qoi-pg-UPv" customClass="DetailExpertVC" customModule="Kmong" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="DetailExpertVC" id="Qoi-pg-UPv" customClass="DetailExpertInfoVC" customModule="Kmong" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Y2q-sj-wSB">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
