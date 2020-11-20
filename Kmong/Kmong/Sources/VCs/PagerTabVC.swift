@@ -63,5 +63,7 @@ class PagerTabVC: ButtonBarPagerTabStripViewController {
       return [child1, child2, child3, child4]
 
     }
+    
+    
 
 }
