@@ -11,7 +11,7 @@
         <!--Detail Service OptionVC-->
         <scene sceneID="yBe-dr-Grb">
             <objects>
-                <viewController id="OKL-xv-2tZ" customClass="DetailServiceOptionVC" customModule="Kmong" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="DetailServiceOptionVC" id="OKL-xv-2tZ" customClass="DetailServiceOptionVC" customModule="Kmong" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="C91-gf-vy6">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="569"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>

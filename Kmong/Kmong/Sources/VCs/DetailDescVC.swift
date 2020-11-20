@@ -33,26 +33,25 @@ class DetailDescVC: UIViewController, IndicatorInfoProvider, UICollectionViewDel
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        
+        CardCollectionViewCell.delegate = self
+        CardCollectionViewCell.dataSource = self
     }
     
     lazy var collectionView : UICollectionView = {
             
-            let layout = UICollectionViewFlowLayout()
-            layout.scrollDirection = .horizontal
-            layout.minimumLineSpacing = 10
+        let layout = UICollectionViewFlowLayout()
+        layout.scrollDirection = .horizontal
+        layout.minimumLineSpacing = 10
 
-            let cv = UICollectionView(frame: .zero, collectionViewLayout: layout)
-            cv.backgroundColor = .white
-            cv.delegate = self
-            cv.dataSource = self
-//            cv.register(CardCollectionViewCell.self, forCellWithReuseIdentifier:"CardCollectionViewCell")
-            cv.contentInset = UIEdgeInsets(top: 0, left: 20, bottom: 0, right: 20)
-            cv.showsHorizontalScrollIndicator = false
-            cv.translatesAutoresizingMaskIntoConstraints = false
+        let cv = UICollectionView(frame: .zero, collectionViewLayout: layout)
+        cv.backgroundColor = .white
+        cv.delegate = self
+        cv.dataSource = self
+//        cv.register(CardCollectionViewCell.self, forCellWithReuseIdentifier: "CardCollectionViewCell")
+        cv.contentInset = UIEdgeInsets(top: 0, left: 20, bottom: 0, right: 20)
+        cv.showsHorizontalScrollIndicator = false
+        cv.translatesAutoresizingMaskIntoConstraints = false
             
-                    
-            return cv
-        }()
-
+        return cv
+    }()
 }
