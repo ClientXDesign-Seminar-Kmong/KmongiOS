@@ -29,8 +29,9 @@ class DetailVC: UIViewController, UICollectionViewDelegate, UICollectionViewData
     @IBOutlet weak var pageNumberView: UIView!
     @IBOutlet weak var inquiryView: UIButton!
     @IBOutlet weak var purchaseView: UIButton!
-    @IBOutlet weak var heartView: UIButton!
+    @IBOutlet weak var smallHeartView: UIButton!
     @IBOutlet weak var currentPage: UILabel!
+    @IBOutlet weak var heartView: UIButton!
     
     var headerImages: [String] = ["", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", ""]
     
@@ -48,9 +49,7 @@ class DetailVC: UIViewController, UICollectionViewDelegate, UICollectionViewData
         self.navigationController?.navigationBar.isTranslucent = true
         self.navigationController?.view.backgroundColor = UIColor.clear
     }
-    
-    
-    
+
     func setInitLayout() {
         
         pageNumberView.layer.cornerRadius = 9
@@ -64,6 +63,11 @@ class DetailVC: UIViewController, UICollectionViewDelegate, UICollectionViewData
         heartView.layer.borderColor = UIColor.systemGray2.cgColor
         heartView.layer.borderWidth = 1
         heartView.layer.cornerRadius = 6
+    }
+    
+    @IBAction func heartBtn(_ sender: Any) {
+       
+        
     }
 }
 

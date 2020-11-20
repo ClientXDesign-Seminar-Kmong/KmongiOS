@@ -55,6 +55,9 @@
                                                 <state key="normal" image="icLikeUnselected">
                                                     <color key="titleColor" systemColor="systemGrayColor"/>
                                                 </state>
+                                                <connections>
+                                                    <action selector="heartBtn:" destination="8Dx-rz-sYW" eventType="touchUpInside" id="wLD-RA-0T2"/>
+                                                </connections>
                                             </button>
                                         </subviews>
                                     </stackView>
@@ -70,7 +73,7 @@
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="800"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Nod-yf-drQ">
-                                        <rect key="frame" x="0.0" y="0.0" width="414" height="800"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="1178"/>
                                         <subviews>
                                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" pagingEnabled="YES" contentInsetAdjustmentBehavior="never" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="bSz-cd-VfD">
                                                 <rect key="frame" x="0.0" y="0.0" width="414" height="270"/>
@@ -353,11 +356,22 @@
                                                 </constraints>
                                             </view>
                                             <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="NFT-hm-Kzc">
-                                                <rect key="frame" x="0.0" y="462" width="414" height="338"/>
+                                                <rect key="frame" x="0.0" y="462" width="414" height="716"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="716" id="avi-UC-V1b"/>
+                                                </constraints>
                                                 <connections>
                                                     <segue destination="WOJ-cb-bdV" kind="embed" id="p8z-Ii-6vk"/>
                                                 </connections>
                                             </containerView>
+                                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="PdG-8g-0nh">
+                                                <rect key="frame" x="0.0" y="462" width="414" height="716"/>
+                                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                                <mutableString key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</mutableString>
+                                                <color key="textColor" systemColor="labelColor"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                            </textView>
                                         </subviews>
                                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                         <constraints>
@@ -373,13 +387,17 @@
                                             <constraint firstItem="aKb-Td-XnM" firstAttribute="leading" secondItem="Nod-yf-drQ" secondAttribute="leading" id="GAG-yN-RfJ"/>
                                             <constraint firstItem="bH4-9a-8kF" firstAttribute="top" secondItem="fkX-Yw-AMh" secondAttribute="bottom" id="JLt-S1-odg"/>
                                             <constraint firstItem="aKb-Td-XnM" firstAttribute="top" secondItem="bSz-cd-VfD" secondAttribute="bottom" constant="18" id="KPm-xl-iC6"/>
+                                            <constraint firstItem="PdG-8g-0nh" firstAttribute="top" secondItem="bH4-9a-8kF" secondAttribute="bottom" id="OAI-gF-Fo5"/>
                                             <constraint firstItem="9u7-Yi-iOE" firstAttribute="top" secondItem="Nod-yf-drQ" secondAttribute="top" constant="238" id="OtC-gv-8zK"/>
+                                            <constraint firstAttribute="trailing" secondItem="PdG-8g-0nh" secondAttribute="trailing" id="Shs-O1-9KO"/>
                                             <constraint firstAttribute="trailing" secondItem="9u7-Yi-iOE" secondAttribute="trailing" constant="20" id="cSX-DT-xkx"/>
                                             <constraint firstItem="fkX-Yw-AMh" firstAttribute="top" secondItem="7jE-hk-Yrg" secondAttribute="bottom" id="ebD-nY-M7o"/>
                                             <constraint firstAttribute="bottom" secondItem="NFT-hm-Kzc" secondAttribute="bottom" id="llj-7F-DSz"/>
                                             <constraint firstAttribute="trailing" secondItem="NFT-hm-Kzc" secondAttribute="trailing" id="q8c-w0-GQc"/>
                                             <constraint firstAttribute="trailing" secondItem="bSz-cd-VfD" secondAttribute="trailing" id="qEd-BA-CRy"/>
                                             <constraint firstItem="bSz-cd-VfD" firstAttribute="top" secondItem="Nod-yf-drQ" secondAttribute="top" id="qVS-Iq-tq9"/>
+                                            <constraint firstAttribute="bottom" secondItem="PdG-8g-0nh" secondAttribute="bottom" id="qpU-i2-2R3"/>
+                                            <constraint firstItem="PdG-8g-0nh" firstAttribute="leading" secondItem="Nod-yf-drQ" secondAttribute="leading" id="sS4-I8-bvS"/>
                                             <constraint firstItem="bH4-9a-8kF" firstAttribute="leading" secondItem="Nod-yf-drQ" secondAttribute="leading" id="w2L-1h-WBI"/>
                                             <constraint firstAttribute="trailing" secondItem="bH4-9a-8kF" secondAttribute="trailing" id="wGc-eg-mkb"/>
                                         </constraints>
@@ -418,10 +436,11 @@
                     <connections>
                         <outlet property="currentPage" destination="hED-SI-cUD" id="jjL-cm-gYF"/>
                         <outlet property="headerCollectionView" destination="bSz-cd-VfD" id="NZq-Wh-J2V"/>
-                        <outlet property="heartView" destination="ETk-i2-BhU" id="DRT-3g-87l"/>
+                        <outlet property="heartView" destination="ETk-i2-BhU" id="j9e-pJ-Lk9"/>
                         <outlet property="inquiryView" destination="ZCM-lf-22Z" id="J2q-4o-OP6"/>
                         <outlet property="pageNumberView" destination="9u7-Yi-iOE" id="Rcq-QE-ISc"/>
                         <outlet property="purchaseView" destination="n1M-rN-bH8" id="fhp-Oi-wKU"/>
+                        <outlet property="smallHeartView" destination="DM8-zh-dD8" id="cUd-y6-Z6L"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="o9v-dH-IRn" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -451,7 +470,7 @@
             <objects>
                 <viewController storyboardIdentifier="PagerTabVC" id="WOJ-cb-bdV" customClass="PagerTabVC" customModule="Kmong" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="5fD-u4-RWl">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="500"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="716"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="3RN-AL-mSw">
@@ -468,12 +487,13 @@
                                 </collectionViewFlowLayout>
                                 <cells>
                                     <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="U70-XI-ezi">
-                                        <rect key="frame" x="0.0" y="0.0" width="128" height="128"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="716"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="il0-VC-d4B">
-                                            <rect key="frame" x="0.0" y="0.0" width="128" height="128"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="716"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                         </collectionViewCellContentView>
+                                        <size key="customSize" width="414" height="716"/>
                                     </collectionViewCell>
                                 </cells>
                             </collectionView>
@@ -486,7 +506,7 @@
                             <constraint firstItem="3RN-AL-mSw" firstAttribute="leading" secondItem="8M0-PD-ZdO" secondAttribute="leading" id="t5P-Xa-kZV"/>
                         </constraints>
                     </view>
-                    <size key="freeformSize" width="414" height="500"/>
+                    <size key="freeformSize" width="414" height="716"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="8Ma-nb-SVb" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -516,6 +536,9 @@
         <image name="icShare" width="44" height="44"/>
         <image name="icStarSelected" width="12" height="12"/>
         <image name="icStarUnselected" width="12" height="12"/>
+        <systemColor name="labelColor">
+            <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
