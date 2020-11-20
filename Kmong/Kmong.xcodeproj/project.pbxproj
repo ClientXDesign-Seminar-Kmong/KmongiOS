@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3741F5992567DA9A00729AEA /* HomeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3741F5982567DA9A00729AEA /* HomeVC.swift */; };
 		B8218ADB255F968F003AA1AA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8218ADA255F968F003AA1AA /* AppDelegate.swift */; };
 		B8218ADD255F968F003AA1AA /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8218ADC255F968F003AA1AA /* SceneDelegate.swift */; };
 		B8218AE4255F9695003AA1AA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B8218AE3255F9695003AA1AA /* Assets.xcassets */; };
@@ -22,6 +23,7 @@
 
 /* Begin PBXFileReference section */
 		29B34A15E7E269D7E63C6034 /* Pods_Kmong.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Kmong.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		3741F5982567DA9A00729AEA /* HomeVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = HomeVC.swift; path = Kmong/Sources/HomeVC.swift; sourceTree = SOURCE_ROOT; };
 		8006D2A8C3B9EB3ED014F779 /* Pods-Kmong.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Kmong.release.xcconfig"; path = "Target Support Files/Pods-Kmong/Pods-Kmong.release.xcconfig"; sourceTree = "<group>"; };
 		A041FD1B043DBD45F4AE2B5D /* Pods-Kmong.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Kmong.debug.xcconfig"; path = "Target Support Files/Pods-Kmong/Pods-Kmong.debug.xcconfig"; sourceTree = "<group>"; };
 		B8218AD7255F968F003AA1AA /* Kmong.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Kmong.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -112,6 +114,7 @@
 		B8218B09255F98B7003AA1AA /* VCs */ = {
 			isa = PBXGroup;
 			children = (
+				3741F5982567DA9A00729AEA /* HomeVC.swift */,
 			);
 			path = VCs;
 			sourceTree = "<group>";
@@ -270,6 +273,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3741F5992567DA9A00729AEA /* HomeVC.swift in Sources */,
 				B8218ADB255F968F003AA1AA /* AppDelegate.swift in Sources */,
 				B8218ADD255F968F003AA1AA /* SceneDelegate.swift in Sources */,
 			);
