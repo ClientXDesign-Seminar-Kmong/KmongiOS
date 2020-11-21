@@ -96,17 +96,17 @@
                                                 <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="lzY-ep-6kj">
                                                     <rect key="frame" x="0.0" y="0.0" width="83" height="192"/>
                                                     <subviews>
-                                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XZJ-g7-9if">
-                                                            <rect key="frame" x="0.0" y="0.0" width="83" height="64"/>
-                                                            <state key="normal" image="homeCategoryIcBook"/>
-                                                        </button>
                                                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gid-Cc-mCL">
+                                                            <rect key="frame" x="0.0" y="0.0" width="83" height="64"/>
+                                                            <state key="normal" image="HomeCategoryic_design"/>
+                                                        </button>
+                                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8Un-Ct-oyJ">
                                                             <rect key="frame" x="0.0" y="64" width="83" height="64"/>
-                                                            <state key="normal" image="homeCategoryIcBook"/>
+                                                            <state key="normal" image="homeCategoryIcTranslate"/>
                                                         </button>
                                                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Akr-9p-3so">
                                                             <rect key="frame" x="0.0" y="128" width="83" height="64"/>
-                                                            <state key="normal" image="homeCategoryIcBook"/>
+                                                            <state key="normal" image="homeCategoryIcFortune"/>
                                                         </button>
                                                     </subviews>
                                                 </stackView>
@@ -115,15 +115,15 @@
                                                     <subviews>
                                                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2mh-fL-U5G">
                                                             <rect key="frame" x="0.0" y="0.0" width="83" height="64"/>
-                                                            <state key="normal" image="homeCategoryIcBook"/>
+                                                            <state key="normal" image="homeCategoryIcProgramming"/>
                                                         </button>
                                                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HPg-S5-PCt">
                                                             <rect key="frame" x="0.0" y="64" width="83" height="64"/>
-                                                            <state key="normal" image="homeCategoryIcBook"/>
+                                                            <state key="normal" image="homeCategoryIcDocument"/>
                                                         </button>
                                                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Fud-E4-lIC">
                                                             <rect key="frame" x="0.0" y="128" width="83" height="64"/>
-                                                            <state key="normal" image="homeCategoryIcBook"/>
+                                                            <state key="normal" image="homeCategoryIcLesson"/>
                                                         </button>
                                                     </subviews>
                                                 </stackView>
@@ -132,15 +132,15 @@
                                                     <subviews>
                                                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Z4h-So-Ml6">
                                                             <rect key="frame" x="0.0" y="0.0" width="83" height="64"/>
-                                                            <state key="normal" image="homeCategoryIcBook"/>
+                                                            <state key="normal" image="homeCategoryIcVideo"/>
                                                         </button>
                                                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Aem-Fz-a8X">
                                                             <rect key="frame" x="0.0" y="64" width="83" height="64"/>
-                                                            <state key="normal" image="homeCategoryIcBook"/>
+                                                            <state key="normal" image="homeCategoryIcConsulting"/>
                                                         </button>
                                                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Z1j-ac-E7h">
                                                             <rect key="frame" x="0.0" y="128" width="83" height="64"/>
-                                                            <state key="normal" image="homeCategoryIcBook"/>
+                                                            <state key="normal" image="homeCategoryIcOrder"/>
                                                         </button>
                                                     </subviews>
                                                 </stackView>
@@ -149,11 +149,11 @@
                                                     <subviews>
                                                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5V1-DX-0Ux">
                                                             <rect key="frame" x="0.0" y="0.0" width="83" height="64"/>
-                                                            <state key="normal" image="homeCategoryIcBook"/>
+                                                            <state key="normal" image="homeCategoryIcMarketing"/>
                                                         </button>
                                                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eic-tB-Ue8">
                                                             <rect key="frame" x="0.0" y="64" width="83" height="64"/>
-                                                            <state key="normal" image="homeCategoryIcBook"/>
+                                                            <state key="normal" image="homeCategoryIcJob"/>
                                                         </button>
                                                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yIO-GD-MXG">
                                                             <rect key="frame" x="0.0" y="128" width="83" height="64"/>
@@ -180,15 +180,57 @@
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="OL1-Nf-xIc" id="GgO-85-S5V">
                                             <rect key="frame" x="0.0" y="0.0" width="414" height="318"/>
                                             <autoresizingMask key="autoresizingMask"/>
-                                            <color key="backgroundColor" systemColor="systemGray2Color"/>
-                                        </tableViewCellContentView>
-                                    </tableViewCell>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="318" id="8B2-Tp-jdO">
-                                        <rect key="frame" x="0.0" y="730" width="414" height="318"/>
-                                        <autoresizingMask key="autoresizingMask"/>
-                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="8B2-Tp-jdO" id="dei-60-Nb8">
-                                            <rect key="frame" x="0.0" y="0.0" width="414" height="318"/>
-                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="디자인 추천 서비스" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3IB-oO-PtP">
+                                                    <rect key="frame" x="20" y="20" width="179" height="29"/>
+                                                    <fontDescription key="fontDescription" name="AppleSDGothicNeo-Regular" family="Apple SD Gothic Neo" pointSize="24"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="VaX-hg-6Ne">
+                                                    <rect key="frame" x="0.0" y="49" width="414" height="269"/>
+                                                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                                    <collectionViewFlowLayout key="collectionViewLayout" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="8q2-k5-ABG">
+                                                        <size key="itemSize" width="256" height="238"/>
+                                                        <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                                        <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                                        <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                                    </collectionViewFlowLayout>
+                                                    <cells>
+                                                        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="6eE-NW-ES5">
+                                                            <rect key="frame" x="79" y="0.0" width="256" height="238"/>
+                                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                            <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="f58-3Y-xiD">
+                                                                <rect key="frame" x="0.0" y="0.0" width="256" height="238"/>
+                                                                <autoresizingMask key="autoresizingMask"/>
+                                                                <subviews>
+                                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="3dQ-DV-9X1">
+                                                                        <rect key="frame" x="0.0" y="0.0" width="256" height="160"/>
+                                                                        <constraints>
+                                                                            <constraint firstAttribute="height" constant="160" id="OHV-QX-RbZ"/>
+                                                                        </constraints>
+                                                                    </imageView>
+                                                                </subviews>
+                                                                <constraints>
+                                                                    <constraint firstItem="3dQ-DV-9X1" firstAttribute="leading" secondItem="f58-3Y-xiD" secondAttribute="leading" id="Di5-Zd-hbB"/>
+                                                                    <constraint firstAttribute="trailing" secondItem="3dQ-DV-9X1" secondAttribute="trailing" id="T3N-2A-I3t"/>
+                                                                    <constraint firstItem="3dQ-DV-9X1" firstAttribute="top" secondItem="f58-3Y-xiD" secondAttribute="top" id="e5S-nW-If7"/>
+                                                                </constraints>
+                                                            </collectionViewCellContentView>
+                                                            <size key="customSize" width="256" height="238"/>
+                                                        </collectionViewCell>
+                                                    </cells>
+                                                </collectionView>
+                                            </subviews>
+                                            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                            <constraints>
+                                                <constraint firstItem="3IB-oO-PtP" firstAttribute="top" secondItem="GgO-85-S5V" secondAttribute="topMargin" constant="9" id="1xw-ha-ZO1"/>
+                                                <constraint firstItem="VaX-hg-6Ne" firstAttribute="top" secondItem="3IB-oO-PtP" secondAttribute="bottom" id="8bn-CB-86f"/>
+                                                <constraint firstAttribute="trailing" secondItem="VaX-hg-6Ne" secondAttribute="trailing" id="Nn5-kg-hER"/>
+                                                <constraint firstItem="3IB-oO-PtP" firstAttribute="leading" secondItem="GgO-85-S5V" secondAttribute="leadingMargin" id="Vke-Ok-M0d"/>
+                                                <constraint firstItem="VaX-hg-6Ne" firstAttribute="leading" secondItem="GgO-85-S5V" secondAttribute="leading" id="f8f-XO-bQ8"/>
+                                                <constraint firstAttribute="bottom" secondItem="VaX-hg-6Ne" secondAttribute="bottom" id="mDY-1e-BBM"/>
+                                            </constraints>
                                         </tableViewCellContentView>
                                     </tableViewCell>
                                 </prototypes>
@@ -454,7 +496,18 @@
         </scene>
     </scenes>
     <resources>
+        <image name="HomeCategoryic_design" width="83" height="64"/>
         <image name="homeCategoryIcBook" width="83" height="64"/>
+        <image name="homeCategoryIcConsulting" width="83" height="64"/>
+        <image name="homeCategoryIcDocument" width="83" height="64"/>
+        <image name="homeCategoryIcFortune" width="83" height="64"/>
+        <image name="homeCategoryIcJob" width="83" height="64"/>
+        <image name="homeCategoryIcLesson" width="83" height="64"/>
+        <image name="homeCategoryIcMarketing" width="83" height="64"/>
+        <image name="homeCategoryIcOrder" width="83" height="64"/>
+        <image name="homeCategoryIcProgramming" width="83" height="64"/>
+        <image name="homeCategoryIcTranslate" width="83" height="64"/>
+        <image name="homeCategoryIcVideo" width="83" height="64"/>
         <image name="icBell" width="44" height="44"/>
         <image name="icLogo" width="87" height="25"/>
         <image name="icNavCategorySelected" width="24" height="24"/>
@@ -467,9 +520,6 @@
         <image name="icSearch" width="44" height="44"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-        </systemColor>
-        <systemColor name="systemGray2Color">
-            <color red="0.68235294117647061" green="0.68235294117647061" blue="0.69803921568627447" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>
