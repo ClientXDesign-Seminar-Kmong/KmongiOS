@@ -433,12 +433,8 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="35S-IZ-GqX">
-                        <barButtonItem key="leftBarButtonItem" image="icArrowLeft" id="XAD-BX-lea">
-                            <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                        </barButtonItem>
-                        <barButtonItem key="rightBarButtonItem" image="icShare" id="El0-Sl-SEC">
-                            <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                        </barButtonItem>
+                        <barButtonItem key="leftBarButtonItem" image="icArrowLeft" id="aOv-Zz-E7z"/>
+                        <barButtonItem key="rightBarButtonItem" image="icShare" id="Quo-yL-762"/>
                     </navigationItem>
                     <connections>
                         <outlet property="currentPage" destination="hED-SI-cUD" id="jjL-cm-gYF"/>
@@ -447,6 +443,7 @@
                         <outlet property="inquiryView" destination="ZCM-lf-22Z" id="J2q-4o-OP6"/>
                         <outlet property="pageNumberView" destination="9u7-Yi-iOE" id="Rcq-QE-ISc"/>
                         <outlet property="purchaseView" destination="n1M-rN-bH8" id="fhp-Oi-wKU"/>
+                        <outlet property="scrollView" destination="pJv-cS-miq" id="oEc-am-LwB"/>
                         <outlet property="smallHeartView" destination="DM8-zh-dD8" id="cUd-y6-Z6L"/>
                     </connections>
                 </viewController>
@@ -470,7 +467,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Zi3-ld-s6q" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="556.52173913043487" y="-64.285714285714278"/>
+            <point key="canvasLocation" x="687" y="-65"/>
         </scene>
         <!--Pager TabVC-->
         <scene sceneID="7Em-Sk-PIA">
@@ -486,7 +483,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="8Ma-nb-SVb" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2180" y="-64"/>
+            <point key="canvasLocation" x="1465" y="579"/>
         </scene>
         <!--Detail DescVC-->
         <scene sceneID="fHA-uM-gAB">
@@ -764,7 +761,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="yCd-xB-0VP" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2876.811594202899" y="-64.285714285714278"/>
+            <point key="canvasLocation" x="2232" y="-64"/>
         </scene>
     </scenes>
     <resources>
