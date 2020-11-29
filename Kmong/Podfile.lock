@@ -1,16 +1,28 @@
 PODS:
+  - InfiniteCarouselCollectionView (0.1.3)
+  - InfiniteLayout (0.4.2):
+    - InfiniteLayout/Core (= 0.4.2)
+  - InfiniteLayout/CocoaProxy (0.4.2)
+  - InfiniteLayout/Core (0.4.2):
+    - InfiniteLayout/CocoaProxy
   - XLPagerTabStrip (9.0.0)
 
 DEPENDENCIES:
+  - InfiniteCarouselCollectionView
+  - InfiniteLayout
   - XLPagerTabStrip (~> 9.0)
 
 SPEC REPOS:
   trunk:
+    - InfiniteCarouselCollectionView
+    - InfiniteLayout
     - XLPagerTabStrip
 
 SPEC CHECKSUMS:
+  InfiniteCarouselCollectionView: d63e9c834ff41f4d2ce99a2b58c9bb679bb14ab5
+  InfiniteLayout: de51cfad9ed480a3e3a0af7d28242d3257c606d9
   XLPagerTabStrip: 61c57fd61f611ee5f01ff1495ad6fbee8bf496c5
 
-PODFILE CHECKSUM: 0aa8cbb3f7a91fdc10a91b5b86899e4f01c63e8b
+PODFILE CHECKSUM: 70a69379fb8f559254e32e8a7c8fddda4697fd35
 
-COCOAPODS: 1.9.1
+COCOAPODS: 1.10.0
