@@ -111,7 +111,7 @@ class DetailVC: UIViewController, UICollectionViewDelegate, UICollectionViewData
         
         bRec = !bRec
         if bRec {
-            smallHeartView.setImage(UIImage(named: "icLikeSelected"), for: .normal)
+            smallHeartView.setImage(UIImage(named: "icLikeUnselected2"), for: .normal)
         } else {
             smallHeartView.setImage(UIImage(named: "icLikeUnselected2"), for: .normal)
         }
