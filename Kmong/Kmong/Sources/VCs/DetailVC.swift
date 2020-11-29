@@ -32,8 +32,6 @@ class DetailVC: UIViewController, UICollectionViewDelegate, UICollectionViewData
     @IBOutlet weak var smallHeartView: UIButton!
     @IBOutlet weak var currentPage: UILabel!
     @IBOutlet weak var heartView: UIButton!
-    
-    
     @IBOutlet weak var scrollView: UIScrollView!
     
     var headerImages: [String] = ["", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", ""]
@@ -58,7 +56,6 @@ class DetailVC: UIViewController, UICollectionViewDelegate, UICollectionViewData
 //       타이틀 컬러 있으면 흰색으로 바꾸기
 //        navigationController?.navigationBar.titleTextAttributes = [NSAttributedString.Key.foregroundColor : UIColor.white]
         
-                
         //status bar 높이 가져오기
         if #available(iOS 13.0, *) {
             
@@ -94,9 +91,30 @@ class DetailVC: UIViewController, UICollectionViewDelegate, UICollectionViewData
         heartView.layer.cornerRadius = 6
     }
     
+    // Like Button설정
+    var bRec:Bool = true
+    
     @IBAction func heartBtn(_ sender: Any) {
        
+        bRec = !bRec
+        if bRec {
+            heartView.setImage(UIImage(named: "icLikeSelected"), for: .normal)
+            heartView.layer.borderColor = UIColor.yellow.cgColor
+            heartView.layer.borderColor = UIColor(red: 249/255, green: 212/255, blue: 72/255, alpha: 1).cgColor
+        } else {
+            heartView.setImage(UIImage(named: "icLikeUnselected"), for: .normal)
+            heartView.layer.borderColor = UIColor.systemGray2.cgColor
+        }
+    }
+    
+    @IBAction func smallHeartBtn(_ sender: Any) {
         
+        bRec = !bRec
+        if bRec {
+            smallHeartView.setImage(UIImage(named: "icLikeSelected"), for: .normal)
+        } else {
+            smallHeartView.setImage(UIImage(named: "icLikeUnselected2"), for: .normal)
+        }
     }
     
     var statusBarFrame: CGRect!
@@ -138,12 +156,10 @@ class DetailVC: UIViewController, UICollectionViewDelegate, UICollectionViewData
         // 스크롤 시 네비 바 백그라운드 색상 변경
         self.navigationController?.navigationBar.backgroundColor = clearToWhite
         
-        
         // 스크롤 시 스테이터스 바 백드라운드 색상 변경
         statusBarView!.backgroundColor = clearToWhite
     }
 }
-
 
 extension DetailVC: UICollectionViewDelegateFlowLayout {
     
@@ -166,6 +182,4 @@ extension DetailVC: UICollectionViewDelegateFlowLayout {
         
         return UIEdgeInsets(top: 0, left: 0, bottom: 0, right: 0)
     }
-    
-    
 }
