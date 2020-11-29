@@ -28,6 +28,8 @@ class PagerTabVC: ButtonBarPagerTabStripViewController {
         
         
         super.viewDidLoad()
+        
+        
     }
     
     
@@ -42,12 +44,12 @@ class PagerTabVC: ButtonBarPagerTabStripViewController {
         settings.style.buttonBarItemTitleColor = .black
         settings.style.buttonBarMinimumInteritemSpacing = 0
         settings.style.buttonBarItemsShouldFillAvailableWidth = true
-        
         changeCurrentIndexProgressive = { (oldCell: ButtonBarViewCell?, newCell: ButtonBarViewCell?, progressPercentage: CGFloat, changeCurrentIndex: Bool, animated: Bool) -> Void in
             
             oldCell?.label.textColor = .systemGray5
             newCell?.label.textColor = .black
         }
+        
     }
     
     override func viewControllers(for pagerTabStripController: PagerTabStripViewController) -> [UIViewController] {
