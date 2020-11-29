@@ -159,6 +159,8 @@ class DetailVC: UIViewController, UICollectionViewDelegate, UICollectionViewData
         // 스크롤 시 스테이터스 바 백드라운드 색상 변경
         statusBarView!.backgroundColor = clearToWhite
     }
+    
+    
 }
 
 extension DetailVC: UICollectionViewDelegateFlowLayout {

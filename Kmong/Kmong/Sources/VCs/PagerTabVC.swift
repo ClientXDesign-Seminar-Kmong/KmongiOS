@@ -28,6 +28,8 @@ class PagerTabVC: ButtonBarPagerTabStripViewController {
         
         
         super.viewDidLoad()
+        
+        
     }
     
     
@@ -47,6 +49,7 @@ class PagerTabVC: ButtonBarPagerTabStripViewController {
             oldCell?.label.textColor = .systemGray5
             newCell?.label.textColor = .black
         }
+        
     }
     
     override func viewControllers(for pagerTabStripController: PagerTabStripViewController) -> [UIViewController] {
