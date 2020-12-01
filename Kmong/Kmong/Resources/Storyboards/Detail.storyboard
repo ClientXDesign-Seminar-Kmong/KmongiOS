@@ -125,37 +125,37 @@
                                                 </cells>
                                             </collectionView>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="9u7-Yi-iOE">
-                                                <rect key="frame" x="354" y="238" width="40" height="18"/>
+                                                <rect key="frame" x="353" y="238" width="41" height="18"/>
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="1" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hED-SI-cUD">
-                                                        <rect key="frame" x="6" y="3" width="5" height="12"/>
-                                                        <fontDescription key="fontDescription" type="system" weight="medium" pointSize="10"/>
+                                                        <rect key="frame" x="6.5" y="3" width="4" height="12"/>
+                                                        <fontDescription key="fontDescription" name="AppleSDGothicNeo-Medium" family="Apple SD Gothic Neo" pointSize="10"/>
                                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="/" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iRD-0W-pxg">
-                                                        <rect key="frame" x="15" y="3" width="3.5" height="12"/>
-                                                        <fontDescription key="fontDescription" type="system" weight="light" pointSize="10"/>
+                                                        <rect key="frame" x="18.5" y="3" width="3.5" height="12"/>
+                                                        <fontDescription key="fontDescription" name="AppleSDGothicNeo-Thin" family="Apple SD Gothic Neo" pointSize="10"/>
                                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="20" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1C8-ky-u25">
-                                                        <rect key="frame" x="22.5" y="3" width="12.5" height="12"/>
-                                                        <fontDescription key="fontDescription" type="system" weight="light" pointSize="10"/>
+                                                        <rect key="frame" x="25" y="3" width="12" height="12"/>
+                                                        <fontDescription key="fontDescription" name="AppleSDGothicNeo-Thin" family="Apple SD Gothic Neo" pointSize="10"/>
                                                         <color key="textColor" red="0.89803921568627454" green="0.89803921568627454" blue="0.89803921568627454" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                 </subviews>
                                                 <color key="backgroundColor" systemColor="systemGrayColor"/>
                                                 <constraints>
-                                                    <constraint firstItem="hED-SI-cUD" firstAttribute="leading" secondItem="9u7-Yi-iOE" secondAttribute="leading" constant="6" id="8mh-CV-QXn"/>
-                                                    <constraint firstItem="iRD-0W-pxg" firstAttribute="leading" secondItem="hED-SI-cUD" secondAttribute="trailing" constant="4" id="Gqa-Qf-I3q"/>
+                                                    <constraint firstItem="hED-SI-cUD" firstAttribute="leading" secondItem="9u7-Yi-iOE" secondAttribute="leading" constant="6.5" id="8mh-CV-QXn"/>
                                                     <constraint firstAttribute="height" constant="18" id="LBK-iY-fWL"/>
-                                                    <constraint firstItem="1C8-ky-u25" firstAttribute="leading" secondItem="iRD-0W-pxg" secondAttribute="trailing" constant="4" id="NGo-Hg-yy2"/>
-                                                    <constraint firstAttribute="width" constant="40" id="NZi-QP-NVK"/>
+                                                    <constraint firstAttribute="width" constant="41" id="NZi-QP-NVK"/>
                                                     <constraint firstItem="iRD-0W-pxg" firstAttribute="centerY" secondItem="9u7-Yi-iOE" secondAttribute="centerY" id="YWb-TJ-aBd"/>
                                                     <constraint firstItem="iRD-0W-pxg" firstAttribute="baseline" secondItem="1C8-ky-u25" secondAttribute="baseline" id="fDk-oR-ijm"/>
                                                     <constraint firstItem="iRD-0W-pxg" firstAttribute="baseline" secondItem="hED-SI-cUD" secondAttribute="baseline" id="jkW-VU-VtW"/>
+                                                    <constraint firstItem="1C8-ky-u25" firstAttribute="leading" secondItem="iRD-0W-pxg" secondAttribute="trailing" constant="3" id="pfu-R5-emJ"/>
+                                                    <constraint firstAttribute="trailing" secondItem="1C8-ky-u25" secondAttribute="trailing" constant="4" id="qfb-rb-Y5q"/>
                                                 </constraints>
                                             </view>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="aKb-Td-XnM">
