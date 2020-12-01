@@ -9,13 +9,16 @@ import UIKit
 import XLPagerTabStrip
 
 class DetailServiceOptionVC: UIViewController, IndicatorInfoProvider {
-    
+    // MARK: - IBOutlets
     @IBOutlet weak var newSignUpButton: UIButton!
     @IBOutlet weak var detailOptionTableView: UITableView!
     
+    // MARK: - Custom Properties
     let deselectedCheckImage = UIImage(named:"icOptionUnselected")
     let selectedCheckImage = UIImage(named:"icOptionSelected")
     let optionTitleList = ["텍스트형 로고","심볼/엠블럼형 로고","프리미엄 로고"]
+    
+    // MARK: - LifeCycle Methods
     override func viewDidLoad() {
         super.viewDidLoad()
         detailOptionTableView.delegate = self
@@ -31,6 +34,8 @@ class DetailServiceOptionVC: UIViewController, IndicatorInfoProvider {
     override func viewWillAppear(_ animated: Bool) {
         
     }
+    
+    // MARK: - Custom Methods
     func setLayout(){
         newSignUpButton.layer.borderWidth = 1
         newSignUpButton.layer.cornerRadius = 6
