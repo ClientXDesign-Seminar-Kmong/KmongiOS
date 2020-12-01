@@ -17,11 +17,12 @@ class DetailVC: UIViewController, UICollectionViewDelegate, UICollectionViewData
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         
-        guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: HeaderCell.identifier, for: indexPath) as? HeaderCell else {
+        guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: DetailHeaderCell.identifier, for: indexPath) as? DetailHeaderCell else {
             
             return UICollectionViewCell()
         }
         
+        cell.setCell(headerImage: headerImages[indexPath.row])
         return cell
     }
     
@@ -34,7 +35,7 @@ class DetailVC: UIViewController, UICollectionViewDelegate, UICollectionViewData
     @IBOutlet weak var heartView: UIButton!
     @IBOutlet weak var scrollView: UIScrollView!
     
-    var headerImages: [String] = ["1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11", "12", "13", "14", "15", "16", "17", "18", "19", "20"]
+    var headerImages: [HeaderImages] = []
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -44,6 +45,7 @@ class DetailVC: UIViewController, UICollectionViewDelegate, UICollectionViewData
         scrollView.delegate = self
         
         setInitLayout()
+        setHeaderData()
         
         self.navigationController?.navigationBar.setBackgroundImage(UIImage(), for: .default)
         self.navigationController?.navigationBar.shadowImage = UIImage()
@@ -73,6 +75,32 @@ class DetailVC: UIViewController, UICollectionViewDelegate, UICollectionViewData
         statusBarView.isOpaque = false
         statusBarView.backgroundColor = .clear
         view.addSubview(statusBarView)
+    }
+    
+    func setHeaderData() {
+        
+        headerImages.append(contentsOf: [
+            HeaderImages(headerImage: "imgHeader"),
+            HeaderImages(headerImage: "imgHeader"),
+            HeaderImages(headerImage: "imgHeader"),
+            HeaderImages(headerImage: "imgHeader"),
+            HeaderImages(headerImage: "imgHeader"),
+            HeaderImages(headerImage: "imgHeader"),
+            HeaderImages(headerImage: "imgHeader"),
+            HeaderImages(headerImage: "imgHeader"),
+            HeaderImages(headerImage: "imgHeader"),
+            HeaderImages(headerImage: "imgHeader"),
+            HeaderImages(headerImage: "imgHeader"),
+            HeaderImages(headerImage: "imgHeader"),
+            HeaderImages(headerImage: "imgHeader"),
+            HeaderImages(headerImage: "imgHeader"),
+            HeaderImages(headerImage: "imgHeader"),
+            HeaderImages(headerImage: "imgHeader"),
+            HeaderImages(headerImage: "imgHeader"),
+            HeaderImages(headerImage: "imgHeader"),
+            HeaderImages(headerImage: "imgHeader"),
+            HeaderImages(headerImage: "imgHeader")
+        ])
     }
 
     func setInitLayout() {
