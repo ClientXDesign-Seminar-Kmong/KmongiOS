@@ -72,29 +72,35 @@
                                             <constraints>
                                                 <constraint firstAttribute="height" constant="160" id="Vx8-FB-bXa"/>
                                             </constraints>
-                                            <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="10" minimumInteritemSpacing="8" id="sAj-FC-9Vd">
+                                            <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="8" minimumInteritemSpacing="8" id="sAj-FC-9Vd">
                                                 <size key="itemSize" width="335" height="144"/>
+                                                <size key="estimatedItemSize" width="335" height="144"/>
                                                 <size key="headerReferenceSize" width="0.0" height="0.0"/>
                                                 <size key="footerReferenceSize" width="0.0" height="0.0"/>
                                                 <inset key="sectionInset" minX="0.0" minY="8" maxX="0.0" maxY="8"/>
                                             </collectionViewFlowLayout>
                                             <cells>
-                                                <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="HomeHeaderCell" id="rf3-W0-x4v" customClass="HomeHeaderCell" customModule="Kmong" customModuleProvider="target">
+                                                <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="HomeHeaderCell" id="Fb3-zR-Kdy" customClass="HomeHeaderCell" customModule="Kmong" customModuleProvider="target">
                                                     <rect key="frame" x="0.0" y="8" width="335" height="144"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                    <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="tBD-NU-qvm">
+                                                    <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="KVr-F7-2id">
                                                         <rect key="frame" x="0.0" y="0.0" width="335" height="144"/>
                                                         <autoresizingMask key="autoresizingMask"/>
                                                         <subviews>
-                                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="homeCard2" translatesAutoresizingMaskIntoConstraints="NO" id="kq7-1C-KeT">
+                                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="homeCard2" translatesAutoresizingMaskIntoConstraints="NO" id="YHO-rq-H3h">
                                                                 <rect key="frame" x="0.0" y="0.0" width="335" height="144"/>
-                                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                             </imageView>
                                                         </subviews>
+                                                        <constraints>
+                                                            <constraint firstItem="YHO-rq-H3h" firstAttribute="top" secondItem="KVr-F7-2id" secondAttribute="top" id="W2C-Cb-IvJ"/>
+                                                            <constraint firstAttribute="trailing" secondItem="YHO-rq-H3h" secondAttribute="trailing" id="bm5-do-28Y"/>
+                                                            <constraint firstAttribute="bottom" secondItem="YHO-rq-H3h" secondAttribute="bottom" id="df2-hV-sCI"/>
+                                                            <constraint firstItem="YHO-rq-H3h" firstAttribute="leading" secondItem="KVr-F7-2id" secondAttribute="leading" id="sfA-eW-evz"/>
+                                                        </constraints>
                                                     </collectionViewCellContentView>
                                                     <size key="customSize" width="335" height="144"/>
                                                     <connections>
-                                                        <outlet property="headerImageView" destination="kq7-1C-KeT" id="V86-hf-gIh"/>
+                                                        <outlet property="headerImageView" destination="YHO-rq-H3h" id="ci5-oR-LVX"/>
                                                     </connections>
                                                 </collectionViewCell>
                                             </cells>
