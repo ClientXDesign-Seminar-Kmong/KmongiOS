@@ -11,14 +11,19 @@ class HomeTableViewHeaderCell: UITableViewCell {
     
     static let identifier = "HomeTableViewHeaderCell"
 
+    @IBOutlet var headerCollectionView: UICollectionView!
+    
     override func awakeFromNib() {
         super.awakeFromNib()
+        
+        headerCollectionView.dataSource = self
+        headerCollectionView.delegate = self
+        
         // Initialization code
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
-
         // Configure the view for the selected state
     }
     
@@ -46,5 +51,38 @@ class HomeTableViewHeaderCell: UITableViewCell {
     @IBAction func TouchUpCareer(_ sender: Any) {
     }
     @IBAction func TouchUpEbook(_ sender: Any) {
+    }
+}
+
+extension HomeTableViewHeaderCell: UICollectionViewDataSource {
+    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        return 5
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: HomeHeaderCell.identifier, for: indexPath) as? HomeHeaderCell else {
+            return UICollectionViewCell()
+        }
+        cell.setImage(imageName: "homeCard2")
+        
+        return cell
+    }
+}
+
+extension HomeTableViewHeaderCell: UICollectionViewDelegateFlowLayout {
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout:
+                            UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
+        return CGSize(width: collectionView.frame.width, height: 160)
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAt section: Int) -> CGFloat {
+        return 0
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumInteritemSpacingForSectionAt section: Int) -> CGFloat {
+        return 8
+    }
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, insetForSectionAt section: Int) -> UIEdgeInsets {
+        return UIEdgeInsets(top: 8, left: 8, bottom: 8, right: 8)
     }
 }
