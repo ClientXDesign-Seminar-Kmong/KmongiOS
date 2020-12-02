@@ -179,14 +179,14 @@
 		B8218B0F255F98DC003AA1AA /* Cells */ = {
 			isa = PBXGroup;
 			children = (
-				373A48AF2577419400C069E3 /* HomeHeaderCell.swift */,
-				37EAC2672572BC7A00474877 /* HomeExpert.swift */,
 				1F0FBAA3256111A900D41323 /* HeaderCell.swift */,
 				63487ACC2567E3150005BC68 /* serviceOptionTVC.swift */,
 				37EAC25A2572AD1100474877 /* HomeTableViewHeaderCell.swift */,
+				373A48AF2577419400C069E3 /* HomeHeaderCell.swift */,
+				37EAC2672572BC7A00474877 /* HomeExpert.swift */,
 				37EAC25E2572B01700474877 /* HomeRecServiceTableViewCell.swift */,
-				373A48B52577F43300C069E3 /* HomeExpertType.swift */,
 				37EAC2622572B15C00474877 /* HomeRecommendedServiceCell.swift */,
+				373A48B52577F43300C069E3 /* HomeExpertType.swift */,
 			);
 			path = Cells;
 			sourceTree = "<group>";

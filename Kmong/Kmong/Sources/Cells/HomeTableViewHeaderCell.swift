@@ -6,12 +6,13 @@
 //
 
 import UIKit
+import InfiniteLayout
 
 class HomeTableViewHeaderCell: UITableViewCell {
     
     static let identifier = "HomeTableViewHeaderCell"
 
-    @IBOutlet var headerCollectionView: UICollectionView!
+    @IBOutlet var headerCollectionView: InfiniteCollectionView!
     
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -26,6 +27,8 @@ class HomeTableViewHeaderCell: UITableViewCell {
         super.setSelected(selected, animated: animated)
         // Configure the view for the selected state
     }
+    
+    
     
     
     @IBAction func TouchUpDesign(_ sender: Any) {
@@ -63,7 +66,7 @@ extension HomeTableViewHeaderCell: UICollectionViewDataSource {
         guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: HomeHeaderCell.identifier, for: indexPath) as? HomeHeaderCell else {
             return UICollectionViewCell()
         }
-        cell.setData(imageName: "homeCard2")
+        cell.setImage(imageName: "homeCard2")
         
         return cell
     }

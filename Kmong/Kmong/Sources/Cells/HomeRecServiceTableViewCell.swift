@@ -24,6 +24,7 @@ class HomeRecServiceTableViewCell: UITableViewCell, UICollectionViewDelegate {
         ServiceCollectionView.delegate = self
         ServiceCollectionView.dataSource = self
         setDesignerData()
+        setProgrammerData()
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {
@@ -40,6 +41,13 @@ class HomeRecServiceTableViewCell: UITableViewCell, UICollectionViewDelegate {
         designExperts.append(contentsOf: [
             Expert(expertImageName: "designerMinju", description: "사랑받는 디자이너로 성장하는 방법 알려드립니다.", reviewCount: 152, star: 5.0),
             Expert(expertImageName: "designerMinju", description: "절대 실패없는 유튜브 영상 촬영 방법에 대해 알려드립니다.", reviewCount: 86, star: 5)
+        ])
+    }
+    
+    func setProgrammerData() {
+        programmingExperts.append(contentsOf: [
+            Expert(expertImageName: "designerMinju", description: "안드로이드의 “모든 것”에 대해서 알려드립니다.", reviewCount: 126, star: 5.0),
+            Expert(expertImageName: "designerMinju", description: "절iOS, 애플 감성 살려서 개발하는 방법을 스윗하게 알려드립니다.", reviewCount: 126, star: 5)
         ])
     }
     

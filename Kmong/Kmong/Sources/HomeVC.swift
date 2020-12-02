@@ -17,6 +17,7 @@ class HomeVC: UIViewController {
         super.viewDidLoad()
         homeTableView.dataSource = self
         setCell()
+        homeTableView.separatorStyle = UITableViewCell.SeparatorStyle.none
     }
     
     func setCell() {
