@@ -11,9 +11,20 @@ class HomeVC: UIViewController {
 
     @IBOutlet weak var homeTableView: UITableView!
     
+    var expertType : [ExpertType] = []
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         homeTableView.dataSource = self
+        setCell()
+    }
+    
+    func setCell() {
+//        serviceType.text = type.type
+        expertType.append(contentsOf: [
+            ExpertType(type: "디자인"),
+            ExpertType(type: "프로그래밍")
+        ])
     }
 
 }
@@ -27,6 +38,7 @@ extension HomeVC : UITableViewDataSource {
         guard let cell = tableView.dequeueReusableCell(withIdentifier: HomeRecServiceTableViewCell.identifier) as? HomeRecServiceTableViewCell else {
             return UITableViewCell()
         }
+        cell.setCell(type: expertType[indexPath.item])
         return cell
     }
 }

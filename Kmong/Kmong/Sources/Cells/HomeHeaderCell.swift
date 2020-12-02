@@ -12,7 +12,7 @@ class HomeHeaderCell: UICollectionViewCell {
     
     @IBOutlet var headerImageView: UIImageView!
     
-    func setImage(imageName: String) {
+    func setData(imageName: String) {
         
         headerImageView.image = UIImage(named: imageName)
     }

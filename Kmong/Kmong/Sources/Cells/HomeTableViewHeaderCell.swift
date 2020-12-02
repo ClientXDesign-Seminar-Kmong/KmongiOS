@@ -63,7 +63,7 @@ extension HomeTableViewHeaderCell: UICollectionViewDataSource {
         guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: HomeHeaderCell.identifier, for: indexPath) as? HomeHeaderCell else {
             return UICollectionViewCell()
         }
-        cell.setImage(imageName: "homeCard2")
+        cell.setData(imageName: "homeCard2")
         
         return cell
     }
