@@ -7,26 +7,26 @@
 
 import UIKit
 import XLPagerTabStrip
+import InfiniteCarouselCollectionView
 
-class DetailVC: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource {
-    
+class DetailVC: UIViewController, UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         
-        headerImages.count
+        return 10
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         
-        guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: DetailHeaderCell.identifier, for: indexPath) as? DetailHeaderCell else {
-            
-            return UICollectionViewCell()
-        }
+        let cell = cardCollectionView.dequeueReusableCell(withReuseIdentifier: "CardCollectionViewCell", for: indexPath)
+
+        cell.layer.borderColor = UIColor.systemGray2.cgColor
+        cell.layer.borderWidth = 1
+        cell.layer.cornerRadius = 5
         
-        cell.setCell(headerImage: headerImages[indexPath.row])
         return cell
     }
     
-    @IBOutlet weak var headerCollectionView: UICollectionView!
+    @IBOutlet weak var headerCollectionView: CarouselCollectionView!
     @IBOutlet weak var pageNumberView: UIView!
     @IBOutlet weak var inquiryView: UIButton!
     @IBOutlet weak var purchaseView: UIButton!
@@ -34,15 +34,32 @@ class DetailVC: UIViewController, UICollectionViewDelegate, UICollectionViewData
     @IBOutlet weak var currentPage: UILabel!
     @IBOutlet weak var heartView: UIButton!
     @IBOutlet weak var scrollView: UIScrollView!
+    @IBOutlet weak var cardCollectionView: UICollectionView!
     
     var headerImages: [HeaderImages] = []
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        headerCollectionView.delegate = self
-        headerCollectionView.dataSource = self
+        let cardFlowLayout = UICollectionViewFlowLayout()
+        
+        cardFlowLayout.itemSize = CGSize(width: 200, height: 223)
+        cardFlowLayout.sectionInset = UIEdgeInsets(top: 0, left: 0, bottom: 0, right: 0)
+        cardFlowLayout.minimumInteritemSpacing = 0
+        cardFlowLayout.minimumLineSpacing = 12
+        cardFlowLayout.scrollDirection = .horizontal
+        
+        cardCollectionView.collectionViewLayout = cardFlowLayout
+        
+        headerCollectionView.carouselDataSource = self
+        
+        let size = UIScreen.main.bounds.size
+        headerCollectionView.flowLayout.itemSize = CGSize(width: size.width, height: size.width/375*270)
+
         scrollView.delegate = self
+        
+        cardCollectionView.delegate = self
+        cardCollectionView.dataSource = self
         
         setInitLayout()
         setHeaderData()
@@ -188,50 +205,34 @@ class DetailVC: UIViewController, UICollectionViewDelegate, UICollectionViewData
     }
 }
 
-extension DetailVC: UICollectionViewDelegateFlowLayout {
-    
-    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
+extension DetailVC: CarouselCollectionViewDataSource {
+    var numberOfItems: Int {
         
-        return CGSize(width: collectionView.frame.width, height: collectionView.frame.height)
+        return 20
     }
     
-    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAt section: Int) -> CGFloat {
+    func carouselCollectionView(_ carouselCollectionView: CarouselCollectionView, cellForItemAt index: Int, fakeIndexPath: IndexPath) -> UICollectionViewCell {
         
-        return 0
+        guard let cell = carouselCollectionView.dequeueReusableCell(withReuseIdentifier: DetailHeaderCell.identifier, for: fakeIndexPath) as? DetailHeaderCell else {
+        
+                return UICollectionViewCell()
+        }
+            cell.setCell(headerImage: headerImages[index])
+                return cell
     }
     
-    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumInteritemSpacingForSectionAt section: Int) -> CGFloat {
+    func carouselCollectionView(_ carouselCollectionView: CarouselCollectionView, didSelectItemAt index: Int) {
         
-        return 0
+        print("Did Select item at \(index)")
     }
     
-    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, insetForSectionAt section: Int) -> UIEdgeInsets {
+    func carouselCollectionView(_ carouselCollectionView: CarouselCollectionView, didDisplayItemAt index: Int) {
         
-        return UIEdgeInsets(top: 0, left: 0, bottom: 0, right: 0)
+        self.currentPage.text = "\(index + 1)"
     }
+}
+
+extension DetailVC: UICollectionViewDelegate {
     
-    func scrollViewDidEndDecelerating(_ scrollView: UIScrollView) {
-        
-        var a: Int? = Int(currentPage.text!)
-        
-        a = Int(headerCollectionView.contentOffset.x) / Int(headerCollectionView.frame.width)
-        
-        currentPage.text = String(a! + 1)
-        
-        
-        
-        
-//        headerCollectionView.translatesAutoresizingMaskIntoConstraints = false
-//
-//        if currentPage.text! < String(a! + 9) {
-//
-//            headerCollectionView.performBatchUpdates({
-//                pageNumberView.leadingAnchor.constraint(equalTo: self.view.leadingAnchor, constant: +309).isActive = true
-//            }, completion: nil)
-//        } else {
-//            headerCollectionView.performBatchUpdates({
-//                pageNumberView.leadingAnchor.constraint(equalTo: self.view.leadingAnchor, constant: +314.5).isActive = true
-//            }, completion: nil)
-//        }
-    }
+    
 }
