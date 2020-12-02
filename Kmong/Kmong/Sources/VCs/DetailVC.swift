@@ -145,8 +145,8 @@ class DetailVC: UIViewController, UICollectionViewDelegate, UICollectionViewData
     }
     
     var statusBarFrame: CGRect!
-        var statusBarView: UIView!
-        var offset: CGFloat!
+    var statusBarView: UIView!
+    var offset: CGFloat!
     
     func scrollViewDidScroll(_ scrollView: UIScrollView) {
         
@@ -186,8 +186,6 @@ class DetailVC: UIViewController, UICollectionViewDelegate, UICollectionViewData
         // 스크롤 시 스테이터스 바 백드라운드 색상 변경
         statusBarView!.backgroundColor = clearToWhite
     }
-    
-    
 }
 
 extension DetailVC: UICollectionViewDelegateFlowLayout {
@@ -219,5 +217,21 @@ extension DetailVC: UICollectionViewDelegateFlowLayout {
         a = Int(headerCollectionView.contentOffset.x) / Int(headerCollectionView.frame.width)
         
         currentPage.text = String(a! + 1)
+        
+        
+        
+        
+//        headerCollectionView.translatesAutoresizingMaskIntoConstraints = false
+//
+//        if currentPage.text! < String(a! + 9) {
+//
+//            headerCollectionView.performBatchUpdates({
+//                pageNumberView.leadingAnchor.constraint(equalTo: self.view.leadingAnchor, constant: +309).isActive = true
+//            }, completion: nil)
+//        } else {
+//            headerCollectionView.performBatchUpdates({
+//                pageNumberView.leadingAnchor.constraint(equalTo: self.view.leadingAnchor, constant: +314.5).isActive = true
+//            }, completion: nil)
+//        }
     }
 }
