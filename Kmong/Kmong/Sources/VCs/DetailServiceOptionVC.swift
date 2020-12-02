@@ -23,7 +23,7 @@ class DetailServiceOptionVC: UIViewController, IndicatorInfoProvider {
         super.viewDidLoad()
         detailOptionTableView.delegate = self
         detailOptionTableView.dataSource = self
-        detailOptionTableView.reloadData()
+        detailOptionTableView.contentInset.bottom = 0
         DispatchQueue.main.async {
             self.detailOptionTableView.selectRow(at: IndexPath(row:0, section:0), animated: false, scrollPosition: .none)
         }
@@ -109,7 +109,9 @@ extension DetailServiceOptionVC: UITableViewDataSource{
         guard let cell = tableView.dequeueReusableCell(withIdentifier: "DetailOptionTVC") as? DetailOptionTVC else{
             return UITableViewCell()
         }
+        //기본으로 적용되는 selectionStyle 제거
         cell.selectionStyle = .none
+        //초기에 첫번재 옵션이 선택되어 있도록 함
         if indexPath.row == 0{
             cell.isSelected = true
             setSelectedCell(cell)

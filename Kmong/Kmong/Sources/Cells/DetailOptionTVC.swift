@@ -20,6 +20,7 @@ class DetailOptionTVC: UITableViewCell {
         self.borderView.layer.borderWidth = 1
         self.borderView.layer.cornerRadius = 6
         self.selectedOptionView.isHidden = true
+        self.selectedOptionViewHeightConstraint.constant = 0
         
     }
     
