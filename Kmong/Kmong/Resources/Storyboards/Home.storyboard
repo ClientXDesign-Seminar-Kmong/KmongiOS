@@ -114,24 +114,21 @@
                                                             <rect key="frame" x="0.0" y="0.0" width="83" height="58.5"/>
                                                             <state key="normal" image="HomeCategoryic_design"/>
                                                             <connections>
-                                                                <action selector="TouchUpDesign:" destination="r72-va-yux" eventType="touchUpInside" id="WIb-2j-lsy"/>
-                                                                <action selector="TouchUpDesign:" destination="DFV-Na-bId" eventType="touchUpInside" id="dRu-RE-bSO"/>
+                                                                <action selector="TouchUpDesign:" destination="RiQ-TJ-XX9" eventType="touchUpInside" id="iPb-3M-vMt"/>
                                                             </connections>
                                                         </button>
                                                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8Un-Ct-oyJ">
                                                             <rect key="frame" x="0.0" y="58.5" width="83" height="58.5"/>
                                                             <state key="normal" image="homeCategoryIcTranslate"/>
                                                             <connections>
-                                                                <action selector="TouchUpTranslate:" destination="r72-va-yux" eventType="touchUpInside" id="4X2-RQ-SsH"/>
-                                                                <action selector="TouchUpTranslate:" destination="DFV-Na-bId" eventType="touchUpInside" id="M56-Dw-cSg"/>
+                                                                <action selector="TouchUpTranslate:" destination="RiQ-TJ-XX9" eventType="touchUpInside" id="iZA-Rk-v8o"/>
                                                             </connections>
                                                         </button>
                                                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Akr-9p-3so">
                                                             <rect key="frame" x="0.0" y="117" width="83" height="58.5"/>
                                                             <state key="normal" image="homeCategoryIcFortune"/>
                                                             <connections>
-                                                                <action selector="TouchUpConsult:" destination="r72-va-yux" eventType="touchUpInside" id="U9g-1S-wBH"/>
-                                                                <action selector="TouchUpConsult:" destination="DFV-Na-bId" eventType="touchUpInside" id="kZK-Lt-RXl"/>
+                                                                <action selector="TouchUpConsult:" destination="RiQ-TJ-XX9" eventType="touchUpInside" id="b2h-QO-H0I"/>
                                                             </connections>
                                                         </button>
                                                     </subviews>
@@ -143,24 +140,21 @@
                                                             <rect key="frame" x="0.0" y="0.0" width="83" height="58.5"/>
                                                             <state key="normal" image="homeCategoryIcProgramming"/>
                                                             <connections>
-                                                                <action selector="TouchUpIT:" destination="DFV-Na-bId" eventType="touchUpInside" id="4QM-r0-rtw"/>
-                                                                <action selector="TouchUpIT:" destination="r72-va-yux" eventType="touchUpInside" id="cDb-EU-40r"/>
+                                                                <action selector="TouchUpIT:" destination="RiQ-TJ-XX9" eventType="touchUpInside" id="GwF-bK-Hlp"/>
                                                             </connections>
                                                         </button>
                                                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HPg-S5-PCt">
                                                             <rect key="frame" x="0.0" y="58.5" width="83" height="58.5"/>
                                                             <state key="normal" image="homeCategoryIcDocument"/>
                                                             <connections>
-                                                                <action selector="TouchUpWriting:" destination="r72-va-yux" eventType="touchUpInside" id="TBV-Zo-UoC"/>
-                                                                <action selector="TouchUpWriting:" destination="DFV-Na-bId" eventType="touchUpInside" id="U1T-KZ-0RR"/>
+                                                                <action selector="TouchUpWriting:" destination="RiQ-TJ-XX9" eventType="touchUpInside" id="Jqu-aE-Pw9"/>
                                                             </connections>
                                                         </button>
                                                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Fud-E4-lIC">
                                                             <rect key="frame" x="0.0" y="117" width="83" height="58.5"/>
                                                             <state key="normal" image="homeCategoryIcLesson"/>
                                                             <connections>
-                                                                <action selector="TouchUpLesson:" destination="r72-va-yux" eventType="touchUpInside" id="f4o-BR-Dfh"/>
-                                                                <action selector="TouchUpLesson:" destination="DFV-Na-bId" eventType="touchUpInside" id="yrI-sM-kee"/>
+                                                                <action selector="TouchUpLesson:" destination="RiQ-TJ-XX9" eventType="touchUpInside" id="epR-Xj-SPr"/>
                                                             </connections>
                                                         </button>
                                                     </subviews>
@@ -172,24 +166,21 @@
                                                             <rect key="frame" x="0.0" y="0.0" width="83" height="58.5"/>
                                                             <state key="normal" image="homeCategoryIcVideo"/>
                                                             <connections>
-                                                                <action selector="TouchUpVideo:" destination="r72-va-yux" eventType="touchUpInside" id="nVr-Uh-5BH"/>
-                                                                <action selector="TouchUpVideo:" destination="DFV-Na-bId" eventType="touchUpInside" id="syq-FE-Hyi"/>
+                                                                <action selector="TouchUpVideo:" destination="RiQ-TJ-XX9" eventType="touchUpInside" id="pkC-I4-Esh"/>
                                                             </connections>
                                                         </button>
                                                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Aem-Fz-a8X">
                                                             <rect key="frame" x="0.0" y="58.5" width="83" height="58.5"/>
                                                             <state key="normal" image="homeCategoryIcConsulting"/>
                                                             <connections>
-                                                                <action selector="TouchUpBusiness:" destination="r72-va-yux" eventType="touchUpInside" id="BnE-11-EYs"/>
-                                                                <action selector="TouchUpBusiness:" destination="DFV-Na-bId" eventType="touchUpInside" id="SAC-vJ-1oA"/>
+                                                                <action selector="TouchUpBusiness:" destination="RiQ-TJ-XX9" eventType="touchUpInside" id="BvW-cR-4I9"/>
                                                             </connections>
                                                         </button>
                                                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Z1j-ac-E7h">
                                                             <rect key="frame" x="0.0" y="117" width="83" height="58.5"/>
                                                             <state key="normal" image="homeCategoryIcOrder"/>
                                                             <connections>
-                                                                <action selector="TouchUpDIY:" destination="r72-va-yux" eventType="touchUpInside" id="RfG-RH-qdE"/>
-                                                                <action selector="TouchUpDIY:" destination="DFV-Na-bId" eventType="touchUpInside" id="fIX-pA-KBy"/>
+                                                                <action selector="TouchUpDIY:" destination="RiQ-TJ-XX9" eventType="touchUpInside" id="wgM-Kw-Fdj"/>
                                                             </connections>
                                                         </button>
                                                     </subviews>
@@ -201,24 +192,21 @@
                                                             <rect key="frame" x="0.0" y="0.0" width="83" height="58.5"/>
                                                             <state key="normal" image="homeCategoryIcMarketing"/>
                                                             <connections>
-                                                                <action selector="TouchUpMarketing:" destination="r72-va-yux" eventType="touchUpInside" id="VbZ-Nv-bdz"/>
-                                                                <action selector="TouchUpMarketing:" destination="DFV-Na-bId" eventType="touchUpInside" id="ggL-Nt-9Dh"/>
+                                                                <action selector="TouchUpMarketing:" destination="RiQ-TJ-XX9" eventType="touchUpInside" id="scl-am-Cn7"/>
                                                             </connections>
                                                         </button>
                                                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eic-tB-Ue8">
                                                             <rect key="frame" x="0.0" y="58.5" width="83" height="58.5"/>
                                                             <state key="normal" image="homeCategoryIcJob"/>
                                                             <connections>
-                                                                <action selector="TouchUpCareer:" destination="DFV-Na-bId" eventType="touchUpInside" id="22W-8l-Aks"/>
-                                                                <action selector="TouchUpCareer:" destination="r72-va-yux" eventType="touchUpInside" id="bIb-Fd-LeY"/>
+                                                                <action selector="TouchUpCareer:" destination="RiQ-TJ-XX9" eventType="touchUpInside" id="Mbt-vt-857"/>
                                                             </connections>
                                                         </button>
                                                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yIO-GD-MXG">
                                                             <rect key="frame" x="0.0" y="117" width="83" height="58.5"/>
                                                             <state key="normal" image="homeCategoryIcBook"/>
                                                             <connections>
-                                                                <action selector="TouchUpEbook:" destination="r72-va-yux" eventType="touchUpInside" id="fwu-tQ-j7y"/>
-                                                                <action selector="TouchUpEbook:" destination="DFV-Na-bId" eventType="touchUpInside" id="gfU-jH-waV"/>
+                                                                <action selector="TouchUpEbook:" destination="RiQ-TJ-XX9" eventType="touchUpInside" id="EH7-3i-doV"/>
                                                             </connections>
                                                         </button>
                                                     </subviews>
@@ -355,7 +343,6 @@
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="OhA-a0-92w" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-                <exit id="r72-va-yux" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="1039.1304347826087" y="-238.39285714285714"/>
         </scene>

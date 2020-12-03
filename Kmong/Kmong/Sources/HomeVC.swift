@@ -50,6 +50,50 @@ class HomeVC: UIViewController {
             ExpertType(type: "프로그래밍")
         ])
     }
+    
+    func simpleAlert() {
+        let alert = UIAlertController(title: "아잇", message: "누르지 마세요.\n아무 일도 안 일어나요.", preferredStyle: .alert)
+        let okAction = UIAlertAction(title: "사과하기", style: .default)
+        alert.addAction(okAction)
+        present(alert, animated: true)
+    }
+    
+    @IBAction func TouchUpDesign(_ sender: Any) {
+        self.simpleAlert()
+    }
+    @IBAction func TouchUpTranslate(_ sender: Any) {
+        self.simpleAlert()
+    }
+    @IBAction func TouchUpConsult(_ sender: Any) {
+        self.simpleAlert()
+    }
+    @IBAction func TouchUpIT(_ sender: Any) {
+        self.simpleAlert()
+    }
+    @IBAction func TouchUpWriting(_ sender: Any) {
+        self.simpleAlert()
+    }
+    @IBAction func TouchUpLesson(_ sender: Any) {
+        self.simpleAlert()
+    }
+    @IBAction func TouchUpVideo(_ sender: Any) {
+        self.simpleAlert()
+    }
+    @IBAction func TouchUpBusiness(_ sender: Any) {
+        self.simpleAlert()
+    }
+    @IBAction func TouchUpDIY(_ sender: Any) {
+        self.simpleAlert()
+    }
+    @IBAction func TouchUpMarketing(_ sender: Any) {
+        self.simpleAlert()
+    }
+    @IBAction func TouchUpCareer(_ sender: Any) {
+        self.simpleAlert()
+    }
+    @IBAction func TouchUpEbook(_ sender: Any) {
+        self.simpleAlert()
+    }
 
 }
 // MARK : - UITableViewDataSource
