@@ -61,7 +61,7 @@ class PagerTabVC: ButtonBarPagerTabStripViewController {
         
         let child3 = UIStoryboard.init(name: "DetailExpertInfo", bundle: nil).instantiateViewController(withIdentifier: "DetailExpertVC") as! DetailExpertInfoVC
         
-        let child4 = UIStoryboard.init(name: "DetailReview", bundle: nil).instantiateViewController(withIdentifier: "DetailReviewVC") as! DetailReviewVC
+        let child4 = UIStoryboard.init(name: "Review", bundle: nil).instantiateViewController(withIdentifier: "ReviewVC") as! ReviewVC
 
       return [child1, child2, child3, child4]
 
@@ -74,13 +74,13 @@ class PagerTabVC: ButtonBarPagerTabStripViewController {
                 self.heightDelegate?.setHeight(590.0)
             }
             else if x == width{
-                self.heightDelegate?.setHeight(390.0)
+                self.heightDelegate?.setHeight(569.0)
             }
             else if x == width*2{
-                self.heightDelegate?.setHeight(190.0)
+                self.heightDelegate?.setHeight(329.0)
             }
             else if x == width*3{
-                self.heightDelegate?.setHeight(390.0)    }
+                self.heightDelegate?.setHeight(2000.0)    }
         }
     
     

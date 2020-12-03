@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17156" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="a4e-mm-JhP">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17506" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="a4e-mm-JhP">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17125"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17505"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -11,14 +11,17 @@
         <!--ReviewVC-->
         <scene sceneID="erE-EC-Iwo">
             <objects>
-                <viewController id="a4e-mm-JhP" customClass="ReviewVC" customModule="Kmong" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="Jc7-q3-bGq">
+                <viewController storyboardIdentifier="ReviewVC" id="a4e-mm-JhP" customClass="ReviewVC" customModule="Kmong" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" ambiguous="YES" id="Jc7-q3-bGq">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="XSF-bQ-AXa">
-                                <rect key="frame" x="0.0" y="44" width="414" height="818"/>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" ambiguous="YES" bounces="NO" scrollEnabled="NO" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" bouncesZoom="NO" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="XSF-bQ-AXa">
+                                <rect key="frame" x="0.0" y="44" width="414" height="695"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="695" id="JNV-Ix-dBS"/>
+                                </constraints>
                                 <view key="tableHeaderView" contentMode="scaleToFill" id="VAk-5R-Sal">
                                     <rect key="frame" x="0.0" y="0.0" width="414" height="105"/>
                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -165,12 +168,18 @@
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="심볼/엠블럼형 로고" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6X5-hh-nZF">
                                                     <rect key="frame" x="20" y="53" width="106" height="17"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="17" id="01m-v2-KCF"/>
+                                                    </constraints>
                                                     <fontDescription key="fontDescription" name="AppleSDGothicNeo-Medium" family="Apple SD Gothic Neo" pointSize="14"/>
                                                     <color key="textColor" red="0.49411764705882355" green="0.49411764705882355" blue="0.49411764705882355" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="친절하게 해주셨어요. 감사합니다." textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="k6A-Da-LUa">
                                                     <rect key="frame" x="20" y="82" width="373" height="17"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="17" id="eHg-p7-HwP"/>
+                                                    </constraints>
                                                     <fontDescription key="fontDescription" name="AppleSDGothicNeo-Medium" family="Apple SD Gothic Neo" pointSize="14"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
@@ -219,11 +228,12 @@
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="loz-LU-IYN" firstAttribute="trailing" secondItem="XSF-bQ-AXa" secondAttribute="trailing" id="8kO-aM-ssW"/>
-                            <constraint firstItem="loz-LU-IYN" firstAttribute="bottom" secondItem="XSF-bQ-AXa" secondAttribute="bottom" id="Dng-cZ-SA7"/>
+                            <constraint firstItem="loz-LU-IYN" firstAttribute="bottom" secondItem="XSF-bQ-AXa" secondAttribute="bottom" id="cSH-H9-dZo"/>
                             <constraint firstItem="XSF-bQ-AXa" firstAttribute="top" secondItem="loz-LU-IYN" secondAttribute="top" id="qtk-aK-BEK"/>
                             <constraint firstItem="XSF-bQ-AXa" firstAttribute="leading" secondItem="loz-LU-IYN" secondAttribute="leading" id="wWZ-pV-A0f"/>
                         </constraints>
                     </view>
+                    <size key="freeformSize" width="414" height="896"/>
                     <connections>
                         <outlet property="borderView" destination="VTb-A2-ncY" id="LK1-NP-Me8"/>
                         <outlet property="headerReviewCountLabel" destination="Jk2-Pn-8VJ" id="UCU-UI-HGN"/>
@@ -234,6 +244,7 @@
                         <outlet property="star3ImageView" destination="bVh-ZI-gwy" id="4nk-MA-wqj"/>
                         <outlet property="star4ImageView" destination="Dxi-d1-UBH" id="2fo-aX-Zik"/>
                         <outlet property="star5ImageView" destination="diz-wP-VLb" id="CIJ-ei-PYK"/>
+                        <outlet property="tableViewHeight" destination="JNV-Ix-dBS" id="oDA-sB-33u"/>
                         <outlet property="writeReviewButton" destination="xi5-lX-jI6" id="H05-Pu-jNA"/>
                     </connections>
                 </viewController>

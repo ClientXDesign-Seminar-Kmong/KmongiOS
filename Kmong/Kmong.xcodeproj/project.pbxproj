@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		1F0FBA9725610F8000D41323 /* DetailVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F0FBA9625610F8000D41323 /* DetailVC.swift */; };
-		1F0FBAA4256111A900D41323 /* HeaderCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F0FBAA3256111A900D41323 /* HeaderCell.swift */; };
 		1F19AC582563FB2E001FF5D1 /* PagerTabVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F19AC572563FB2E001FF5D1 /* PagerTabVC.swift */; };
 		1F19AC5B2563FB9C001FF5D1 /* DetailDescVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F19AC5A2563FB9C001FF5D1 /* DetailDescVC.swift */; };
 		1F19AC5F25640002001FF5D1 /* DetailServiceOptionVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F19AC5E25640002001FF5D1 /* DetailServiceOptionVC.swift */; };
@@ -30,6 +29,8 @@
 		63487ACD2567E3150005BC68 /* DetailOptionTVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63487ACC2567E3150005BC68 /* DetailOptionTVC.swift */; };
 		63487AD12567E35F0005BC68 /* UIColor+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63487AD02567E35F0005BC68 /* UIColor+Extensions.swift */; };
 		639C94F32578BCE100A14D0B /* DetailExpertTVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 639C94F22578BCE100A14D0B /* DetailExpertTVC.swift */; };
+		639C95062579162C00A14D0B /* DetailHeaderCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 639C95052579162C00A14D0B /* DetailHeaderCell.swift */; };
+		639C950C2579165300A14D0B /* DetailHeaderImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 639C950B2579165300A14D0B /* DetailHeaderImage.swift */; };
 		B8218ADB255F968F003AA1AA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8218ADA255F968F003AA1AA /* AppDelegate.swift */; };
 		B8218ADD255F968F003AA1AA /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8218ADC255F968F003AA1AA /* SceneDelegate.swift */; };
 		B8218AE4255F9695003AA1AA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B8218AE3255F9695003AA1AA /* Assets.xcassets */; };
@@ -43,7 +44,6 @@
 
 /* Begin PBXFileReference section */
 		1F0FBA9625610F8000D41323 /* DetailVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailVC.swift; sourceTree = "<group>"; };
-		1F0FBAA3256111A900D41323 /* HeaderCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeaderCell.swift; sourceTree = "<group>"; };
 		1F19AC572563FB2E001FF5D1 /* PagerTabVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PagerTabVC.swift; sourceTree = "<group>"; };
 		1F19AC5A2563FB9C001FF5D1 /* DetailDescVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailDescVC.swift; sourceTree = "<group>"; };
 		1F19AC5E25640002001FF5D1 /* DetailServiceOptionVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailServiceOptionVC.swift; sourceTree = "<group>"; };
@@ -66,6 +66,8 @@
 		63487ACC2567E3150005BC68 /* DetailOptionTVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailOptionTVC.swift; sourceTree = "<group>"; };
 		63487AD02567E35F0005BC68 /* UIColor+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+Extensions.swift"; sourceTree = "<group>"; };
 		639C94F22578BCE100A14D0B /* DetailExpertTVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailExpertTVC.swift; sourceTree = "<group>"; };
+		639C95052579162C00A14D0B /* DetailHeaderCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailHeaderCell.swift; sourceTree = "<group>"; };
+		639C950B2579165300A14D0B /* DetailHeaderImage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailHeaderImage.swift; sourceTree = "<group>"; };
 		8006D2A8C3B9EB3ED014F779 /* Pods-Kmong.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Kmong.release.xcconfig"; path = "Target Support Files/Pods-Kmong/Pods-Kmong.release.xcconfig"; sourceTree = "<group>"; };
 		A041FD1B043DBD45F4AE2B5D /* Pods-Kmong.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Kmong.debug.xcconfig"; path = "Target Support Files/Pods-Kmong/Pods-Kmong.debug.xcconfig"; sourceTree = "<group>"; };
 		B8218AD7255F968F003AA1AA /* Kmong.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Kmong.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -191,12 +193,11 @@
 		B8218B0F255F98DC003AA1AA /* Cells */ = {
 			isa = PBXGroup;
 			children = (
-				1F0FBAA3256111A900D41323 /* HeaderCell.swift */,
-				63487ACC2567E3150005BC68 /* DetailOptionTVC.swift */,
+				639C95052579162C00A14D0B /* DetailHeaderCell.swift */,
 				639C94F22578BCE100A14D0B /* DetailExpertTVC.swift */,
 				373A48CC2578EA3000C069E3 /* ReviewTVC.swift */,
 				373A48CF2578EADD00C069E3 /* ReviewStruct.swift */,
-				63487ACC2567E3150005BC68 /* serviceOptionTVC.swift */,
+				63487ACC2567E3150005BC68 /* DetailOptionTVC.swift */,
 				37EAC25A2572AD1100474877 /* HomeTableViewHeaderTVC.swift */,
 				373A48AF2577419400C069E3 /* HomeHeaderCVC.swift */,
 				37EAC2672572BC7A00474877 /* HomeExpert.swift */,
@@ -210,6 +211,7 @@
 		B8218B16255FA0BC003AA1AA /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				639C950B2579165300A14D0B /* DetailHeaderImage.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -347,9 +349,10 @@
 				37EAC25B2572AD1100474877 /* HomeTableViewHeaderTVC.swift in Sources */,
 				373A48CD2578EA3000C069E3 /* ReviewTVC.swift in Sources */,
 				1F19AC5B2563FB9C001FF5D1 /* DetailDescVC.swift in Sources */,
-				1F0FBAA4256111A900D41323 /* HeaderCell.swift in Sources */,
 				1F19AC5F25640002001FF5D1 /* DetailServiceOptionVC.swift in Sources */,
 				373A48B62577F43300C069E3 /* HomeExpertType.swift in Sources */,
+				639C950C2579165300A14D0B /* DetailHeaderImage.swift in Sources */,
+				639C95062579162C00A14D0B /* DetailHeaderCell.swift in Sources */,
 				373A48D02578EADD00C069E3 /* ReviewStruct.swift in Sources */,
 				1F19AC62256400F5001FF5D1 /* DetailExpertInfoVC.swift in Sources */,
 				1F19AC652564016A001FF5D1 /* DetailReviewVC.swift in Sources */,

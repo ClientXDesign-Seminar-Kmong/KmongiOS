@@ -6,8 +6,9 @@
 //
 
 import UIKit
+import XLPagerTabStrip
 
-class ReviewVC: UIViewController {
+class ReviewVC: UIViewController,IndicatorInfoProvider{
     
     var reviews : [Review] = []
     var starAvg : Float = 0.0
@@ -23,6 +24,7 @@ class ReviewVC: UIViewController {
     @IBOutlet var star4ImageView: UIImageView!
     @IBOutlet var star5ImageView: UIImageView!
     @IBOutlet var borderView: UIView!
+    @IBOutlet var tableViewHeight: NSLayoutConstraint!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -40,18 +42,25 @@ class ReviewVC: UIViewController {
         
         reviewTableView.separatorInset.left = 20
         reviewTableView.separatorInset.right = 20
+        DispatchQueue.main.async{
+            self.tableViewHeight.constant = self.reviewTableView.contentSize.height
+        }
 
         // Do any additional setup after loading the view.
     }
-    
+    func indicatorInfo(for pagerTabStripController: PagerTabStripViewController) -> IndicatorInfo {
+        
+        return IndicatorInfo(title: "리뷰")
+    }
+
     func setReviewData() {
-        reviews.append(contentsOf: [
+        reviews=[
             Review(id: "abc01234", date: "2020.11.11.", service: "심볼/엠블럼형 로고", review: "친절하게 해주셨어요. 감사합니다.", star: 4),
             Review(id: "eifddnf", date: "2020.12.03.", service: "iOS 앱 개발 외주", review: "빠르네요. 감사합니다.", star: 3),
             Review(id: "diafknd", date: "2020.12.01.", service: "와악", review: "얄머ㅏ아", star: 2),
             Review(id: "eifddnf", date: "2020.12.03.", service: "iOS 앱 개발 외주", review: "빠르네요. 감사합니다.", star: 5),
             Review(id: "ghcfhjking", date: "2020.12.01.", service: "와악", review: "과연 과연 과연 과연 글자가 글자가 글자가 많으면 많으면 어떻게 될까요?", star: 3)
-        ])
+        ]
     }
     
     func setAvgStar() {

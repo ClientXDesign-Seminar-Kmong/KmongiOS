@@ -8,7 +8,7 @@
 import UIKit
 import XLPagerTabStrip
 
-class DetailReviewVC: UIViewController, IndicatorInfoProvider {
+class DetailReviewVC: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -16,8 +16,5 @@ class DetailReviewVC: UIViewController, IndicatorInfoProvider {
         
     }
     
-    func indicatorInfo(for pagerTabStripController: PagerTabStripViewController) -> IndicatorInfo {
-        
-        return IndicatorInfo(title: "리뷰")
-    }
+    
 }
