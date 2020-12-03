@@ -1,13 +1,13 @@
 {
   "images" : [
     {
-      "idiom" : "universal",
+      "scale" : "1x",
       "filename" : "designerMinju.png",
-      "scale" : "1x"
+      "idiom" : "universal"
     },
     {
-      "idiom" : "universal",
       "scale" : "2x",
+      "idiom" : "universal",
       "filename" : "designerMinju@2x.png"
     },
     {

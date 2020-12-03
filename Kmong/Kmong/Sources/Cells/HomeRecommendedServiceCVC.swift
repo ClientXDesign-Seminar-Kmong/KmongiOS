@@ -7,7 +7,7 @@
 
 import UIKit
 
-class HomeRecommendedServiceCell: UICollectionViewCell {
+class HomeRecommendedServiceCVC: UICollectionViewCell {
     
     static let identifier = "HomeRecommendedServiceCell"
     
@@ -15,8 +15,10 @@ class HomeRecommendedServiceCell: UICollectionViewCell {
     @IBOutlet var expertDescription: UILabel!
     @IBOutlet var expertReview: UILabel!
     
-    func setImage (imageName : String) {
-        ExpertPhoto.image = UIImage(named: imageName)
+    func setData (expert : Expert) {
+        expertDescription.text = expert.description
+        ExpertPhoto.image = expert.makeExpertImage()
+        expertReview.text = "\(String(format: "%.1f", expert.star)) | \(String(expert.reviewCount))개의 평가"
     }
     
 }
