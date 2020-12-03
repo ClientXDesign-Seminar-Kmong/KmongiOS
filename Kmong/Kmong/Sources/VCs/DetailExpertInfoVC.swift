@@ -14,6 +14,7 @@ class DetailExpertInfoVC: UIViewController, IndicatorInfoProvider {
     let expertInfoFixedValue = ["건","%","분 이내","개인"]
     let expertValue = ["515","99","30",""]
 
+    @IBOutlet weak var tableHeight: NSLayoutConstraint!
     @IBOutlet weak var expertImageView: UIImageView!
     @IBOutlet weak var expertName: UILabel!
     @IBOutlet weak var isExpertOn: UILabel!
@@ -23,6 +24,9 @@ class DetailExpertInfoVC: UIViewController, IndicatorInfoProvider {
         expertTableView.delegate = self
         expertTableView.dataSource = self
         setLayout()
+        DispatchQueue.main.async {
+            self.tableHeight.constant = self.expertTableView.contentSize.height
+        }
         
     }
     func setLayout(){

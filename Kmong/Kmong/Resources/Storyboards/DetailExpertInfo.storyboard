@@ -32,16 +32,19 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="접속중" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yaT-Pb-fgU">
-                                <rect key="frame" x="100" y="77.333333333333329" width="31.333333333333343" height="14.333333333333329"/>
+                                <rect key="frame" x="100" y="77.333333333333329" width="31.333333333333343" height="14"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="14" id="Dgv-oh-Jog"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="12"/>
                                 <color key="textColor" systemColor="systemGreenColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="v8X-Q8-eyV">
-                                <rect key="frame" x="100" y="116" width="275" height="188"/>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="47" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="v8X-Q8-eyV">
+                                <rect key="frame" x="100" y="115.66666666666669" width="275" height="188"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="188" id="Z4b-24-wvU"/>
+                                    <constraint firstAttribute="height" constant="188" id="gyR-LQ-l5g"/>
                                 </constraints>
                                 <inset key="separatorInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                                 <prototypes>
@@ -101,7 +104,6 @@
                             <constraint firstItem="gBD-Pd-00L" firstAttribute="trailing" secondItem="CKR-rR-oMF" secondAttribute="trailing" constant="291" id="drg-V5-wlP"/>
                             <constraint firstItem="Fhv-8d-tex" firstAttribute="top" secondItem="Y2q-sj-wSB" secondAttribute="top" constant="52" id="eCG-Cn-lfr"/>
                             <constraint firstItem="v8X-Q8-eyV" firstAttribute="top" secondItem="yaT-Pb-fgU" secondAttribute="bottom" constant="24.329999999999998" id="geP-Mh-i9V"/>
-                            <constraint firstAttribute="bottom" secondItem="v8X-Q8-eyV" secondAttribute="bottom" constant="25" id="kmA-2k-5X0"/>
                             <constraint firstItem="yaT-Pb-fgU" firstAttribute="leading" secondItem="Fhv-8d-tex" secondAttribute="leading" id="n3t-pC-Sku"/>
                             <constraint firstItem="gBD-Pd-00L" firstAttribute="trailing" secondItem="v8X-Q8-eyV" secondAttribute="trailing" id="poP-YE-ns0"/>
                         </constraints>
@@ -112,6 +114,7 @@
                         <outlet property="expertName" destination="Fhv-8d-tex" id="ggV-4e-TdE"/>
                         <outlet property="expertTableView" destination="v8X-Q8-eyV" id="Der-sq-AZh"/>
                         <outlet property="isExpertOn" destination="yaT-Pb-fgU" id="uJF-av-2GB"/>
+                        <outlet property="tableHeight" destination="gyR-LQ-l5g" id="7tw-OP-M8t"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="VOw-YW-EOR" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
