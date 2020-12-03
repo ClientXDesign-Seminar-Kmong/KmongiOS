@@ -31,6 +31,7 @@ class ReviewVC: UIViewController {
         setAvgStar()
 
         headerReviewCountLabel.font = UIFont(name: "AppleSDGothicNeo-SemiBold", size: 18)
+        headerReviewCountLabel.text = "리뷰 \(reviews.count)건"
         
         writeReviewButton.titleLabel?.font = UIFont(name: "AppleSDGothicNeo-Medium", size: 14)
         writeReviewButton.titleLabel?.textColor = UIColor(red: 101/255, green: 101/255, blue: 101/255, alpha: 0)
