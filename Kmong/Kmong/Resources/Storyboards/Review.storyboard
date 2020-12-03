@@ -159,7 +159,7 @@
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="친절하게 해주셨어요. 감사합니다." textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="k6A-Da-LUa">
-                                                    <rect key="frame" x="20" y="82" width="184" height="17"/>
+                                                    <rect key="frame" x="20" y="82" width="373" height="17"/>
                                                     <fontDescription key="fontDescription" name="AppleSDGothicNeo-Medium" family="Apple SD Gothic Neo" pointSize="14"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
@@ -173,6 +173,7 @@
                                                 <constraint firstItem="L61-dw-OPI" firstAttribute="leading" secondItem="HEH-1z-yyR" secondAttribute="trailing" id="NdT-An-dwh"/>
                                                 <constraint firstItem="k6A-Da-LUa" firstAttribute="leading" secondItem="6X5-hh-nZF" secondAttribute="leading" id="TA7-M8-FNK"/>
                                                 <constraint firstAttribute="trailing" secondItem="0lt-Pl-1cS" secondAttribute="trailing" constant="21" id="UK1-bE-7I1"/>
+                                                <constraint firstItem="k6A-Da-LUa" firstAttribute="trailing" secondItem="0lt-Pl-1cS" secondAttribute="trailing" id="UuY-OD-INJ"/>
                                                 <constraint firstItem="0lt-Pl-1cS" firstAttribute="top" secondItem="HoN-Gh-aIi" secondAttribute="top" id="Vix-ym-3VM"/>
                                                 <constraint firstItem="HoN-Gh-aIi" firstAttribute="top" secondItem="L61-dw-OPI" secondAttribute="top" id="Vzd-J7-fXq"/>
                                                 <constraint firstItem="L61-dw-OPI" firstAttribute="centerY" secondItem="HEH-1z-yyR" secondAttribute="centerY" id="b33-FR-9kb"/>

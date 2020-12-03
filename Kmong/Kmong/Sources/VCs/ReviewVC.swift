@@ -44,7 +44,7 @@ class ReviewVC: UIViewController {
             Review(id: "eifddnf", date: "2020.12.03.", service: "iOS 앱 개발 외주", review: "빠르네요. 감사합니다.", star: 3),
             Review(id: "diafknd", date: "2020.12.01.", service: "와악", review: "얄머ㅏ아", star: 2),
             Review(id: "eifddnf", date: "2020.12.03.", service: "iOS 앱 개발 외주", review: "빠르네요. 감사합니다.", star: 5),
-            Review(id: "diafknd", date: "2020.12.01.", service: "와악", review: "얄머ㅏ아", star: 3)
+            Review(id: "ghcfhjking", date: "2020.12.01.", service: "와악", review: "과연 과연 과연 과연 글자가 글자가 글자가 많으면 많으면 어떻게 될까요?", star: 3)
         ])
     }
     
