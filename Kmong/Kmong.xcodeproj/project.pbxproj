@@ -22,6 +22,7 @@
 		63487AC72567DABE0005BC68 /* DetailServiceOption.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 63487AC62567DABE0005BC68 /* DetailServiceOption.storyboard */; };
 		63487ACD2567E3150005BC68 /* DetailOptionTVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63487ACC2567E3150005BC68 /* DetailOptionTVC.swift */; };
 		63487AD12567E35F0005BC68 /* UIColor+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63487AD02567E35F0005BC68 /* UIColor+Extensions.swift */; };
+		639C94F32578BCE100A14D0B /* DetailExpertTVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 639C94F22578BCE100A14D0B /* DetailExpertTVC.swift */; };
 		B8218ADB255F968F003AA1AA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8218ADA255F968F003AA1AA /* AppDelegate.swift */; };
 		B8218ADD255F968F003AA1AA /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8218ADC255F968F003AA1AA /* SceneDelegate.swift */; };
 		B8218AE4255F9695003AA1AA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B8218AE3255F9695003AA1AA /* Assets.xcassets */; };
@@ -50,6 +51,7 @@
 		63487AC62567DABE0005BC68 /* DetailServiceOption.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = DetailServiceOption.storyboard; sourceTree = "<group>"; };
 		63487ACC2567E3150005BC68 /* DetailOptionTVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailOptionTVC.swift; sourceTree = "<group>"; };
 		63487AD02567E35F0005BC68 /* UIColor+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+Extensions.swift"; sourceTree = "<group>"; };
+		639C94F22578BCE100A14D0B /* DetailExpertTVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailExpertTVC.swift; sourceTree = "<group>"; };
 		8006D2A8C3B9EB3ED014F779 /* Pods-Kmong.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Kmong.release.xcconfig"; path = "Target Support Files/Pods-Kmong/Pods-Kmong.release.xcconfig"; sourceTree = "<group>"; };
 		A041FD1B043DBD45F4AE2B5D /* Pods-Kmong.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Kmong.debug.xcconfig"; path = "Target Support Files/Pods-Kmong/Pods-Kmong.debug.xcconfig"; sourceTree = "<group>"; };
 		B8218AD7255F968F003AA1AA /* Kmong.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Kmong.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -178,6 +180,7 @@
 				37EAC25A2572AD1100474877 /* HomeTableViewHeaderCell.swift */,
 				37EAC25E2572B01700474877 /* HomeRecServiceTableViewCell.swift */,
 				37EAC2622572B15C00474877 /* HomeRecommendedServiceCell.swift */,
+				639C94F22578BCE100A14D0B /* DetailExpertTVC.swift */,
 			);
 			path = Cells;
 			sourceTree = "<group>";
@@ -330,6 +333,7 @@
 				B8218ADB255F968F003AA1AA /* AppDelegate.swift in Sources */,
 				37EAC2682572BC7A00474877 /* HomeExpert.swift in Sources */,
 				63487AD12567E35F0005BC68 /* UIColor+Extensions.swift in Sources */,
+				639C94F32578BCE100A14D0B /* DetailExpertTVC.swift in Sources */,
 				B8218ADD255F968F003AA1AA /* SceneDelegate.swift in Sources */,
 				1F0FBA9725610F8000D41323 /* DetailVC.swift in Sources */,
 			);
