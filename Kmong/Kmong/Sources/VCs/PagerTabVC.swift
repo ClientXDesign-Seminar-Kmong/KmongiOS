@@ -80,7 +80,7 @@ class PagerTabVC: ButtonBarPagerTabStripViewController {
                 self.heightDelegate?.setHeight(329.0)
             }
             else if x == width*3{
-                self.heightDelegate?.setHeight(2000.0)    }
+                self.heightDelegate?.setHeight(725.0)    }
         }
     
     

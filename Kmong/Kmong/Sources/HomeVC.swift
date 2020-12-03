@@ -121,7 +121,7 @@ extension HomeVC : UITableViewDataSource {
             cell.setProgrammerData()
         }
         cell.setCell(type: expertType[indexPath.item])
-        cell.naviHere = self.navigationController
+        cell.vcHere = self
         return cell
     }
 }

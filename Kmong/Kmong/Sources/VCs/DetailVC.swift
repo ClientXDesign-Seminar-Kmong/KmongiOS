@@ -168,7 +168,9 @@ class DetailVC: UIViewController, UICollectionViewDataSource,HeightDelegate {
             heartView.layer.borderColor = UIColor(red: 229/255, green: 229/255, blue: 229/255, alpha: 1).cgColor
         }
     }
-    
+    @IBAction func touchUpBack(_ sender: Any){
+        self.dismiss(animated: true, completion: nil)
+    }
     var statusBarFrame: CGRect!
     var statusBarView: UIView!
     var offset: CGFloat!

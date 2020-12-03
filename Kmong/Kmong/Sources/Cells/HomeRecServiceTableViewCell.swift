@@ -16,7 +16,7 @@ class HomeRecServiceTableViewCell: UITableViewCell, UICollectionViewDelegate {
     
     var ServiceCells : [String] = ["디자인", "프로그래밍"]
     var experts : [Expert] = []
-    var naviHere : UINavigationController?
+    var vcHere : HomeVC?
     //    var programmingExperts : [Expert] = []
     
     
@@ -97,8 +97,9 @@ extension HomeRecServiceTableViewCell: UICollectionViewDelegateFlowLayout {
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         let storyboard = UIStoryboard(name: "Detail", bundle: nil)
         
-        if let dvc = storyboard.instantiateViewController(identifier: "DetailVC") as? DetailVC {
-            self.naviHere?.pushViewController(dvc, animated: true)
+        if let dvc = storyboard.instantiateViewController(identifier: "DetailNavigation") as? UINavigationController {
+            dvc.modalPresentationStyle = .fullScreen
+            self.vcHere?.present(dvc,animated: true)
             
         }
     }

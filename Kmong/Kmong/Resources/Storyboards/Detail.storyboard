@@ -562,7 +562,11 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="35S-IZ-GqX">
-                        <barButtonItem key="leftBarButtonItem" image="icArrowLeft" id="aOv-Zz-E7z"/>
+                        <barButtonItem key="leftBarButtonItem" image="icArrowLeft" id="aOv-Zz-E7z">
+                            <connections>
+                                <action selector="touchUpBack:" destination="8Dx-rz-sYW" id="gdc-hM-fIz"/>
+                            </connections>
+                        </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" image="icShare" id="Quo-yL-762"/>
                     </navigationItem>
                     <connections>
@@ -585,7 +589,8 @@
         <!--Navigation Controller-->
         <scene sceneID="OoR-aI-cyz">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Un5-Uw-hDg" sceneMemberID="viewController">
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Zi3-ld-s6q" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <navigationController storyboardIdentifier="DetailNavigation" automaticallyAdjustsScrollViewInsets="NO" id="Un5-Uw-hDg" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="2CZ-2X-eNa">
                         <rect key="frame" x="0.0" y="44" width="414" height="44"/>
@@ -596,7 +601,6 @@
                         <segue destination="8Dx-rz-sYW" kind="relationship" relationship="rootViewController" id="fPl-6f-MKu"/>
                     </connections>
                 </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="Zi3-ld-s6q" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="687" y="-65"/>
         </scene>
