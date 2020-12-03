@@ -27,6 +27,9 @@
                                             <constraint firstAttribute="width" constant="44" id="nbA-yb-NG5"/>
                                         </constraints>
                                         <state key="normal" image="icBell"/>
+                                        <connections>
+                                            <action selector="TouchUpAlert:" destination="RiQ-TJ-XX9" eventType="touchUpInside" id="Dou-av-WSP"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3vI-xw-si6">
                                         <rect key="frame" x="365" y="2" width="44" height="44"/>
@@ -35,6 +38,9 @@
                                             <constraint firstAttribute="height" constant="44" id="s0s-2G-hvc"/>
                                         </constraints>
                                         <state key="normal" image="icSearch"/>
+                                        <connections>
+                                            <action selector="TouchUpSearch:" destination="RiQ-TJ-XX9" eventType="touchUpInside" id="Agj-M6-cbP"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bjr-H2-PL7">
                                         <rect key="frame" x="163.5" y="9" width="87" height="25"/>
@@ -397,13 +403,21 @@
                                     <constraint firstAttribute="trailing" secondItem="U9T-Tz-6l6" secondAttribute="trailing" constant="5" id="zeJ-a0-zsK"/>
                                 </constraints>
                             </view>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="여긴 카테고리" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UtF-vx-STU">
+                                <rect key="frame" x="160.5" y="437.5" width="93" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="cga-B0-MIm"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="Z9r-br-Nwd" firstAttribute="leading" secondItem="QCI-ak-qfp" secondAttribute="leading" id="5JK-rx-AU6"/>
+                            <constraint firstItem="UtF-vx-STU" firstAttribute="centerX" secondItem="QCI-ak-qfp" secondAttribute="centerX" id="ZLq-ct-Ysg"/>
                             <constraint firstItem="cga-B0-MIm" firstAttribute="trailing" secondItem="Z9r-br-Nwd" secondAttribute="trailing" id="bGv-ag-X1p"/>
                             <constraint firstItem="Z9r-br-Nwd" firstAttribute="top" secondItem="cga-B0-MIm" secondAttribute="top" id="dAv-5U-D1e"/>
+                            <constraint firstItem="UtF-vx-STU" firstAttribute="centerY" secondItem="QCI-ak-qfp" secondAttribute="centerY" id="nes-X3-nD3"/>
                         </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="카테고리" image="icNavCategoryUnselected" selectedImage="icNavCategorySelected" id="R2J-Ih-JEE"/>
@@ -463,11 +477,19 @@
                                     <constraint firstItem="cyO-9o-g7u" firstAttribute="top" secondItem="XFK-H1-ffM" secondAttribute="top" constant="2" id="yde-lT-JJv"/>
                                 </constraints>
                             </view>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="여긴 마이크몽" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rjy-Ur-3xZ">
+                                <rect key="frame" x="160.5" y="437.5" width="93" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="16t-Nm-D4e"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="XFK-H1-ffM" firstAttribute="leading" secondItem="vBY-Ms-1Gj" secondAttribute="leading" id="09u-5X-bRU"/>
+                            <constraint firstItem="rjy-Ur-3xZ" firstAttribute="centerY" secondItem="vBY-Ms-1Gj" secondAttribute="centerY" id="8FZ-8w-Hgb"/>
+                            <constraint firstItem="rjy-Ur-3xZ" firstAttribute="centerX" secondItem="vBY-Ms-1Gj" secondAttribute="centerX" id="H4k-ZX-QuP"/>
                             <constraint firstItem="16t-Nm-D4e" firstAttribute="trailing" secondItem="XFK-H1-ffM" secondAttribute="trailing" id="NWV-VG-WiD"/>
                             <constraint firstItem="XFK-H1-ffM" firstAttribute="top" secondItem="16t-Nm-D4e" secondAttribute="top" id="dkw-Ic-YaK"/>
                         </constraints>
@@ -529,13 +551,21 @@
                                     <constraint firstAttribute="height" constant="48" id="tEG-Jh-sy4"/>
                                 </constraints>
                             </view>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="여긴 메시지" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Tzt-Xl-JWe">
+                                <rect key="frame" x="168" y="437.5" width="78" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6GD-mE-WDF"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="9Jl-dr-2Bn" firstAttribute="top" secondItem="6GD-mE-WDF" secondAttribute="top" id="EbP-ZE-Mqo"/>
                             <constraint firstItem="9Jl-dr-2Bn" firstAttribute="leading" secondItem="CDQ-ax-9MG" secondAttribute="leading" id="bAb-af-HfO"/>
+                            <constraint firstItem="Tzt-Xl-JWe" firstAttribute="centerY" secondItem="CDQ-ax-9MG" secondAttribute="centerY" id="dy3-H7-EEu"/>
                             <constraint firstItem="6GD-mE-WDF" firstAttribute="trailing" secondItem="9Jl-dr-2Bn" secondAttribute="trailing" id="e66-ay-clM"/>
+                            <constraint firstItem="Tzt-Xl-JWe" firstAttribute="centerX" secondItem="CDQ-ax-9MG" secondAttribute="centerX" id="spb-ja-32o"/>
                         </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="메시지" image="icNavMessageUnselected" selectedImage="icNavMessageSelected" id="4pj-31-egH"/>

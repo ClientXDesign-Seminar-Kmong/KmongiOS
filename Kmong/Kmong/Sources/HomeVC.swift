@@ -58,6 +58,12 @@ class HomeVC: UIViewController {
         present(alert, animated: true)
     }
     
+    @IBAction func TouchUpAlert(_ sender: Any) {
+        self.simpleAlert()
+    }
+    @IBAction func TouchUpSearch(_ sender: Any) {
+        self.simpleAlert()
+    }
     @IBAction func TouchUpDesign(_ sender: Any) {
         self.simpleAlert()
     }
