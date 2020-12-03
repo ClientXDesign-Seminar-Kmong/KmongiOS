@@ -503,10 +503,10 @@
                                             <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="NFT-hm-Kzc">
                                                 <rect key="frame" x="0.0" y="462" width="414" height="603.5"/>
                                                 <constraints>
-                                                    <constraint firstAttribute="height" priority="250" constant="603.5" id="DmD-dG-5qg"/>
+                                                    <constraint firstAttribute="height" constant="603.5" id="DmD-dG-5qg"/>
                                                 </constraints>
                                                 <connections>
-                                                    <segue destination="WOJ-cb-bdV" kind="embed" id="p8z-Ii-6vk"/>
+                                                    <segue destination="WOJ-cb-bdV" kind="embed" identifier="segue" id="p8z-Ii-6vk"/>
                                                 </connections>
                                             </containerView>
                                         </subviews>
@@ -570,6 +570,7 @@
                         <outlet property="currentPage" destination="hED-SI-cUD" id="jjL-cm-gYF"/>
                         <outlet property="headerCollectionView" destination="bSz-cd-VfD" id="NZq-Wh-J2V"/>
                         <outlet property="heartView" destination="ETk-i2-BhU" id="j9e-pJ-Lk9"/>
+                        <outlet property="height" destination="DmD-dG-5qg" id="rhL-gd-DZD"/>
                         <outlet property="inquiryView" destination="ZCM-lf-22Z" id="J2q-4o-OP6"/>
                         <outlet property="pageNumberView" destination="9u7-Yi-iOE" id="Rcq-QE-ISc"/>
                         <outlet property="purchaseView" destination="n1M-rN-bH8" id="fhp-Oi-wKU"/>
@@ -720,6 +721,9 @@
                             </view>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="비슷한 서비스" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rkn-CG-uOl">
                                 <rect key="frame" x="20" y="584" width="87" height="19.5"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="19.5" id="MFE-cd-WGm"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="16"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -734,6 +738,7 @@
                             <constraint firstItem="9oa-hw-Ii9" firstAttribute="top" secondItem="JSj-7S-fUe" secondAttribute="bottom" constant="20" id="31d-B2-H1M"/>
                             <constraint firstItem="rkn-CG-uOl" firstAttribute="leading" secondItem="V0Q-BB-ifu" secondAttribute="leading" constant="20" id="3Jr-N5-OVo"/>
                             <constraint firstItem="V0Q-BB-ifu" firstAttribute="trailing" secondItem="PQZ-xq-UCU" secondAttribute="trailing" constant="20" id="7Gz-9p-PlF"/>
+                            <constraint firstItem="rkn-CG-uOl" firstAttribute="bottom" secondItem="V0Q-BB-ifu" secondAttribute="bottom" id="ACL-OR-fzB"/>
                             <constraint firstItem="E2d-SB-sPQ" firstAttribute="top" secondItem="9oa-hw-Ii9" secondAttribute="bottom" constant="40" id="AG5-Yy-hrc"/>
                             <constraint firstItem="zjV-Wy-WUd" firstAttribute="top" secondItem="psd-fk-dRL" secondAttribute="bottom" constant="20" id="APe-F5-4dY"/>
                             <constraint firstItem="V0Q-BB-ifu" firstAttribute="trailing" secondItem="5CW-C2-Aeu" secondAttribute="trailing" constant="20" id="CYB-He-c2t"/>

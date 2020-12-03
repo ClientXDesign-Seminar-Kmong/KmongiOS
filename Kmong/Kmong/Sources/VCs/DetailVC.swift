@@ -10,7 +10,13 @@ import XLPagerTabStrip
 import InfiniteCarouselCollectionView
 
 // CardCollectionView DataSource
-class DetailVC: UIViewController, UICollectionViewDataSource {
+class DetailVC: UIViewController, UICollectionViewDataSource,HeightDelegate {
+    func setHeight(_ height: CGFloat) {
+        self.height.constant = height
+        self.view.layoutIfNeeded()
+    }
+    
+    @IBOutlet weak var height: NSLayoutConstraint!
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         
         return 10
@@ -38,7 +44,12 @@ class DetailVC: UIViewController, UICollectionViewDataSource {
     @IBOutlet weak var cardCollectionView: UICollectionView!
     
     var headerImages: [HeaderImages] = []
-    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+            if segue.identifier == "segue" {
+                let viewController : PagerTabVC = segue.destination as! PagerTabVC
+                    viewController.heightDelegate = self
+            }
+        }
     override func viewDidLoad() {
         super.viewDidLoad()
         
