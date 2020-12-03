@@ -8,7 +8,7 @@
 import UIKit
 
 class HomeHeaderCVC: UICollectionViewCell {
-    static let identifier = "HomeHeaderCell"
+    static let identifier = "HomeHeaderCVC"
     
     @IBOutlet var headerImageView: UIImageView!
     

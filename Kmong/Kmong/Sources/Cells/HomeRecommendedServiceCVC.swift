@@ -7,7 +7,7 @@
 
 import UIKit
 
-class HomeRecommendedServiceCell: UICollectionViewCell {
+class HomeRecommendedServiceCVC: UICollectionViewCell {
     
     static let identifier = "HomeRecommendedServiceCell"
     

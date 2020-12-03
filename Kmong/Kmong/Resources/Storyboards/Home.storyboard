@@ -62,43 +62,42 @@
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="7bl-bC-a2b">
                                 <rect key="frame" x="0.0" y="92" width="414" height="721"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                                <view key="tableHeaderView" contentMode="scaleToFill" id="DFV-Na-bId" customClass="HomeTableViewHeaderCell" customModule="Kmong" customModuleProvider="target">
+                                <view key="tableHeaderView" contentMode="scaleToFill" id="DFV-Na-bId">
                                     <rect key="frame" x="0.0" y="0.0" width="414" height="384"/>
                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                     <subviews>
-                                        <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="9Mn-uM-ik9">
-                                            <rect key="frame" x="0.0" y="0.0" width="414" height="160"/>
+                                        <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="9Mn-uM-ik9" customClass="InfiniteCollectionView" customModule="InfiniteLayout">
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="176.5"/>
                                             <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                             <constraints>
-                                                <constraint firstAttribute="height" constant="160" id="Vx8-FB-bXa"/>
+                                                <constraint firstAttribute="width" secondItem="9Mn-uM-ik9" secondAttribute="height" multiplier="375:160" id="DEZ-1J-cps"/>
                                             </constraints>
-                                            <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="8" minimumInteritemSpacing="8" id="sAj-FC-9Vd">
-                                                <size key="itemSize" width="335" height="144"/>
-                                                <size key="estimatedItemSize" width="335" height="144"/>
+                                            <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="0.0" minimumInteritemSpacing="1000" id="sAj-FC-9Vd">
+                                                <size key="itemSize" width="340" height="144"/>
                                                 <size key="headerReferenceSize" width="0.0" height="0.0"/>
                                                 <size key="footerReferenceSize" width="0.0" height="0.0"/>
-                                                <inset key="sectionInset" minX="0.0" minY="8" maxX="0.0" maxY="8"/>
+                                                <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                                             </collectionViewFlowLayout>
                                             <cells>
-                                                <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="HomeHeaderCell" id="Fb3-zR-Kdy" customClass="HomeHeaderCell" customModule="Kmong" customModuleProvider="target">
-                                                    <rect key="frame" x="0.0" y="8" width="335" height="144"/>
+                                                <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="HomeHeaderCVC" id="Fb3-zR-Kdy" customClass="HomeHeaderCVC" customModule="Kmong" customModuleProvider="target">
+                                                    <rect key="frame" x="0.0" y="16.5" width="340" height="144"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="KVr-F7-2id">
-                                                        <rect key="frame" x="0.0" y="0.0" width="335" height="144"/>
+                                                        <rect key="frame" x="0.0" y="0.0" width="340" height="144"/>
                                                         <autoresizingMask key="autoresizingMask"/>
                                                         <subviews>
                                                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="homeCard2" translatesAutoresizingMaskIntoConstraints="NO" id="YHO-rq-H3h">
-                                                                <rect key="frame" x="0.0" y="0.0" width="335" height="144"/>
+                                                                <rect key="frame" x="4" y="8" width="332" height="128"/>
                                                             </imageView>
                                                         </subviews>
                                                         <constraints>
-                                                            <constraint firstItem="YHO-rq-H3h" firstAttribute="top" secondItem="KVr-F7-2id" secondAttribute="top" id="W2C-Cb-IvJ"/>
-                                                            <constraint firstAttribute="trailing" secondItem="YHO-rq-H3h" secondAttribute="trailing" id="bm5-do-28Y"/>
-                                                            <constraint firstAttribute="bottom" secondItem="YHO-rq-H3h" secondAttribute="bottom" id="df2-hV-sCI"/>
-                                                            <constraint firstItem="YHO-rq-H3h" firstAttribute="leading" secondItem="KVr-F7-2id" secondAttribute="leading" id="sfA-eW-evz"/>
+                                                            <constraint firstItem="YHO-rq-H3h" firstAttribute="top" secondItem="KVr-F7-2id" secondAttribute="top" constant="8" id="W2C-Cb-IvJ"/>
+                                                            <constraint firstAttribute="trailing" secondItem="YHO-rq-H3h" secondAttribute="trailing" constant="4" id="bm5-do-28Y"/>
+                                                            <constraint firstAttribute="bottom" secondItem="YHO-rq-H3h" secondAttribute="bottom" constant="8" id="df2-hV-sCI"/>
+                                                            <constraint firstItem="YHO-rq-H3h" firstAttribute="leading" secondItem="KVr-F7-2id" secondAttribute="leading" constant="4" id="sfA-eW-evz"/>
                                                         </constraints>
                                                     </collectionViewCellContentView>
-                                                    <size key="customSize" width="335" height="144"/>
+                                                    <size key="customSize" width="340" height="144"/>
                                                     <connections>
                                                         <outlet property="headerImageView" destination="YHO-rq-H3h" id="ci5-oR-LVX"/>
                                                     </connections>
@@ -106,13 +105,13 @@
                                             </cells>
                                         </collectionView>
                                         <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="bwc-vy-C6Q">
-                                            <rect key="frame" x="41" y="176" width="332" height="192"/>
+                                            <rect key="frame" x="41" y="192.5" width="332" height="175.5"/>
                                             <subviews>
                                                 <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="lzY-ep-6kj">
-                                                    <rect key="frame" x="0.0" y="0.0" width="83" height="192"/>
+                                                    <rect key="frame" x="0.0" y="0.0" width="83" height="175.5"/>
                                                     <subviews>
                                                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gid-Cc-mCL">
-                                                            <rect key="frame" x="0.0" y="0.0" width="83" height="64"/>
+                                                            <rect key="frame" x="0.0" y="0.0" width="83" height="58.5"/>
                                                             <state key="normal" image="HomeCategoryic_design"/>
                                                             <connections>
                                                                 <action selector="TouchUpDesign:" destination="r72-va-yux" eventType="touchUpInside" id="WIb-2j-lsy"/>
@@ -120,7 +119,7 @@
                                                             </connections>
                                                         </button>
                                                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8Un-Ct-oyJ">
-                                                            <rect key="frame" x="0.0" y="64" width="83" height="64"/>
+                                                            <rect key="frame" x="0.0" y="58.5" width="83" height="58.5"/>
                                                             <state key="normal" image="homeCategoryIcTranslate"/>
                                                             <connections>
                                                                 <action selector="TouchUpTranslate:" destination="r72-va-yux" eventType="touchUpInside" id="4X2-RQ-SsH"/>
@@ -128,7 +127,7 @@
                                                             </connections>
                                                         </button>
                                                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Akr-9p-3so">
-                                                            <rect key="frame" x="0.0" y="128" width="83" height="64"/>
+                                                            <rect key="frame" x="0.0" y="117" width="83" height="58.5"/>
                                                             <state key="normal" image="homeCategoryIcFortune"/>
                                                             <connections>
                                                                 <action selector="TouchUpConsult:" destination="r72-va-yux" eventType="touchUpInside" id="U9g-1S-wBH"/>
@@ -138,10 +137,10 @@
                                                     </subviews>
                                                 </stackView>
                                                 <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="ZGQ-AL-yMe">
-                                                    <rect key="frame" x="83" y="0.0" width="83" height="192"/>
+                                                    <rect key="frame" x="83" y="0.0" width="83" height="175.5"/>
                                                     <subviews>
                                                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2mh-fL-U5G">
-                                                            <rect key="frame" x="0.0" y="0.0" width="83" height="64"/>
+                                                            <rect key="frame" x="0.0" y="0.0" width="83" height="58.5"/>
                                                             <state key="normal" image="homeCategoryIcProgramming"/>
                                                             <connections>
                                                                 <action selector="TouchUpIT:" destination="DFV-Na-bId" eventType="touchUpInside" id="4QM-r0-rtw"/>
@@ -149,7 +148,7 @@
                                                             </connections>
                                                         </button>
                                                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HPg-S5-PCt">
-                                                            <rect key="frame" x="0.0" y="64" width="83" height="64"/>
+                                                            <rect key="frame" x="0.0" y="58.5" width="83" height="58.5"/>
                                                             <state key="normal" image="homeCategoryIcDocument"/>
                                                             <connections>
                                                                 <action selector="TouchUpWriting:" destination="r72-va-yux" eventType="touchUpInside" id="TBV-Zo-UoC"/>
@@ -157,7 +156,7 @@
                                                             </connections>
                                                         </button>
                                                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Fud-E4-lIC">
-                                                            <rect key="frame" x="0.0" y="128" width="83" height="64"/>
+                                                            <rect key="frame" x="0.0" y="117" width="83" height="58.5"/>
                                                             <state key="normal" image="homeCategoryIcLesson"/>
                                                             <connections>
                                                                 <action selector="TouchUpLesson:" destination="r72-va-yux" eventType="touchUpInside" id="f4o-BR-Dfh"/>
@@ -167,10 +166,10 @@
                                                     </subviews>
                                                 </stackView>
                                                 <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="gxc-4B-q6h">
-                                                    <rect key="frame" x="166" y="0.0" width="83" height="192"/>
+                                                    <rect key="frame" x="166" y="0.0" width="83" height="175.5"/>
                                                     <subviews>
                                                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Z4h-So-Ml6">
-                                                            <rect key="frame" x="0.0" y="0.0" width="83" height="64"/>
+                                                            <rect key="frame" x="0.0" y="0.0" width="83" height="58.5"/>
                                                             <state key="normal" image="homeCategoryIcVideo"/>
                                                             <connections>
                                                                 <action selector="TouchUpVideo:" destination="r72-va-yux" eventType="touchUpInside" id="nVr-Uh-5BH"/>
@@ -178,7 +177,7 @@
                                                             </connections>
                                                         </button>
                                                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Aem-Fz-a8X">
-                                                            <rect key="frame" x="0.0" y="64" width="83" height="64"/>
+                                                            <rect key="frame" x="0.0" y="58.5" width="83" height="58.5"/>
                                                             <state key="normal" image="homeCategoryIcConsulting"/>
                                                             <connections>
                                                                 <action selector="TouchUpBusiness:" destination="r72-va-yux" eventType="touchUpInside" id="BnE-11-EYs"/>
@@ -186,7 +185,7 @@
                                                             </connections>
                                                         </button>
                                                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Z1j-ac-E7h">
-                                                            <rect key="frame" x="0.0" y="128" width="83" height="64"/>
+                                                            <rect key="frame" x="0.0" y="117" width="83" height="58.5"/>
                                                             <state key="normal" image="homeCategoryIcOrder"/>
                                                             <connections>
                                                                 <action selector="TouchUpDIY:" destination="r72-va-yux" eventType="touchUpInside" id="RfG-RH-qdE"/>
@@ -196,10 +195,10 @@
                                                     </subviews>
                                                 </stackView>
                                                 <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="SzD-gw-QfZ">
-                                                    <rect key="frame" x="249" y="0.0" width="83" height="192"/>
+                                                    <rect key="frame" x="249" y="0.0" width="83" height="175.5"/>
                                                     <subviews>
                                                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5V1-DX-0Ux">
-                                                            <rect key="frame" x="0.0" y="0.0" width="83" height="64"/>
+                                                            <rect key="frame" x="0.0" y="0.0" width="83" height="58.5"/>
                                                             <state key="normal" image="homeCategoryIcMarketing"/>
                                                             <connections>
                                                                 <action selector="TouchUpMarketing:" destination="r72-va-yux" eventType="touchUpInside" id="VbZ-Nv-bdz"/>
@@ -207,7 +206,7 @@
                                                             </connections>
                                                         </button>
                                                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eic-tB-Ue8">
-                                                            <rect key="frame" x="0.0" y="64" width="83" height="64"/>
+                                                            <rect key="frame" x="0.0" y="58.5" width="83" height="58.5"/>
                                                             <state key="normal" image="homeCategoryIcJob"/>
                                                             <connections>
                                                                 <action selector="TouchUpCareer:" destination="DFV-Na-bId" eventType="touchUpInside" id="22W-8l-Aks"/>
@@ -215,7 +214,7 @@
                                                             </connections>
                                                         </button>
                                                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yIO-GD-MXG">
-                                                            <rect key="frame" x="0.0" y="128" width="83" height="64"/>
+                                                            <rect key="frame" x="0.0" y="117" width="83" height="58.5"/>
                                                             <state key="normal" image="homeCategoryIcBook"/>
                                                             <connections>
                                                                 <action selector="TouchUpEbook:" destination="r72-va-yux" eventType="touchUpInside" id="fwu-tQ-j7y"/>
@@ -228,7 +227,6 @@
                                         </stackView>
                                     </subviews>
                                     <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                                    <accessibility key="accessibilityConfiguration" identifier="HomeTableViewHeaderCell"/>
                                     <constraints>
                                         <constraint firstAttribute="bottom" secondItem="bwc-vy-C6Q" secondAttribute="bottom" constant="16" id="1mg-b7-K0w"/>
                                         <constraint firstAttribute="trailing" secondItem="9Mn-uM-ik9" secondAttribute="trailing" id="9JD-Tv-GCF"/>
@@ -237,9 +235,6 @@
                                         <constraint firstItem="9Mn-uM-ik9" firstAttribute="top" secondItem="DFV-Na-bId" secondAttribute="top" id="cwP-yS-c7a"/>
                                         <constraint firstItem="bwc-vy-C6Q" firstAttribute="top" secondItem="9Mn-uM-ik9" secondAttribute="bottom" constant="16" id="t9G-ww-ZO3"/>
                                     </constraints>
-                                    <connections>
-                                        <outlet property="headerCollectionView" destination="9Mn-uM-ik9" id="cKD-x4-6pm"/>
-                                    </connections>
                                 </view>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="HomeRecServiceTVC" rowHeight="318" id="OL1-Nf-xIc" customClass="HomeRecServiceTableViewCell" customModule="Kmong" customModuleProvider="target">
@@ -268,7 +263,7 @@
                                                         <inset key="sectionInset" minX="20" minY="0.0" maxX="20" maxY="0.0"/>
                                                     </collectionViewFlowLayout>
                                                     <cells>
-                                                        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="HomeRecommendedServiceCell" id="6eE-NW-ES5" customClass="HomeRecommendedServiceCell" customModule="Kmong" customModuleProvider="target">
+                                                        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="HomeRecommendedServiceCell" id="6eE-NW-ES5" customClass="HomeRecommendedServiceCVC" customModule="Kmong" customModuleProvider="target">
                                                             <rect key="frame" x="20" y="15.5" width="256" height="238"/>
                                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                             <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="f58-3Y-xiD">
@@ -355,6 +350,7 @@
                     </view>
                     <tabBarItem key="tabBarItem" title="홈" image="icNavHomeSelected" selectedImage="icNavHomeSelected" id="ALi-nu-VtC"/>
                     <connections>
+                        <outlet property="homeHeaderCollectionView" destination="9Mn-uM-ik9" id="h6I-Yv-TGL"/>
                         <outlet property="homeTableView" destination="7bl-bC-a2b" id="Bx7-2Q-Swh"/>
                     </connections>
                 </viewController>
