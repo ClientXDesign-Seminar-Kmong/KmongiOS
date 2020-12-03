@@ -62,10 +62,10 @@ extension HomeVC : UITableViewDataSource {
         guard let cell = tableView.dequeueReusableCell(withIdentifier: HomeRecServiceTableViewCell.identifier) as? HomeRecServiceTableViewCell else {
             return UITableViewCell()
         }
-        if indexPath.row == 0{
+        if indexPath.row == 0 {
             cell.setDesignerData()
         }
-        else{
+        else {
             cell.setProgrammerData()
         }
         cell.setCell(type: expertType[indexPath.item])

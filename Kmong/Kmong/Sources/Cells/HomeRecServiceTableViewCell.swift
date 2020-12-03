@@ -66,8 +66,6 @@ extension HomeRecServiceTableViewCell: UICollectionViewDataSource {
             return UICollectionViewCell()
         }
         
-        
-        print(experts)
         cell.setData(expert: experts[indexPath.item])
         
         cell.layer.borderColor = CGColor(red: 204/255, green: 204/255, blue: 204/255, alpha: 1)
@@ -79,10 +77,6 @@ extension HomeRecServiceTableViewCell: UICollectionViewDataSource {
         
         return cell
         
-    }
-    
-    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        print(indexPath)
     }
 }
 
