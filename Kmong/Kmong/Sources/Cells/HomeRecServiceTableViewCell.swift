@@ -16,6 +16,7 @@ class HomeRecServiceTableViewCell: UITableViewCell, UICollectionViewDelegate {
     
     var ServiceCells : [String] = ["디자인", "프로그래밍"]
     var experts : [Expert] = []
+    var naviHere : UINavigationController?
     //    var programmingExperts : [Expert] = []
     
     
@@ -71,29 +72,34 @@ extension HomeRecServiceTableViewCell: UICollectionViewDataSource {
         cell.layer.borderColor = CGColor(red: 204/255, green: 204/255, blue: 204/255, alpha: 1)
         cell.layer.borderWidth = 1.0
         cell.layer.cornerRadius = 8.0
-        
-        
-        
-        
+
         return cell
         
     }
 }
 
-extension HomeRecommendedServiceCVC: UICollectionViewDelegateFlowLayout {
-    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout:
-                            UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        return CGSize(width: collectionView.frame.width, height: collectionView.frame.height)
-    }
-    
-    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAt section: Int) -> CGFloat {
-        return 12
-    }
-    
-    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumInteritemSpacingForSectionAt section: Int) -> CGFloat {
-        return 0
-    }
-    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, insetForSectionAt section: Int) -> UIEdgeInsets {
-        return UIEdgeInsets(top: 11, left: 20, bottom: 16, right: 20)
+extension HomeRecServiceTableViewCell: UICollectionViewDelegateFlowLayout {
+//    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout:
+//                            UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
+//        return CGSize(width: collectionView.frame.width, height: collectionView.frame.height)
+//    }
+//
+//    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAt section: Int) -> CGFloat {
+//        return 12
+//    }
+//
+//    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumInteritemSpacingForSectionAt section: Int) -> CGFloat {
+//        return 0
+//    }
+//    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, insetForSectionAt section: Int) -> UIEdgeInsets {
+//        return UIEdgeInsets(top: 11, left: 20, bottom: 16, right: 20)
+//    }
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        let storyboard = UIStoryboard(name: "Detail", bundle: nil)
+        
+        if let dvc = storyboard.instantiateViewController(identifier: "DetailVC") as? DetailVC {
+            self.naviHere?.pushViewController(dvc, animated: true)
+            
+        }
     }
 }

@@ -8,7 +8,7 @@
 import UIKit
 import InfiniteLayout
 
-class HomeVC: UIViewController {
+class HomeVC: UIViewController, UIGestureRecognizerDelegate {
 
     @IBOutlet weak var homeTableView: UITableView!
     @IBOutlet var homeHeaderCollectionView: InfiniteCollectionView!
@@ -17,6 +17,8 @@ class HomeVC: UIViewController {
     var timer = Timer()
     var counter = 0
     let imgArr = [UIImage(named: "homeCard2"), UIImage(named: "homeCard2")]
+
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -29,9 +31,9 @@ class HomeVC: UIViewController {
         homeHeaderCollectionView.isItemPagingEnabled = true
         homeHeaderCollectionView.velocityMultiplier = 1
         homeHeaderCollectionView.preferredCenteredIndexPath = [0,0]
+        self.navigationController?.interactivePopGestureRecognizer?.delegate = self
         
         DispatchQueue.main.async {
-            
             self.timer = Timer.scheduledTimer(timeInterval: 2.0, target: self, selector: #selector(self.changeIMG), userInfo: nil, repeats: true)
         }
     }
@@ -119,6 +121,7 @@ extension HomeVC : UITableViewDataSource {
             cell.setProgrammerData()
         }
         cell.setCell(type: expertType[indexPath.item])
+        cell.naviHere = self.navigationController
         return cell
     }
 }
@@ -126,7 +129,13 @@ extension HomeVC : UITableViewDataSource {
 extension HomeVC: UITableViewDelegate{
 //    func scrollViewDidScroll(_ scrollView: UIScrollView) {
 //        print(scrollView.contentOffset.y)
+////
+////    }
 //
+//    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+//        guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: HomeRecommendedServiceCVC.identifier, for: indexPath) as? HomeRecommendedServiceCVC else {
+//        }
+//        let cell.naviHere = self.navigationController
 //    }
 }
 extension HomeVC: UICollectionViewDataSource {
@@ -139,7 +148,7 @@ extension HomeVC: UICollectionViewDataSource {
             return UICollectionViewCell()
         }
         cell.setImage(imageName: "homeCard2")
-
+        
         return cell
     }
 }
@@ -149,6 +158,7 @@ extension HomeVC: UICollectionViewDelegateFlowLayout, UICollectionViewDelegate {
                             UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         return CGSize(width: collectionView.frame.width-40, height: collectionView.frame.height)
     }
+
 //
 //    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAt section: Int) -> CGFloat {
 //        return 8
