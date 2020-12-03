@@ -7,25 +7,33 @@
 
 import UIKit
 import XLPagerTabStrip
+import InfiniteCarouselCollectionView
 
-class DetailVC: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource {
+// CardCollectionView DataSource
+class DetailVC: UIViewController, UICollectionViewDataSource,HeightDelegate {
+    func setHeight(_ height: CGFloat) {
+        self.height.constant = height
+        self.view.layoutIfNeeded()
+    }
     
+    @IBOutlet weak var height: NSLayoutConstraint!
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         
-        headerImages.count
+        return 10
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         
-        guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: HeaderCell.identifier, for: indexPath) as? HeaderCell else {
-            
-            return UICollectionViewCell()
-        }
+        let cell = cardCollectionView.dequeueReusableCell(withReuseIdentifier: "CardCollectionViewCell", for: indexPath)
+
+        cell.layer.borderColor = UIColor(red: 229/255, green: 229/255, blue: 229/255, alpha: 1).cgColor
+        cell.layer.borderWidth = 1
+        cell.layer.cornerRadius = 5
         
         return cell
     }
     
-    @IBOutlet weak var headerCollectionView: UICollectionView!
+    @IBOutlet weak var headerCollectionView: CarouselCollectionView!
     @IBOutlet weak var pageNumberView: UIView!
     @IBOutlet weak var inquiryView: UIButton!
     @IBOutlet weak var purchaseView: UIButton!
@@ -33,17 +41,41 @@ class DetailVC: UIViewController, UICollectionViewDelegate, UICollectionViewData
     @IBOutlet weak var currentPage: UILabel!
     @IBOutlet weak var heartView: UIButton!
     @IBOutlet weak var scrollView: UIScrollView!
+    @IBOutlet weak var cardCollectionView: UICollectionView!
     
-    var headerImages: [String] = ["1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11", "12", "13", "14", "15", "16", "17", "18", "19", "20"]
-    
+    var headerImages: [HeaderImages] = []
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+            if segue.identifier == "segue" {
+                let viewController : PagerTabVC = segue.destination as! PagerTabVC
+                    viewController.heightDelegate = self
+            }
+        }
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        headerCollectionView.delegate = self
-        headerCollectionView.dataSource = self
+        //cardCollectionView 레이아웃 구성
+        let cardFlowLayout = UICollectionViewFlowLayout()
+        
+        cardFlowLayout.itemSize = CGSize(width: 200, height: 223)
+        cardFlowLayout.sectionInset = UIEdgeInsets(top: 0, left: 0, bottom: 0, right: 0)
+        cardFlowLayout.minimumInteritemSpacing = 0
+        cardFlowLayout.minimumLineSpacing = 12
+        cardFlowLayout.scrollDirection = .horizontal
+        
+        cardCollectionView.collectionViewLayout = cardFlowLayout
+        
+        headerCollectionView.carouselDataSource = self
+        
+        let size = UIScreen.main.bounds.size
+        headerCollectionView.flowLayout.itemSize = CGSize(width: size.width, height: size.width/375*270)
+
         scrollView.delegate = self
         
+        cardCollectionView.delegate = self
+        cardCollectionView.dataSource = self
+        
         setInitLayout()
+        setHeaderData()
         
         self.navigationController?.navigationBar.setBackgroundImage(UIImage(), for: .default)
         self.navigationController?.navigationBar.shadowImage = UIImage()
@@ -74,18 +106,46 @@ class DetailVC: UIViewController, UICollectionViewDelegate, UICollectionViewData
         statusBarView.backgroundColor = .clear
         view.addSubview(statusBarView)
     }
+    
+    //헤더컬렉션뷰 셀 이미지 세팅
+    func setHeaderData() {
+        
+        headerImages.append(contentsOf: [
+            HeaderImages(headerImage: "imgHeader"),
+            HeaderImages(headerImage: "imgHeader"),
+            HeaderImages(headerImage: "imgHeader"),
+            HeaderImages(headerImage: "imgHeader"),
+            HeaderImages(headerImage: "imgHeader"),
+            HeaderImages(headerImage: "imgHeader"),
+            HeaderImages(headerImage: "imgHeader"),
+            HeaderImages(headerImage: "imgHeader"),
+            HeaderImages(headerImage: "imgHeader"),
+            HeaderImages(headerImage: "imgHeader"),
+            HeaderImages(headerImage: "imgHeader"),
+            HeaderImages(headerImage: "imgHeader"),
+            HeaderImages(headerImage: "imgHeader"),
+            HeaderImages(headerImage: "imgHeader"),
+            HeaderImages(headerImage: "imgHeader"),
+            HeaderImages(headerImage: "imgHeader"),
+            HeaderImages(headerImage: "imgHeader"),
+            HeaderImages(headerImage: "imgHeader"),
+            HeaderImages(headerImage: "imgHeader"),
+            HeaderImages(headerImage: "imgHeader")
+        ])
+    }
 
+    // 문의, 구매, 하트 버튼 레이아웃 구성
     func setInitLayout() {
         
         pageNumberView.layer.cornerRadius = 9
         
-        inquiryView.layer.borderColor = UIColor.systemGray2.cgColor
+        inquiryView.layer.borderColor = UIColor(red: 229/255, green: 229/255, blue: 229/255, alpha: 1).cgColor
         inquiryView.layer.borderWidth = 1
         inquiryView.layer.cornerRadius = 6
         
         purchaseView.layer.cornerRadius = 6
         
-        heartView.layer.borderColor = UIColor.systemGray2.cgColor
+        heartView.layer.borderColor = UIColor(red: 229/255, green: 229/255, blue: 229/255, alpha: 1).cgColor
         heartView.layer.borderWidth = 1
         heartView.layer.cornerRadius = 6
     }
@@ -96,29 +156,22 @@ class DetailVC: UIViewController, UICollectionViewDelegate, UICollectionViewData
     @IBAction func heartBtn(_ sender: Any) {
        
         bRec = !bRec
+        
         if bRec {
+            
             heartView.setImage(UIImage(named: "icLikeSelected"), for: .normal)
             heartView.layer.borderColor = UIColor.yellow.cgColor
             heartView.layer.borderColor = UIColor(red: 249/255, green: 212/255, blue: 72/255, alpha: 1).cgColor
         } else {
+            
             heartView.setImage(UIImage(named: "icLikeUnselected"), for: .normal)
-            heartView.layer.borderColor = UIColor.systemGray2.cgColor
-        }
-    }
-    
-    @IBAction func smallHeartBtn(_ sender: Any) {
-        
-        bRec = !bRec
-        if bRec {
-            smallHeartView.setImage(UIImage(named: "icLikeUnselected2"), for: .normal)
-        } else {
-            smallHeartView.setImage(UIImage(named: "icLikeUnselected2"), for: .normal)
+            heartView.layer.borderColor = UIColor(red: 229/255, green: 229/255, blue: 229/255, alpha: 1).cgColor
         }
     }
     
     var statusBarFrame: CGRect!
-        var statusBarView: UIView!
-        var offset: CGFloat!
+    var statusBarView: UIView!
+    var offset: CGFloat!
     
     func scrollViewDidScroll(_ scrollView: UIScrollView) {
         
@@ -158,29 +211,37 @@ class DetailVC: UIViewController, UICollectionViewDelegate, UICollectionViewData
         // 스크롤 시 스테이터스 바 백드라운드 색상 변경
         statusBarView!.backgroundColor = clearToWhite
     }
-    
-    
 }
 
-extension DetailVC: UICollectionViewDelegateFlowLayout {
-    
-    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
+// Carousel Banner Cell, 페이지 텍스트 설정
+extension DetailVC: CarouselCollectionViewDataSource {
+    var numberOfItems: Int {
         
-        return CGSize(width: collectionView.frame.width, height: collectionView.frame.height)
+        return 20
     }
     
-    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAt section: Int) -> CGFloat {
+    func carouselCollectionView(_ carouselCollectionView: CarouselCollectionView, cellForItemAt index: Int, fakeIndexPath: IndexPath) -> UICollectionViewCell {
         
-        return 0
+        guard let cell = carouselCollectionView.dequeueReusableCell(withReuseIdentifier: DetailHeaderCell.identifier, for: fakeIndexPath) as? DetailHeaderCell else {
+        
+                return UICollectionViewCell()
+        }
+            cell.setCell(headerImage: headerImages[index])
+                return cell
     }
     
-    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumInteritemSpacingForSectionAt section: Int) -> CGFloat {
+    func carouselCollectionView(_ carouselCollectionView: CarouselCollectionView, didSelectItemAt index: Int) {
         
-        return 0
+        print("Did Select item at \(index)")
     }
     
-    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, insetForSectionAt section: Int) -> UIEdgeInsets {
+    func carouselCollectionView(_ carouselCollectionView: CarouselCollectionView, didDisplayItemAt index: Int) {
         
-        return UIEdgeInsets(top: 0, left: 0, bottom: 0, right: 0)
+        self.currentPage.text = "\(index + 1)"
     }
+}
+
+extension DetailVC: UICollectionViewDelegate {
+    
+    
 }

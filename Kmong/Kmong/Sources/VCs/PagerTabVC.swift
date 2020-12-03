@@ -7,7 +7,9 @@
 
 import UIKit
 import XLPagerTabStrip
-
+public protocol HeightDelegate: class{
+    func setHeight(_ height: CGFloat)
+}
 public protocol PagerTabStripDelegate: class {
 
     func updateIndicator(for viewController: PagerTabStripViewController, fromIndex: Int, toIndex: Int)
@@ -20,7 +22,7 @@ public protocol PagerTabStripIsProgressiveDelegate : PagerTabStripDelegate {
 
 class PagerTabVC: ButtonBarPagerTabStripViewController {
     
-    
+    var heightDelegate: HeightDelegate?
 
     override func viewDidLoad() {
         
@@ -35,7 +37,6 @@ class PagerTabVC: ButtonBarPagerTabStripViewController {
     
     
     func loadDesign() {
-        
         settings.style.selectedBarHeight = 2
         settings.style.selectedBarBackgroundColor = UIColor.black
         settings.style.buttonBarBackgroundColor = UIColor.white
@@ -49,7 +50,7 @@ class PagerTabVC: ButtonBarPagerTabStripViewController {
             oldCell?.label.textColor = .systemGray5
             newCell?.label.textColor = .black
         }
-        
+        settings.style.buttonBarMinimumLineSpacing = 0
     }
     
     override func viewControllers(for pagerTabStripController: PagerTabStripViewController) -> [UIViewController] {
@@ -65,6 +66,22 @@ class PagerTabVC: ButtonBarPagerTabStripViewController {
       return [child1, child2, child3, child4]
 
     }
+    func scrollViewDidEndDecelerating(_ scrollView: UIScrollView) {
+            print(scrollView.contentOffset)
+            let x = scrollView.contentOffset.x
+            let width = containerView.frame.width
+            if x == 0.0{
+                self.heightDelegate?.setHeight(590.0)
+            }
+            else if x == width{
+                self.heightDelegate?.setHeight(390.0)
+            }
+            else if x == width*2{
+                self.heightDelegate?.setHeight(190.0)
+            }
+            else if x == width*3{
+                self.heightDelegate?.setHeight(390.0)    }
+        }
     
     
 
