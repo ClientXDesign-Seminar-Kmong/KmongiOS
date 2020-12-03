@@ -242,3 +242,8 @@ extension DetailVC: CarouselCollectionViewDataSource {
         self.currentPage.text = "\(index + 1)"
     }
 }
+
+extension DetailVC: UICollectionViewDelegate {
+    
+    
+}
