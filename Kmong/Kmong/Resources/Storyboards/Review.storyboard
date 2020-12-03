@@ -193,6 +193,11 @@
                                             <outlet property="idLabel" destination="HoN-Gh-aIi" id="xFU-Ki-vwb"/>
                                             <outlet property="reviewLabel" destination="k6A-Da-LUa" id="Iei-cS-LVS"/>
                                             <outlet property="serviceLabel" destination="6X5-hh-nZF" id="dIj-hI-ZUv"/>
+                                            <outlet property="star1ImageView" destination="54k-Ra-pOv" id="Fo5-Xb-J9D"/>
+                                            <outlet property="star2ImageView" destination="hMP-hL-G6g" id="inu-EG-wQo"/>
+                                            <outlet property="star3ImageView" destination="XId-eg-buc" id="WWH-VO-E6S"/>
+                                            <outlet property="star4ImageView" destination="HEH-1z-yyR" id="ZXJ-Uc-DBQ"/>
+                                            <outlet property="star5ImageView" destination="L61-dw-OPI" id="yx2-kI-u3t"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>

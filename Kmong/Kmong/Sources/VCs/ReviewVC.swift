@@ -32,11 +32,11 @@ class ReviewVC: UIViewController {
     
     func setReviewData() {
         reviews.append(contentsOf: [
-            Review(id: "abc01***", date: "2020.11.11.", service: "심볼/엠블럼형 로고", review: "친절하게 해주셨어요. 감사합니다."),
-            Review(id: "eifddnf", date: "2020.12.03.", service: "iOS 앱 개발 외주", review: "빠르네요. 감사합니다."),
-            Review(id: "diafknd", date: "2020.12.01.", service: "와악", review: "얄머ㅏ아"),
-            Review(id: "eifddnf", date: "2020.12.03.", service: "iOS 앱 개발 외주", review: "빠르네요. 감사합니다."),
-            Review(id: "diafknd", date: "2020.12.01.", service: "와악", review: "얄머ㅏ아")
+            Review(id: "eifddnf", date: "2020.12.03.", service: "iOS 앱 개발 외주", review: "빠르네요. 감사합니다.", star: 3),
+            Review(id: "diafknd", date: "2020.12.01.", service: "와악", review: "얄머ㅏ아", star: 2),
+            Review(id: "eifddnf", date: "2020.12.03.", service: "iOS 앱 개발 외주", review: "빠르네요. 감사합니다.", star: 5),
+            Review(id: "diafknd", date: "2020.12.01.", service: "와악", review: "얄머ㅏ아", star: 3),
+            Review(id: "abc01234", date: "2020.11.11.", service: "심볼/엠블럼형 로고", review: "친절하게 해주셨어요. 감사합니다.", star: 4)
         ])
     }
 

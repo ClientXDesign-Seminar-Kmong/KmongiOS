@@ -12,6 +12,7 @@ struct Review {
     var date : String
     var service : String
     var review : String
+    var star : Int
     
     func hideID(id : String) -> String {
 
@@ -23,4 +24,5 @@ struct Review {
         
         return id.joined()
     }
+
 }
