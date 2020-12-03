@@ -22,6 +22,7 @@ class ReviewVC: UIViewController {
     @IBOutlet var star3ImageView: UIImageView!
     @IBOutlet var star4ImageView: UIImageView!
     @IBOutlet var star5ImageView: UIImageView!
+    @IBOutlet var borderView: UIView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -29,6 +30,7 @@ class ReviewVC: UIViewController {
         setReviewData()
         reviewTableView.dataSource = self
         setAvgStar()
+        
 
         headerReviewCountLabel.font = UIFont(name: "AppleSDGothicNeo-SemiBold", size: 18)
         headerReviewCountLabel.text = "리뷰 \(reviews.count)건"
@@ -36,6 +38,9 @@ class ReviewVC: UIViewController {
         writeReviewButton.titleLabel?.font = UIFont(name: "AppleSDGothicNeo-Medium", size: 14)
         writeReviewButton.titleLabel?.textColor = UIColor(red: 101/255, green: 101/255, blue: 101/255, alpha: 0)
         
+        reviewTableView.separatorInset.left = 20
+        reviewTableView.separatorInset.right = 20
+
         // Do any additional setup after loading the view.
     }
     
@@ -86,13 +91,20 @@ class ReviewVC: UIViewController {
         }
         return
     }
+    
+    func addTopBorderWithColor(_ objView : UIView, color: UIColor, width: CGFloat) {
+        let border = CALayer()
+        border.backgroundColor = color.cgColor
+        border.frame = CGRect(x: 0, y: 0, width: objView.frame.size.width, height: width)
+        objView.layer.addSublayer(border)
+    }
 
 
 }
 
 extension ReviewVC : UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 5
+        return reviews.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -104,6 +116,6 @@ extension ReviewVC : UITableViewDataSource {
         return cell
     }
     
-    
 }
+
 
