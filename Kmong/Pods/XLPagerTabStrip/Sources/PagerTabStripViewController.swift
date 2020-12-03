@@ -26,6 +26,10 @@ import Foundation
 
 // MARK: Protocols
 
+public protocol HeightDelegate: class{
+    func setHeight(_ height: CGFloat)
+}
+
 public protocol IndicatorInfoProvider {
 
     func indicatorInfo(for pagerTabStripController: PagerTabStripViewController) -> IndicatorInfo
@@ -82,7 +86,8 @@ open class PagerTabStripViewController: UIViewController, UIScrollViewDelegate {
         }
         return .none
     }
-
+    open var heightDelegate: HeightDelegate?
+    
     override open func viewDidLoad() {
         super.viewDidLoad()
         let conteinerViewAux = containerView ?? {
@@ -169,6 +174,19 @@ open class PagerTabStripViewController: UIViewController, UIScrollViewDelegate {
             (navigationController?.view ?? view).isUserInteractionEnabled = !animated
             containerView.setContentOffset(CGPoint(x: pageOffsetForChild(at: index), y: 0), animated: animated)
         }
+        if index == 0{
+            print("000")
+            self.heightDelegate?.setHeight(590.0)
+        }
+        else if index == 1{
+            self.heightDelegate?.setHeight(569.0)
+        }
+        else if index == 2{
+            self.heightDelegate?.setHeight(360.0)
+        }
+        else if index == 3{
+            self.heightDelegate?.setHeight(725.0)    }
+        
     }
 
     open func moveTo(viewController: UIViewController, animated: Bool = true) {

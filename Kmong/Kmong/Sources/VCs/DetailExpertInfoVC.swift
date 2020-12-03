@@ -38,7 +38,9 @@ class DetailExpertInfoVC: UIViewController, IndicatorInfoProvider {
     }
 }
 extension DetailExpertInfoVC: UITableViewDelegate{
-    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        tableView.cellForRow(at: indexPath)?.selectionStyle = .none
+    }
 }
 extension DetailExpertInfoVC: UITableViewDataSource{
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
