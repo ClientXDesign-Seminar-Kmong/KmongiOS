@@ -146,9 +146,9 @@
 		B8218B08255F9879003AA1AA /* Storyboards */ = {
 			isa = PBXGroup;
 			children = (
+				B8218AF4255F97D2003AA1AA /* Detail.storyboard */,
 				B8218AF1255F97AC003AA1AA /* Home.storyboard */,
 				373A48C22578DBCC00C069E3 /* Review.storyboard */,
-				B8218AF4255F97D2003AA1AA /* Detail.storyboard */,
 				63487AC62567DABE0005BC68 /* DetailServiceOption.storyboard */,
 				B8218B01255F9857003AA1AA /* DetailExpertInfo.storyboard */,
 				B8218B04255F9862003AA1AA /* DetailReview.storyboard */,

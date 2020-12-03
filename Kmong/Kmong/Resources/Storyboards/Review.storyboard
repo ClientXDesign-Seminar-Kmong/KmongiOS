@@ -29,13 +29,6 @@
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
-                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="icStarReviewSelected" translatesAutoresizingMaskIntoConstraints="NO" id="Gcq-Hw-DYA">
-                                            <rect key="frame" x="38" y="65" width="18" height="18"/>
-                                            <constraints>
-                                                <constraint firstAttribute="width" constant="18" id="Bs4-yh-pkr"/>
-                                                <constraint firstAttribute="height" constant="18" id="cEh-S3-cyR"/>
-                                            </constraints>
-                                        </imageView>
                                         <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="icStarReviewSelected" translatesAutoresizingMaskIntoConstraints="NO" id="bVh-ZI-gwy">
                                             <rect key="frame" x="56" y="65" width="18" height="18"/>
                                             <constraints>
@@ -78,6 +71,13 @@
                                                 </attributedString>
                                             </state>
                                         </button>
+                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="icStarReviewSelected" translatesAutoresizingMaskIntoConstraints="NO" id="Gcq-Hw-DYA">
+                                            <rect key="frame" x="38" y="65" width="18" height="18"/>
+                                            <constraints>
+                                                <constraint firstAttribute="width" constant="18" id="Bs4-yh-pkr"/>
+                                                <constraint firstAttribute="height" constant="18" id="cEh-S3-cyR"/>
+                                            </constraints>
+                                        </imageView>
                                     </subviews>
                                     <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                     <constraints>
@@ -216,6 +216,11 @@
                         <outlet property="headerReviewCountLabel" destination="Jk2-Pn-8VJ" id="UCU-UI-HGN"/>
                         <outlet property="headerView" destination="VAk-5R-Sal" id="xeQ-R8-Q4P"/>
                         <outlet property="reviewTableView" destination="XSF-bQ-AXa" id="RNh-xD-vfl"/>
+                        <outlet property="star1ImageView" destination="vqS-QV-9uS" id="2gh-fg-azQ"/>
+                        <outlet property="star2ImageView" destination="Gcq-Hw-DYA" id="nPz-HZ-Wuq"/>
+                        <outlet property="star3ImageView" destination="bVh-ZI-gwy" id="4nk-MA-wqj"/>
+                        <outlet property="star4ImageView" destination="Dxi-d1-UBH" id="2fo-aX-Zik"/>
+                        <outlet property="star5ImageView" destination="diz-wP-VLb" id="CIJ-ei-PYK"/>
                         <outlet property="writeReviewButton" destination="xi5-lX-jI6" id="H05-Pu-jNA"/>
                     </connections>
                 </viewController>
