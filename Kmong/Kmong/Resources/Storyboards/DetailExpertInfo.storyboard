@@ -41,7 +41,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="47" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="v8X-Q8-eyV">
-                                <rect key="frame" x="100" y="115.66666666666669" width="275" height="188"/>
+                                <rect key="frame" x="100" y="131.33333333333334" width="275" height="188.00000000000003"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="188" id="gyR-LQ-l5g"/>
@@ -103,7 +103,7 @@
                             <constraint firstItem="CKR-rR-oMF" firstAttribute="leading" secondItem="gBD-Pd-00L" secondAttribute="leading" constant="20" id="OsD-cn-FLC"/>
                             <constraint firstItem="gBD-Pd-00L" firstAttribute="trailing" secondItem="CKR-rR-oMF" secondAttribute="trailing" constant="291" id="drg-V5-wlP"/>
                             <constraint firstItem="Fhv-8d-tex" firstAttribute="top" secondItem="Y2q-sj-wSB" secondAttribute="top" constant="52" id="eCG-Cn-lfr"/>
-                            <constraint firstItem="v8X-Q8-eyV" firstAttribute="top" secondItem="yaT-Pb-fgU" secondAttribute="bottom" constant="24.329999999999998" id="geP-Mh-i9V"/>
+                            <constraint firstItem="v8X-Q8-eyV" firstAttribute="top" secondItem="yaT-Pb-fgU" secondAttribute="bottom" constant="40" id="geP-Mh-i9V"/>
                             <constraint firstItem="yaT-Pb-fgU" firstAttribute="leading" secondItem="Fhv-8d-tex" secondAttribute="leading" id="n3t-pC-Sku"/>
                             <constraint firstItem="gBD-Pd-00L" firstAttribute="trailing" secondItem="v8X-Q8-eyV" secondAttribute="trailing" id="poP-YE-ns0"/>
                         </constraints>
