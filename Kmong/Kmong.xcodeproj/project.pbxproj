@@ -17,6 +17,10 @@
 		373A48B02577419400C069E3 /* HomeHeaderCVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 373A48AF2577419400C069E3 /* HomeHeaderCVC.swift */; };
 		373A48B32577CC0C00C069E3 /* CustomTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 373A48B22577CC0C00C069E3 /* CustomTabBarController.swift */; };
 		373A48B62577F43300C069E3 /* HomeExpertType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 373A48B52577F43300C069E3 /* HomeExpertType.swift */; };
+		373A48C32578DBCD00C069E3 /* Review.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 373A48C22578DBCC00C069E3 /* Review.storyboard */; };
+		373A48C62578DC0300C069E3 /* ReviewVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 373A48C52578DC0300C069E3 /* ReviewVC.swift */; };
+		373A48CD2578EA3000C069E3 /* ReviewTVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 373A48CC2578EA3000C069E3 /* ReviewTVC.swift */; };
+		373A48D02578EADD00C069E3 /* ReviewStruct.swift in Sources */ = {isa = PBXBuildFile; fileRef = 373A48CF2578EADD00C069E3 /* ReviewStruct.swift */; };
 		3741F5992567DA9A00729AEA /* HomeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3741F5982567DA9A00729AEA /* HomeVC.swift */; };
 		37EAC25B2572AD1100474877 /* HomeTableViewHeaderTVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37EAC25A2572AD1100474877 /* HomeTableViewHeaderTVC.swift */; };
 		37EAC25F2572B01700474877 /* HomeRecServiceTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37EAC25E2572B01700474877 /* HomeRecServiceTableViewCell.swift */; };
@@ -48,6 +52,10 @@
 		373A48AF2577419400C069E3 /* HomeHeaderCVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeHeaderCVC.swift; sourceTree = "<group>"; };
 		373A48B22577CC0C00C069E3 /* CustomTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTabBarController.swift; sourceTree = "<group>"; };
 		373A48B52577F43300C069E3 /* HomeExpertType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeExpertType.swift; sourceTree = "<group>"; };
+		373A48C22578DBCC00C069E3 /* Review.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Review.storyboard; sourceTree = "<group>"; };
+		373A48C52578DC0300C069E3 /* ReviewVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReviewVC.swift; sourceTree = "<group>"; };
+		373A48CC2578EA3000C069E3 /* ReviewTVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReviewTVC.swift; sourceTree = "<group>"; };
+		373A48CF2578EADD00C069E3 /* ReviewStruct.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReviewStruct.swift; sourceTree = "<group>"; };
 		3741F5982567DA9A00729AEA /* HomeVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = HomeVC.swift; path = Kmong/Sources/HomeVC.swift; sourceTree = SOURCE_ROOT; };
 		37EAC25A2572AD1100474877 /* HomeTableViewHeaderTVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = HomeTableViewHeaderTVC.swift; path = Kmong/Sources/Cells/HomeTableViewHeaderTVC.swift; sourceTree = SOURCE_ROOT; };
 		37EAC25E2572B01700474877 /* HomeRecServiceTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = HomeRecServiceTableViewCell.swift; path = Kmong/Sources/Cells/HomeRecServiceTableViewCell.swift; sourceTree = SOURCE_ROOT; };
@@ -139,6 +147,7 @@
 			isa = PBXGroup;
 			children = (
 				B8218AF1255F97AC003AA1AA /* Home.storyboard */,
+				373A48C22578DBCC00C069E3 /* Review.storyboard */,
 				B8218AF4255F97D2003AA1AA /* Detail.storyboard */,
 				63487AC62567DABE0005BC68 /* DetailServiceOption.storyboard */,
 				B8218B01255F9857003AA1AA /* DetailExpertInfo.storyboard */,
@@ -151,6 +160,7 @@
 		B8218B09255F98B7003AA1AA /* VCs */ = {
 			isa = PBXGroup;
 			children = (
+				373A48C52578DC0300C069E3 /* ReviewVC.swift */,
 				373A48B22577CC0C00C069E3 /* CustomTabBarController.swift */,
 				3741F5982567DA9A00729AEA /* HomeVC.swift */,
 				1F0FBA9625610F8000D41323 /* DetailVC.swift */,
@@ -180,6 +190,8 @@
 			isa = PBXGroup;
 			children = (
 				1F0FBAA3256111A900D41323 /* HeaderCell.swift */,
+				373A48CC2578EA3000C069E3 /* ReviewTVC.swift */,
+				373A48CF2578EADD00C069E3 /* ReviewStruct.swift */,
 				63487ACC2567E3150005BC68 /* serviceOptionTVC.swift */,
 				37EAC25A2572AD1100474877 /* HomeTableViewHeaderTVC.swift */,
 				373A48AF2577419400C069E3 /* HomeHeaderCVC.swift */,
@@ -268,6 +280,7 @@
 			files = (
 				B8218AF2255F97AC003AA1AA /* Home.storyboard in Resources */,
 				B8218AE7255F9695003AA1AA /* LaunchScreen.storyboard in Resources */,
+				373A48C32578DBCD00C069E3 /* Review.storyboard in Resources */,
 				63487AC72567DABE0005BC68 /* DetailServiceOption.storyboard in Resources */,
 				B8218B05255F9862003AA1AA /* DetailReview.storyboard in Resources */,
 				B8218AE4255F9695003AA1AA /* Assets.xcassets in Resources */,
@@ -328,10 +341,12 @@
 				3741F5992567DA9A00729AEA /* HomeVC.swift in Sources */,
 				37EAC2632572B15C00474877 /* HomeRecommendedServiceCVC.swift in Sources */,
 				37EAC25B2572AD1100474877 /* HomeTableViewHeaderTVC.swift in Sources */,
+				373A48CD2578EA3000C069E3 /* ReviewTVC.swift in Sources */,
 				1F19AC5B2563FB9C001FF5D1 /* DetailDescVC.swift in Sources */,
 				1F0FBAA4256111A900D41323 /* HeaderCell.swift in Sources */,
 				1F19AC5F25640002001FF5D1 /* DetailServiceOptionVC.swift in Sources */,
 				373A48B62577F43300C069E3 /* HomeExpertType.swift in Sources */,
+				373A48D02578EADD00C069E3 /* ReviewStruct.swift in Sources */,
 				1F19AC62256400F5001FF5D1 /* DetailExpertInfoVC.swift in Sources */,
 				1F19AC652564016A001FF5D1 /* DetailReviewVC.swift in Sources */,
 				373A48B32577CC0C00C069E3 /* CustomTabBarController.swift in Sources */,
@@ -341,6 +356,7 @@
 				63487ACD2567E3150005BC68 /* serviceOptionTVC.swift in Sources */,
 				B8218ADB255F968F003AA1AA /* AppDelegate.swift in Sources */,
 				37EAC2682572BC7A00474877 /* HomeExpert.swift in Sources */,
+				373A48C62578DC0300C069E3 /* ReviewVC.swift in Sources */,
 				63487AD12567E35F0005BC68 /* UIColor+Extensions.swift in Sources */,
 				B8218ADD255F968F003AA1AA /* SceneDelegate.swift in Sources */,
 				1F0FBA9725610F8000D41323 /* DetailVC.swift in Sources */,
