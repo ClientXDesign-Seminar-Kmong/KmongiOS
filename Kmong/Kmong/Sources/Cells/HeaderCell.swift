@@ -14,7 +14,6 @@ class HeaderCell: UICollectionViewCell {
     @IBOutlet weak var headerImageView: UIImageView!
     
     func setImage(imageName: String) {
-        
         headerImageView.image = UIImage(named: imageName)
     }
 }

@@ -10,7 +10,8 @@ import UIKit
 struct Expert {
     var expertImageName : String
     var description : String
-    var review : String
+    var reviewCount : Int
+    var star : Float
     
     func makeExpertImage() -> UIImage? {
         return UIImage(named: expertImageName)
