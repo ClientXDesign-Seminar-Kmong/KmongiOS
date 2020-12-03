@@ -9,6 +9,7 @@ import UIKit
 import XLPagerTabStrip
 import InfiniteCarouselCollectionView
 
+// CardCollectionView DataSource
 class DetailVC: UIViewController, UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         
@@ -19,7 +20,7 @@ class DetailVC: UIViewController, UICollectionViewDataSource {
         
         let cell = cardCollectionView.dequeueReusableCell(withReuseIdentifier: "CardCollectionViewCell", for: indexPath)
 
-        cell.layer.borderColor = UIColor.systemGray2.cgColor
+        cell.layer.borderColor = UIColor(red: 229/255, green: 229/255, blue: 229/255, alpha: 1).cgColor
         cell.layer.borderWidth = 1
         cell.layer.cornerRadius = 5
         
@@ -41,6 +42,7 @@ class DetailVC: UIViewController, UICollectionViewDataSource {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        //cardCollectionView 레이아웃 구성
         let cardFlowLayout = UICollectionViewFlowLayout()
         
         cardFlowLayout.itemSize = CGSize(width: 200, height: 223)
@@ -94,6 +96,7 @@ class DetailVC: UIViewController, UICollectionViewDataSource {
         view.addSubview(statusBarView)
     }
     
+    //헤더컬렉션뷰 셀 이미지 세팅
     func setHeaderData() {
         
         headerImages.append(contentsOf: [
@@ -120,17 +123,18 @@ class DetailVC: UIViewController, UICollectionViewDataSource {
         ])
     }
 
+    // 문의, 구매, 하트 버튼 레이아웃 구성
     func setInitLayout() {
         
         pageNumberView.layer.cornerRadius = 9
         
-        inquiryView.layer.borderColor = UIColor.systemGray2.cgColor
+        inquiryView.layer.borderColor = UIColor(red: 229/255, green: 229/255, blue: 229/255, alpha: 1).cgColor
         inquiryView.layer.borderWidth = 1
         inquiryView.layer.cornerRadius = 6
         
         purchaseView.layer.cornerRadius = 6
         
-        heartView.layer.borderColor = UIColor.systemGray2.cgColor
+        heartView.layer.borderColor = UIColor(red: 229/255, green: 229/255, blue: 229/255, alpha: 1).cgColor
         heartView.layer.borderWidth = 1
         heartView.layer.cornerRadius = 6
     }
@@ -141,23 +145,16 @@ class DetailVC: UIViewController, UICollectionViewDataSource {
     @IBAction func heartBtn(_ sender: Any) {
        
         bRec = !bRec
+        
         if bRec {
+            
             heartView.setImage(UIImage(named: "icLikeSelected"), for: .normal)
             heartView.layer.borderColor = UIColor.yellow.cgColor
             heartView.layer.borderColor = UIColor(red: 249/255, green: 212/255, blue: 72/255, alpha: 1).cgColor
         } else {
+            
             heartView.setImage(UIImage(named: "icLikeUnselected"), for: .normal)
-            heartView.layer.borderColor = UIColor.systemGray2.cgColor
-        }
-    }
-    
-    @IBAction func smallHeartBtn(_ sender: Any) {
-        
-        bRec = !bRec
-        if bRec {
-            smallHeartView.setImage(UIImage(named: "icLikeUnselected2"), for: .normal)
-        } else {
-            smallHeartView.setImage(UIImage(named: "icLikeUnselected2"), for: .normal)
+            heartView.layer.borderColor = UIColor(red: 229/255, green: 229/255, blue: 229/255, alpha: 1).cgColor
         }
     }
     
@@ -205,6 +202,7 @@ class DetailVC: UIViewController, UICollectionViewDataSource {
     }
 }
 
+// Carousel Banner Cell, 페이지 텍스트 설정
 extension DetailVC: CarouselCollectionViewDataSource {
     var numberOfItems: Int {
         

@@ -35,7 +35,6 @@ class PagerTabVC: ButtonBarPagerTabStripViewController {
     
     
     func loadDesign() {
-        
         settings.style.selectedBarHeight = 2
         settings.style.selectedBarBackgroundColor = UIColor.black
         settings.style.buttonBarBackgroundColor = UIColor.white
@@ -49,7 +48,7 @@ class PagerTabVC: ButtonBarPagerTabStripViewController {
             oldCell?.label.textColor = .systemGray5
             newCell?.label.textColor = .black
         }
-        
+        settings.style.buttonBarMinimumLineSpacing = 0
     }
     
     override func viewControllers(for pagerTabStripController: PagerTabStripViewController) -> [UIViewController] {
