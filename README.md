@@ -3,9 +3,20 @@
 <br>
 <p align = "center"><img width="150" alt="logo" src="https://user-images.githubusercontent.com/42545818/101120783-d9c81d00-3631-11eb-8b72-4e901e6d9ea8.png"></p>
 
-<p align = "center">
-  <strong>🙈iOS🙉</strong>
-</p>
+<br>
+<br>
+<br>
+
+
+```
+🙈 SOPT 27기 Client X Design 합동 세미나
+
+🙉 iOS 곽민제
+
+🙈 iOS 이다은
+
+🙉 iOS 이예슬
+```
 <br>
 <br>
 
