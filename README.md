@@ -9,8 +9,12 @@
 <br>
 <br>
 
-<p align = "center">🎥</p>
-<p align = "center"><img width="300" alt="구동영상" src="https://user-images.githubusercontent.com/42545818/101025442-ecead680-35b8-11eb-920e-bf377c8eb8ab.gif"></p>
+### 🎥 구동 영상
+<br>&nbsp;
+<img width="300" alt="구동영상" src="https://user-images.githubusercontent.com/42545818/101025442-ecead680-35b8-11eb-920e-bf377c8eb8ab.gif">&nbsp;
+
+<br>
+<br>
 
 ## 🙎‍♂️ 곽민제
 
