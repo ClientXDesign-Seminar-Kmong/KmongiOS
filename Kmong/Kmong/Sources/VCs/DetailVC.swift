@@ -151,7 +151,7 @@ class DetailVC: UIViewController, UICollectionViewDataSource,HeightDelegate {
     }
     
     // Like Button설정
-    var bRec:Bool = true
+    var bRec:Bool = false
     
     @IBAction func heartBtn(_ sender: Any) {
        
