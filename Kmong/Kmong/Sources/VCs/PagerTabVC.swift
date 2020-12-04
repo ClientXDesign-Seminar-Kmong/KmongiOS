@@ -7,9 +7,9 @@
 
 import UIKit
 import XLPagerTabStrip
-public protocol HeightDelegate: class{
-    func setHeight(_ height: CGFloat)
-}
+//public protocol HeightDelegate: class{
+//    func setHeight(_ height: CGFloat)
+//}
 public protocol PagerTabStripDelegate: class {
 
     func updateIndicator(for viewController: PagerTabStripViewController, fromIndex: Int, toIndex: Int)
@@ -22,7 +22,7 @@ public protocol PagerTabStripIsProgressiveDelegate : PagerTabStripDelegate {
 
 class PagerTabVC: ButtonBarPagerTabStripViewController {
     
-    var heightDelegate: HeightDelegate?
+//    var heightDelegate: HeightDelegate?
 
     override func viewDidLoad() {
         
@@ -69,15 +69,16 @@ class PagerTabVC: ButtonBarPagerTabStripViewController {
     func scrollViewDidEndDecelerating(_ scrollView: UIScrollView) {
             print(scrollView.contentOffset)
             let x = scrollView.contentOffset.x
+            print("xx",x)
             let width = containerView.frame.width
-            if x == 0.0{
+            if 0.0<=x && x<width/2{
                 self.heightDelegate?.setHeight(590.0)
             }
             else if x == width{
                 self.heightDelegate?.setHeight(569.0)
             }
             else if x == width*2{
-                self.heightDelegate?.setHeight(329.0)
+                self.heightDelegate?.setHeight(360.0)
             }
             else if x == width*3{
                 self.heightDelegate?.setHeight(725.0)    }
