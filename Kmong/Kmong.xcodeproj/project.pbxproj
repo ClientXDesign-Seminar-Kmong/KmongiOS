@@ -25,6 +25,11 @@
 		37EAC25F2572B01700474877 /* HomeRecServiceTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37EAC25E2572B01700474877 /* HomeRecServiceTableViewCell.swift */; };
 		37EAC2632572B15C00474877 /* HomeRecommendedServiceCVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37EAC2622572B15C00474877 /* HomeRecommendedServiceCVC.swift */; };
 		37EAC2682572BC7A00474877 /* HomeExpert.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37EAC2672572BC7A00474877 /* HomeExpert.swift */; };
+		37FBC8512582544B00C7B572 /* APIConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37FBC8502582544B00C7B572 /* APIConstants.swift */; };
+		37FBC854258254D100C7B572 /* GenericResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37FBC853258254D100C7B572 /* GenericResponse.swift */; };
+		37FBC8572582569100C7B572 /* HomeHeaderImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37FBC8562582569100C7B572 /* HomeHeaderImage.swift */; };
+		37FBC85A258256E600C7B572 /* NetworkResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37FBC859258256E600C7B572 /* NetworkResult.swift */; };
+		37FBC85D2582573500C7B572 /* HomeAuthService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37FBC85C2582573500C7B572 /* HomeAuthService.swift */; };
 		63487AC72567DABE0005BC68 /* DetailServiceOption.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 63487AC62567DABE0005BC68 /* DetailServiceOption.storyboard */; };
 		63487ACD2567E3150005BC68 /* DetailOptionTVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63487ACC2567E3150005BC68 /* DetailOptionTVC.swift */; };
 		63487AD12567E35F0005BC68 /* UIColor+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63487AD02567E35F0005BC68 /* UIColor+Extensions.swift */; };
@@ -62,6 +67,11 @@
 		37EAC25E2572B01700474877 /* HomeRecServiceTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = HomeRecServiceTableViewCell.swift; path = Kmong/Sources/Cells/HomeRecServiceTableViewCell.swift; sourceTree = SOURCE_ROOT; };
 		37EAC2622572B15C00474877 /* HomeRecommendedServiceCVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = HomeRecommendedServiceCVC.swift; path = Kmong/Sources/Cells/HomeRecommendedServiceCVC.swift; sourceTree = SOURCE_ROOT; };
 		37EAC2672572BC7A00474877 /* HomeExpert.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeExpert.swift; sourceTree = "<group>"; };
+		37FBC8502582544B00C7B572 /* APIConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIConstants.swift; sourceTree = "<group>"; };
+		37FBC853258254D100C7B572 /* GenericResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GenericResponse.swift; sourceTree = "<group>"; };
+		37FBC8562582569100C7B572 /* HomeHeaderImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeHeaderImage.swift; sourceTree = "<group>"; };
+		37FBC859258256E600C7B572 /* NetworkResult.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkResult.swift; sourceTree = "<group>"; };
+		37FBC85C2582573500C7B572 /* HomeAuthService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeAuthService.swift; sourceTree = "<group>"; };
 		63487AC62567DABE0005BC68 /* DetailServiceOption.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = DetailServiceOption.storyboard; sourceTree = "<group>"; };
 		63487ACC2567E3150005BC68 /* DetailOptionTVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailOptionTVC.swift; sourceTree = "<group>"; };
 		63487AD02567E35F0005BC68 /* UIColor+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+Extensions.swift"; sourceTree = "<group>"; };
@@ -100,6 +110,13 @@
 				29B34A15E7E269D7E63C6034 /* Pods_Kmong.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		3716CDD825876129006D7FBA /* APIService */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = APIService;
 			sourceTree = "<group>";
 		};
 		63487ACF2567E3510005BC68 /* Extensions */ = {
@@ -141,6 +158,7 @@
 		B8218B07255F986A003AA1AA /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				3716CDD825876129006D7FBA /* APIService */,
 				B8218AE3255F9695003AA1AA /* Assets.xcassets */,
 				B8218B08255F9879003AA1AA /* Storyboards */,
 			);
@@ -212,6 +230,11 @@
 			isa = PBXGroup;
 			children = (
 				639C950B2579165300A14D0B /* DetailHeaderImage.swift */,
+				37FBC859258256E600C7B572 /* NetworkResult.swift */,
+				37FBC8502582544B00C7B572 /* APIConstants.swift */,
+				37FBC853258254D100C7B572 /* GenericResponse.swift */,
+				37FBC8562582569100C7B572 /* HomeHeaderImage.swift */,
+				37FBC85C2582573500C7B572 /* HomeAuthService.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -345,17 +368,22 @@
 			buildActionMask = 2147483647;
 			files = (
 				3741F5992567DA9A00729AEA /* HomeVC.swift in Sources */,
+				37FBC8572582569100C7B572 /* HomeHeaderImage.swift in Sources */,
 				37EAC2632572B15C00474877 /* HomeRecommendedServiceCVC.swift in Sources */,
 				37EAC25B2572AD1100474877 /* HomeTableViewHeaderTVC.swift in Sources */,
+				37FBC85A258256E600C7B572 /* NetworkResult.swift in Sources */,
 				373A48CD2578EA3000C069E3 /* ReviewTVC.swift in Sources */,
 				1F19AC5B2563FB9C001FF5D1 /* DetailDescVC.swift in Sources */,
 				1F19AC5F25640002001FF5D1 /* DetailServiceOptionVC.swift in Sources */,
 				373A48B62577F43300C069E3 /* HomeExpertType.swift in Sources */,
 				639C950C2579165300A14D0B /* DetailHeaderImage.swift in Sources */,
+				37FBC8512582544B00C7B572 /* APIConstants.swift in Sources */,
 				639C95062579162C00A14D0B /* DetailHeaderCell.swift in Sources */,
 				373A48D02578EADD00C069E3 /* ReviewStruct.swift in Sources */,
+				37FBC85D2582573500C7B572 /* HomeAuthService.swift in Sources */,
 				1F19AC62256400F5001FF5D1 /* DetailExpertInfoVC.swift in Sources */,
 				1F19AC652564016A001FF5D1 /* DetailReviewVC.swift in Sources */,
+				37FBC854258254D100C7B572 /* GenericResponse.swift in Sources */,
 				373A48B32577CC0C00C069E3 /* CustomTabBarController.swift in Sources */,
 				37EAC25F2572B01700474877 /* HomeRecServiceTableViewCell.swift in Sources */,
 				373A48B02577419400C069E3 /* HomeHeaderCVC.swift in Sources */,

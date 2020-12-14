@@ -138,6 +138,7 @@ extension HomeVC: UITableViewDelegate{
 //        let cell.naviHere = self.navigationController
 //    }
 }
+
 extension HomeVC: UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return 5
