@@ -2,6 +2,7 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17506" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Un5-Uw-hDg">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
+        <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17505"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
@@ -595,13 +596,16 @@
                         <outlet property="cardCollectionView" destination="IbI-s4-ibu" id="bQ4-MT-f2a"/>
                         <outlet property="currentPage" destination="hED-SI-cUD" id="jjL-cm-gYF"/>
                         <outlet property="headerCollectionView" destination="bSz-cd-VfD" id="NZq-Wh-J2V"/>
+                        <outlet property="heartLabel" destination="dLj-az-zQk" id="1dP-Eu-1x8"/>
                         <outlet property="heartView" destination="ETk-i2-BhU" id="j9e-pJ-Lk9"/>
                         <outlet property="height" destination="DmD-dG-5qg" id="rhL-gd-DZD"/>
                         <outlet property="inquiryView" destination="ZCM-lf-22Z" id="J2q-4o-OP6"/>
                         <outlet property="pageNumberView" destination="9u7-Yi-iOE" id="Rcq-QE-ISc"/>
+                        <outlet property="priceLabel" destination="Iu3-09-Vpe" id="y5B-hb-Uak"/>
                         <outlet property="purchaseView" destination="n1M-rN-bH8" id="fhp-Oi-wKU"/>
+                        <outlet property="reviewLabel" destination="lgU-2z-eY4" id="Y8J-ap-Dnl"/>
                         <outlet property="scrollView" destination="pJv-cS-miq" id="oEc-am-LwB"/>
-                        <outlet property="smallHeartView" destination="DM8-zh-dD8" id="cUd-y6-Z6L"/>
+                        <outlet property="titleLabel" destination="0Vj-E1-9la" id="yZz-pd-6UP"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="o9v-dH-IRn" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>

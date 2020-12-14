@@ -37,11 +37,14 @@ class DetailVC: UIViewController, UICollectionViewDataSource,HeightDelegate {
     @IBOutlet weak var pageNumberView: UIView!
     @IBOutlet weak var inquiryView: UIButton!
     @IBOutlet weak var purchaseView: UIButton!
-    @IBOutlet weak var smallHeartView: UIButton!
     @IBOutlet weak var currentPage: UILabel!
     @IBOutlet weak var heartView: UIButton!
     @IBOutlet weak var scrollView: UIScrollView!
     @IBOutlet weak var cardCollectionView: UICollectionView!
+    @IBOutlet weak var titleLabel: UILabel!
+    @IBOutlet weak var reviewLabel: UILabel!
+    @IBOutlet weak var heartLabel: UILabel!
+    @IBOutlet weak var priceLabel: UILabel!
     
     var headerImages: [HeaderImages] = []
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
@@ -52,6 +55,25 @@ class DetailVC: UIViewController, UICollectionViewDataSource,HeightDelegate {
         }
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        DetailServiceUpper.shared.ServiceUpper(title: titleLabel.text!, id: "", star: 0, review: 394, heart: 30, price: "65,000", layer: "", serviceImage: [""]) { (networkResult) -> (Void) in
+            switch networkResult {
+            case .success(let data):
+                if let ServiceUpperData = data as? ServiceUpperData {
+                    print(ServiceUpperData)
+                }
+            case .requestErr(let msg):
+                if let message = msg as? String {
+                    print(message)
+                }
+            case .pathErr:
+                print("pathErr")
+            case .serverErr:
+                print("serverErr")
+            case .networkFail:
+                print("networkFail")
+            }
+        }
         
         //cardCollectionView 레이아웃 구성
         let cardFlowLayout = UICollectionViewFlowLayout()
