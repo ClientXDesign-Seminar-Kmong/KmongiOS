@@ -38,6 +38,7 @@
 		639C94F32578BCE100A14D0B /* DetailExpertTVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 639C94F22578BCE100A14D0B /* DetailExpertTVC.swift */; };
 		639C95062579162C00A14D0B /* DetailHeaderCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 639C95052579162C00A14D0B /* DetailHeaderCell.swift */; };
 		639C950C2579165300A14D0B /* DetailHeaderImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 639C950B2579165300A14D0B /* DetailHeaderImage.swift */; };
+		63B9B5642588C9CC00595534 /* UIImageVIew+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63B9B5632588C9CC00595534 /* UIImageVIew+Extensions.swift */; };
 		B8218ADB255F968F003AA1AA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8218ADA255F968F003AA1AA /* AppDelegate.swift */; };
 		B8218ADD255F968F003AA1AA /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8218ADC255F968F003AA1AA /* SceneDelegate.swift */; };
 		B8218AE4255F9695003AA1AA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B8218AE3255F9695003AA1AA /* Assets.xcassets */; };
@@ -82,6 +83,7 @@
 		639C94F22578BCE100A14D0B /* DetailExpertTVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailExpertTVC.swift; sourceTree = "<group>"; };
 		639C95052579162C00A14D0B /* DetailHeaderCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailHeaderCell.swift; sourceTree = "<group>"; };
 		639C950B2579165300A14D0B /* DetailHeaderImage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailHeaderImage.swift; sourceTree = "<group>"; };
+		63B9B5632588C9CC00595534 /* UIImageVIew+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImageVIew+Extensions.swift"; sourceTree = "<group>"; };
 		8006D2A8C3B9EB3ED014F779 /* Pods-Kmong.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Kmong.release.xcconfig"; path = "Target Support Files/Pods-Kmong/Pods-Kmong.release.xcconfig"; sourceTree = "<group>"; };
 		A041FD1B043DBD45F4AE2B5D /* Pods-Kmong.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Kmong.debug.xcconfig"; path = "Target Support Files/Pods-Kmong/Pods-Kmong.debug.xcconfig"; sourceTree = "<group>"; };
 		B8218AD7255F968F003AA1AA /* Kmong.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Kmong.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -130,6 +132,7 @@
 			isa = PBXGroup;
 			children = (
 				63487AD02567E35F0005BC68 /* UIColor+Extensions.swift */,
+				63B9B5632588C9CC00595534 /* UIImageVIew+Extensions.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -387,6 +390,7 @@
 				37FBC8512582544B00C7B572 /* APIConstants.swift in Sources */,
 				639C95062579162C00A14D0B /* DetailHeaderCell.swift in Sources */,
 				373A48D02578EADD00C069E3 /* ReviewStruct.swift in Sources */,
+				63B9B5642588C9CC00595534 /* UIImageVIew+Extensions.swift in Sources */,
 				37FBC85D2582573500C7B572 /* HomeAuthService.swift in Sources */,
 				1F19AC62256400F5001FF5D1 /* DetailExpertInfoVC.swift in Sources */,
 				1F19AC652564016A001FF5D1 /* DetailReviewVC.swift in Sources */,
