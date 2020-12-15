@@ -124,6 +124,7 @@
 				1F1890AD2587AB4400592462 /* DetailServiceUpper.swift */,
 				37FBC859258256E600C7B572 /* NetworkResult.swift */,
 				37FBC8502582544B00C7B572 /* APIConstants.swift */,
+				37FBC85C2582573500C7B572 /* HomeAuthService.swift */,
 			);
 			path = APIService;
 			sourceTree = "<group>";
@@ -242,7 +243,6 @@
 				639C950B2579165300A14D0B /* DetailHeaderImage.swift */,
 				37FBC853258254D100C7B572 /* GenericResponse.swift */,
 				37FBC8562582569100C7B572 /* HomeHeaderImage.swift */,
-				37FBC85C2582573500C7B572 /* HomeAuthService.swift */,
 				1F1890AA2587A97A00592462 /* DetailServiceUpperData.swift */,
 			);
 			path = Models;

@@ -16,7 +16,8 @@ class HomeVC: UIViewController, UIGestureRecognizerDelegate {
     var expertType : [ExpertType] = []
     var timer = Timer()
     var counter = 0
-    let imgArr = [UIImage(named: "homeCard2"), UIImage(named: "homeCard2")]
+//    let imgArr = [UIImage(named: "homeCard2"), UIImage(named: "homeCard2")]
+    var homeData : [HomeHeaderImage] = []
 
     
     
@@ -31,6 +32,10 @@ class HomeVC: UIViewController, UIGestureRecognizerDelegate {
         homeHeaderCollectionView.isItemPagingEnabled = true
         homeHeaderCollectionView.velocityMultiplier = 1
         homeHeaderCollectionView.preferredCenteredIndexPath = [0,0]
+        
+        callHomeAuthService()
+        
+        
         self.navigationController?.interactivePopGestureRecognizer?.delegate = self
         
         DispatchQueue.main.async {
@@ -58,6 +63,31 @@ class HomeVC: UIViewController, UIGestureRecognizerDelegate {
         let okAction = UIAlertAction(title: "사과하기", style: .default)
         alert.addAction(okAction)
         present(alert, animated: true)
+    }
+    
+    func callHomeAuthService() {
+        HomeAuthService.shared.homeHeader() { (networkResult) -> (Void) in
+            switch networkResult {
+            case .success(let data):
+                if let homeHeaderData = data as? [HomeHeaderImage] {
+                    self.homeData = homeHeaderData
+                    DispatchQueue.main.async{
+                        self.homeHeaderCollectionView.reloadData()
+                    }
+                }
+            case .requestErr(let msg):
+                if let message = msg as? String {
+                    print(message)
+                }
+            case .pathErr:
+                print("pathErr")
+            case .serverErr:
+                print("serverErr")
+            case .networkFail:
+                print("networkFail")
+            }
+            
+        }
     }
     
     @IBAction func TouchUpAlert(_ sender: Any) {
@@ -141,14 +171,19 @@ extension HomeVC: UITableViewDelegate{
 
 extension HomeVC: UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 5
+        return homeData.count
     }
 
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: HomeHeaderCVC.identifier, for: indexPath) as? HomeHeaderCVC else {
             return UICollectionViewCell()
         }
-        cell.setImage(imageName: "homeCard2")
+        print(homeData)
+        
+        let realIndex = self.homeHeaderCollectionView.indexPath(from: indexPath).row
+        
+        cell.setImage(url: homeData[realIndex].image)
+        
         
         return cell
     }
