@@ -12,15 +12,10 @@ struct ServiceUpperData: Codable {
     var id, star, review, heart: Int
     var price: Int
     var layer: String
-    var serviceImgs: [ServiceImg]
-    
-    enum CodingKeys: String, CodingKey {
-            case title, id, star, review, heart, price, layer
-            case serviceImgs = "ServiceImgs"
-        }
+    var serviceImgs: [serviceImg]
 }
 
-struct ServiceImg: Codable {
+struct serviceImg: Codable {
     var id: Int
     var img: String
 }

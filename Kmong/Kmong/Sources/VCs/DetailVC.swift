@@ -45,6 +45,8 @@ class DetailVC: UIViewController, UICollectionViewDataSource,HeightDelegate {
     @IBOutlet weak var reviewLabel: UILabel!
     @IBOutlet weak var heartLabel: UILabel!
     @IBOutlet weak var priceLabel: UILabel!
+    @IBOutlet weak var layerLabel: UILabel!
+    
     
     var headerImages: [HeaderImages] = []
     var upperData: ServiceUpperData?
@@ -60,6 +62,9 @@ class DetailVC: UIViewController, UICollectionViewDataSource,HeightDelegate {
         
         titleLabel.text = upperData?.title
         reviewLabel.text = String(upperData!.review)
+        priceLabel.text = String(upperData!.price)
+        layerLabel.text = upperData?.layer
+        
     }
     
     override func viewDidLoad() {
