@@ -56,11 +56,12 @@ class DetailVC: UIViewController, UICollectionViewDataSource,HeightDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        DetailServiceUpper.shared.ServiceUpper(title: titleLabel.text!, id: "", star: 0, review: 394, heart: 30, price: "65,000", layer: "", serviceImage: [""]) { (networkResult) -> (Void) in
+        DetailServiceUpper.shared.ServiceUpper() { (networkResult) -> (Void) in
             switch networkResult {
             case .success(let data):
-                if let ServiceUpperData = data as? ServiceUpperData {
-                    print(ServiceUpperData)
+                print("123")
+                if let serviceUpperData = data as? ServiceUpperData {
+                    print(serviceUpperData)
                 }
             case .requestErr(let msg):
                 if let message = msg as? String {

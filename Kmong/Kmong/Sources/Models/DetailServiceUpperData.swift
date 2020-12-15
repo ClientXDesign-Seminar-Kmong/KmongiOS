@@ -7,22 +7,15 @@
 
 import Foundation
 
-struct Empty: Codable {
-    
-    var status: Int
-    var message: String
-    var data: ServiceUpperData
+struct ServiceUpperData: Codable {
+    var title: String
+    var id, star, review, heart: Int
+    var price: Int
+    var layer: String
+    var serviceImgs: [ServiceImg]
 }
 
-struct ServiceUpperData: Codable {
-    let title: String
-    let id, star, review, heart: Int
-    let price: Int
-    let layer: String
-    let serviceImgs: [String]
-
-    enum CodingKeys: String, CodingKey {
-        case title, id, star, review, heart, price, layer
-        case serviceImgs = "ServiceImgs"
-    }
+struct ServiceImg: Codable {
+    var id: Int
+    var img: String
 }

@@ -11,18 +11,16 @@ import Alamofire
 struct DetailServiceUpper {
     static let shared = DetailServiceUpper()
     
-    func ServiceUpper(title: String, id: String, star: Int, review: Int, heart: Int, price: String, layer: String, serviceImage: [String], completion: @escaping (NetworkResult<Any>) -> (Void)) {
+    func ServiceUpper(completion: @escaping (NetworkResult<Any>) -> (Void)) {
         
         let serviceUpperURL = APIConstants.serviceUpperURL
-        let serviceUpperHeader: HTTPHeaders = ["Content-Type":"application/json"]
-        let serviceUpperBody: Parameters = ["title": title, "id": id, "star": star, "review": review, "heart": heart, "price": price, "layer": layer, "serviceImage": serviceImage]
+//        let serviceUpperHeader: HTTPHeaders = []
+//        let serviceUpperBody: Parameters = ["title": title, "id": id, "star": star, "review": review, "heart": heart, "price": price, "layer": layer, "serviceImage": serviceImage]
         
-        let serviceUpperdataRequest = AF.request(serviceUpperURL, method: .get, parameters: serviceUpperBody, encoding: JSONEncoding.default, headers: serviceUpperHeader)
+        let serviceUpperdataRequest = AF.request(serviceUpperURL, method: .get, parameters: nil, encoding: JSONEncoding.default, headers: nil)
         
         serviceUpperdataRequest.responseData { (response) in
-            
             switch response.result {
-            
             case .success:
                 guard let statusCode = response.response?.statusCode else {
                     return
@@ -38,6 +36,7 @@ struct DetailServiceUpper {
             }
         }
     }
+    
     private func judgeDetailServiceUpperData(status: Int, data: Data) -> NetworkResult<Any> {
         
         let decoder = JSONDecoder()

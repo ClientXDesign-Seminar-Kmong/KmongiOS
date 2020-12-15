@@ -8,7 +8,7 @@
 import Foundation
 
 struct APIConstants {
-    static let baseURL = "13.209.146.22:3000"
+    static let baseURL = "http://13.209.146.22:3000"
     
     static let homeBannerURL = baseURL + "/banner"
     
