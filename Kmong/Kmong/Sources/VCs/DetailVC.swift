@@ -47,20 +47,32 @@ class DetailVC: UIViewController, UICollectionViewDataSource,HeightDelegate {
     @IBOutlet weak var priceLabel: UILabel!
     
     var headerImages: [HeaderImages] = []
+    var upperData: ServiceUpperData?
+    
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
             if segue.identifier == "segue" {
                 let viewController : PagerTabVC = segue.destination as! PagerTabVC
                     viewController.heightDelegate = self
             }
         }
+    
+    func setUpper() {
+        
+        titleLabel.text = upperData?.title
+        reviewLabel.text = String(upperData!.review)
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
         DetailServiceUpper.shared.ServiceUpper() { (networkResult) -> (Void) in
             switch networkResult {
             case .success(let data):
-                print("123")
                 if let serviceUpperData = data as? ServiceUpperData {
+                    self.upperData = serviceUpperData
+                    
+                    self.setUpper()
+                    
                     print(serviceUpperData)
                 }
             case .requestErr(let msg):

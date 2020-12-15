@@ -13,6 +13,11 @@ struct ServiceUpperData: Codable {
     var price: Int
     var layer: String
     var serviceImgs: [ServiceImg]
+    
+    enum CodingKeys: String, CodingKey {
+            case title, id, star, review, heart, price, layer
+            case serviceImgs = "ServiceImgs"
+        }
 }
 
 struct ServiceImg: Codable {
