@@ -14,7 +14,7 @@ class HomeHeaderCVC: UICollectionViewCell {
     
     func setImage(imageName: String) {
         
-        headerImageView.image = UIImage(named: imageName)
+        headerImageView.imagefromurl
     }
     
 }

@@ -6,14 +6,18 @@
 //
 
 import Foundation
-import UIKit
 
 struct HomeHeaderImage: Codable {
     var id : Int
-    var image : String
+    var image : [BannerImg]
     
 //    func urlToImage(url : String) -> UIImage {
 //        let data = try Data(contentsOf: URL(string: url) ?? "")
 //
 //    }
+}
+
+struct BannerImg: Codable {
+    var id : Int
+    var img : String
 }
