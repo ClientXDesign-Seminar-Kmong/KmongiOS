@@ -46,9 +46,9 @@ class DetailVC: UIViewController, UICollectionViewDataSource,HeightDelegate {
     @IBOutlet weak var heartLabel: UILabel!
     @IBOutlet weak var priceLabel: UILabel!
     @IBOutlet weak var layerLabel: UILabel!
+    @IBOutlet weak var imageNumber: UILabel!
     
-    
-    var headerImages: [HeaderImages] = []
+    var headerImages: [ServiceImg] = []
     var upperData: ServiceUpperData?
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
@@ -64,7 +64,9 @@ class DetailVC: UIViewController, UICollectionViewDataSource,HeightDelegate {
         reviewLabel.text = String(upperData!.review)
         priceLabel.text = String(upperData!.price)
         layerLabel.text = upperData?.layer
-        
+        headerImages = upperData!.serviceImgs
+        imageNumber.text = String(headerImages.count)
+        heartLabel.text = String(upperData!.heart)
     }
     
     override func viewDidLoad() {
@@ -75,8 +77,12 @@ class DetailVC: UIViewController, UICollectionViewDataSource,HeightDelegate {
             case .success(let data):
                 if let serviceUpperData = data as? ServiceUpperData {
                     self.upperData = serviceUpperData
-                    
                     self.setUpper()
+                    
+                    DispatchQueue.main.async {
+                        
+                        self.headerCollectionView.reloadData()
+                    }
                     
                     print(serviceUpperData)
                 }
@@ -115,7 +121,7 @@ class DetailVC: UIViewController, UICollectionViewDataSource,HeightDelegate {
         cardCollectionView.dataSource = self
         
         setInitLayout()
-        setHeaderData()
+//        setHeaderData()
         
         self.navigationController?.navigationBar.setBackgroundImage(UIImage(), for: .default)
         self.navigationController?.navigationBar.shadowImage = UIImage()
@@ -145,33 +151,6 @@ class DetailVC: UIViewController, UICollectionViewDataSource,HeightDelegate {
         statusBarView.isOpaque = false
         statusBarView.backgroundColor = .clear
         view.addSubview(statusBarView)
-    }
-    
-    //헤더컬렉션뷰 셀 이미지 세팅
-    func setHeaderData() {
-        
-        headerImages.append(contentsOf: [
-            HeaderImages(headerImage: "imgHeader"),
-            HeaderImages(headerImage: "imgHeader"),
-            HeaderImages(headerImage: "imgHeader"),
-            HeaderImages(headerImage: "imgHeader"),
-            HeaderImages(headerImage: "imgHeader"),
-            HeaderImages(headerImage: "imgHeader"),
-            HeaderImages(headerImage: "imgHeader"),
-            HeaderImages(headerImage: "imgHeader"),
-            HeaderImages(headerImage: "imgHeader"),
-            HeaderImages(headerImage: "imgHeader"),
-            HeaderImages(headerImage: "imgHeader"),
-            HeaderImages(headerImage: "imgHeader"),
-            HeaderImages(headerImage: "imgHeader"),
-            HeaderImages(headerImage: "imgHeader"),
-            HeaderImages(headerImage: "imgHeader"),
-            HeaderImages(headerImage: "imgHeader"),
-            HeaderImages(headerImage: "imgHeader"),
-            HeaderImages(headerImage: "imgHeader"),
-            HeaderImages(headerImage: "imgHeader"),
-            HeaderImages(headerImage: "imgHeader")
-        ])
     }
 
     // 문의, 구매, 하트 버튼 레이아웃 구성
@@ -259,7 +238,7 @@ class DetailVC: UIViewController, UICollectionViewDataSource,HeightDelegate {
 extension DetailVC: CarouselCollectionViewDataSource {
     var numberOfItems: Int {
         
-        return 20
+        return headerImages.count
     }
     
     func carouselCollectionView(_ carouselCollectionView: CarouselCollectionView, cellForItemAt index: Int, fakeIndexPath: IndexPath) -> UICollectionViewCell {
@@ -268,7 +247,8 @@ extension DetailVC: CarouselCollectionViewDataSource {
         
                 return UICollectionViewCell()
         }
-            cell.setCell(headerImage: headerImages[index])
+//            cell.setCell(headerImage: headerImages[index])
+        cell.setCell(url: headerImages[index].img)
                 return cell
     }
     

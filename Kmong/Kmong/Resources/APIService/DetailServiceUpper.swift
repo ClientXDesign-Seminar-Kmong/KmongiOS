@@ -14,8 +14,6 @@ struct DetailServiceUpper {
     func ServiceUpper(completion: @escaping (NetworkResult<Any>) -> (Void)) {
         
         let serviceUpperURL = APIConstants.serviceUpperURL
-//        let serviceUpperHeader: HTTPHeaders = []
-//        let serviceUpperBody: Parameters = ["title": title, "id": id, "star": star, "review": review, "heart": heart, "price": price, "layer": layer, "serviceImage": serviceImage]
         
         let serviceUpperdataRequest = AF.request(serviceUpperURL, method: .get, parameters: nil, encoding: JSONEncoding.default, headers: nil)
         

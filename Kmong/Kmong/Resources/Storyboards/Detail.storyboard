@@ -129,7 +129,7 @@
                                                 <rect key="frame" x="354" y="238" width="40" height="18"/>
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="1" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hED-SI-cUD">
-                                                        <rect key="frame" x="4.5" y="3" width="13" height="12"/>
+                                                        <rect key="frame" x="6.5" y="3" width="13" height="12"/>
                                                         <constraints>
                                                             <constraint firstAttribute="width" constant="13" id="5tk-gk-9vd"/>
                                                         </constraints>
@@ -138,13 +138,13 @@
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="/" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iRD-0W-pxg">
-                                                        <rect key="frame" x="18.5" y="3" width="3.5" height="12"/>
+                                                        <rect key="frame" x="20.5" y="3" width="3.5" height="12"/>
                                                         <fontDescription key="fontDescription" name="AppleSDGothicNeo-Thin" family="Apple SD Gothic Neo" pointSize="10"/>
                                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
-                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="20" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1C8-ky-u25">
-                                                        <rect key="frame" x="23" y="3" width="12" height="12"/>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="1" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1C8-ky-u25">
+                                                        <rect key="frame" x="27" y="3" width="4" height="12"/>
                                                         <fontDescription key="fontDescription" name="AppleSDGothicNeo-Thin" family="Apple SD Gothic Neo" pointSize="10"/>
                                                         <color key="textColor" red="0.89803921568627454" green="0.89803921568627454" blue="0.89803921568627454" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                         <nil key="highlightedColor"/>
@@ -158,8 +158,8 @@
                                                     <constraint firstItem="iRD-0W-pxg" firstAttribute="centerY" secondItem="9u7-Yi-iOE" secondAttribute="centerY" id="YWb-TJ-aBd"/>
                                                     <constraint firstItem="iRD-0W-pxg" firstAttribute="baseline" secondItem="1C8-ky-u25" secondAttribute="baseline" id="fDk-oR-ijm"/>
                                                     <constraint firstItem="iRD-0W-pxg" firstAttribute="baseline" secondItem="hED-SI-cUD" secondAttribute="baseline" id="jkW-VU-VtW"/>
-                                                    <constraint firstItem="1C8-ky-u25" firstAttribute="leading" secondItem="iRD-0W-pxg" secondAttribute="trailing" constant="1" id="pfu-R5-emJ"/>
-                                                    <constraint firstAttribute="trailing" secondItem="1C8-ky-u25" secondAttribute="trailing" constant="5" id="qfb-rb-Y5q"/>
+                                                    <constraint firstItem="1C8-ky-u25" firstAttribute="leading" secondItem="iRD-0W-pxg" secondAttribute="trailing" constant="3" id="pfu-R5-emJ"/>
+                                                    <constraint firstAttribute="trailing" secondItem="1C8-ky-u25" secondAttribute="trailing" constant="9" id="qfb-rb-Y5q"/>
                                                 </constraints>
                                             </view>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="aKb-Td-XnM">
@@ -599,6 +599,7 @@
                         <outlet property="heartLabel" destination="dLj-az-zQk" id="1dP-Eu-1x8"/>
                         <outlet property="heartView" destination="ETk-i2-BhU" id="j9e-pJ-Lk9"/>
                         <outlet property="height" destination="DmD-dG-5qg" id="rhL-gd-DZD"/>
+                        <outlet property="imageNumber" destination="1C8-ky-u25" id="DMn-EJ-OOj"/>
                         <outlet property="inquiryView" destination="ZCM-lf-22Z" id="J2q-4o-OP6"/>
                         <outlet property="layerLabel" destination="2Uc-37-fmh" id="Q7I-bd-w7p"/>
                         <outlet property="pageNumberView" destination="9u7-Yi-iOE" id="Rcq-QE-ISc"/>
