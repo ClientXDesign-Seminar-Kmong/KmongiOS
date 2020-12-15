@@ -37,21 +37,61 @@ class DetailVC: UIViewController, UICollectionViewDataSource,HeightDelegate {
     @IBOutlet weak var pageNumberView: UIView!
     @IBOutlet weak var inquiryView: UIButton!
     @IBOutlet weak var purchaseView: UIButton!
-    @IBOutlet weak var smallHeartView: UIButton!
     @IBOutlet weak var currentPage: UILabel!
     @IBOutlet weak var heartView: UIButton!
     @IBOutlet weak var scrollView: UIScrollView!
     @IBOutlet weak var cardCollectionView: UICollectionView!
+    @IBOutlet weak var titleLabel: UILabel!
+    @IBOutlet weak var reviewLabel: UILabel!
+    @IBOutlet weak var heartLabel: UILabel!
+    @IBOutlet weak var priceLabel: UILabel!
+    @IBOutlet weak var layerLabel: UILabel!
+    
     
     var headerImages: [HeaderImages] = []
+    var upperData: ServiceUpperData?
+    
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
             if segue.identifier == "segue" {
                 let viewController : PagerTabVC = segue.destination as! PagerTabVC
                     viewController.heightDelegate = self
             }
         }
+    
+    func setUpper() {
+        
+        titleLabel.text = upperData?.title
+        reviewLabel.text = String(upperData!.review)
+        priceLabel.text = String(upperData!.price)
+        layerLabel.text = upperData?.layer
+        
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        DetailServiceUpper.shared.ServiceUpper() { (networkResult) -> (Void) in
+            switch networkResult {
+            case .success(let data):
+                if let serviceUpperData = data as? ServiceUpperData {
+                    self.upperData = serviceUpperData
+                    
+                    self.setUpper()
+                    
+                    print(serviceUpperData)
+                }
+            case .requestErr(let msg):
+                if let message = msg as? String {
+                    print(message)
+                }
+            case .pathErr:
+                print("pathErr")
+            case .serverErr:
+                print("serverErr")
+            case .networkFail:
+                print("networkFail")
+            }
+        }
         
         //cardCollectionView 레이아웃 구성
         let cardFlowLayout = UICollectionViewFlowLayout()

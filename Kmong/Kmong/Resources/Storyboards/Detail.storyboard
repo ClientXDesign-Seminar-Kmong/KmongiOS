@@ -1,8 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17506" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Un5-Uw-hDg">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Un5-Uw-hDg">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17505"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="collection view cell content view" minToolsVersion="11.0"/>
@@ -170,25 +171,25 @@
                                                         <color key="textColor" red="0.396078431372549" green="0.396078431372549" blue="0.396078431372549" alpha="1" colorSpace="calibratedRGB"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
-                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="&gt;" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tJL-5u-EVf">
+                                                    <label opaque="NO" userInteractionEnabled="NO" alpha="0.0" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="&gt;" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tJL-5u-EVf">
                                                         <rect key="frame" x="57.5" y="8" width="7" height="14.5"/>
                                                         <fontDescription key="fontDescription" name="AppleSDGothicNeo-Light" family="Apple SD Gothic Neo" pointSize="12"/>
                                                         <color key="textColor" systemColor="systemGrayColor"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
-                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="로고 · 브랜딩" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kwE-Qb-oPU">
+                                                    <label opaque="NO" userInteractionEnabled="NO" alpha="0.0" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="로고 · 브랜딩" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kwE-Qb-oPU">
                                                         <rect key="frame" x="70.5" y="8" width="62" height="14.5"/>
                                                         <fontDescription key="fontDescription" name="AppleSDGothicNeo-Light" family="Apple SD Gothic Neo" pointSize="12"/>
                                                         <color key="textColor" red="0.396078431372549" green="0.396078431372549" blue="0.396078431372549" alpha="0.84705882352941175" colorSpace="calibratedRGB"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
-                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="&gt;" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Kj6-lC-AzI">
+                                                    <label opaque="NO" userInteractionEnabled="NO" alpha="0.0" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="&gt;" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Kj6-lC-AzI">
                                                         <rect key="frame" x="138.5" y="8" width="7" height="14.5"/>
                                                         <fontDescription key="fontDescription" name="AppleSDGothicNeo-Light" family="Apple SD Gothic Neo" pointSize="12"/>
                                                         <color key="textColor" systemColor="systemGrayColor"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
-                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="로고디자인" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MAS-ls-v0x">
+                                                    <label opaque="NO" userInteractionEnabled="NO" alpha="0.0" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="로고디자인" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MAS-ls-v0x">
                                                         <rect key="frame" x="151.5" y="8" width="52" height="14.5"/>
                                                         <fontDescription key="fontDescription" name="AppleSDGothicNeo-Light" family="Apple SD Gothic Neo" pointSize="12"/>
                                                         <color key="textColor" red="0.396078431372549" green="0.396078431372549" blue="0.396078431372549" alpha="0.84705882352941175" colorSpace="calibratedRGB"/>
@@ -595,13 +596,17 @@
                         <outlet property="cardCollectionView" destination="IbI-s4-ibu" id="bQ4-MT-f2a"/>
                         <outlet property="currentPage" destination="hED-SI-cUD" id="jjL-cm-gYF"/>
                         <outlet property="headerCollectionView" destination="bSz-cd-VfD" id="NZq-Wh-J2V"/>
+                        <outlet property="heartLabel" destination="dLj-az-zQk" id="1dP-Eu-1x8"/>
                         <outlet property="heartView" destination="ETk-i2-BhU" id="j9e-pJ-Lk9"/>
                         <outlet property="height" destination="DmD-dG-5qg" id="rhL-gd-DZD"/>
                         <outlet property="inquiryView" destination="ZCM-lf-22Z" id="J2q-4o-OP6"/>
+                        <outlet property="layerLabel" destination="2Uc-37-fmh" id="Q7I-bd-w7p"/>
                         <outlet property="pageNumberView" destination="9u7-Yi-iOE" id="Rcq-QE-ISc"/>
+                        <outlet property="priceLabel" destination="Iu3-09-Vpe" id="y5B-hb-Uak"/>
                         <outlet property="purchaseView" destination="n1M-rN-bH8" id="fhp-Oi-wKU"/>
+                        <outlet property="reviewLabel" destination="lgU-2z-eY4" id="Y8J-ap-Dnl"/>
                         <outlet property="scrollView" destination="pJv-cS-miq" id="oEc-am-LwB"/>
-                        <outlet property="smallHeartView" destination="DM8-zh-dD8" id="cUd-y6-Z6L"/>
+                        <outlet property="titleLabel" destination="0Vj-E1-9la" id="yZz-pd-6UP"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="o9v-dH-IRn" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
