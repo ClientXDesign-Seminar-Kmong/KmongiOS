@@ -391,7 +391,7 @@
                                                     <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                                                 </collectionViewFlowLayout>
                                                 <cells>
-                                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="CardCollectionViewCell" id="I2a-2C-9ad">
+                                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="SimilarServiceCVC" id="I2a-2C-9ad" customClass="SimilarServiceCVC" customModule="Kmong" customModuleProvider="target">
                                                         <rect key="frame" x="0.0" y="0.0" width="200" height="223"/>
                                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                         <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="ut4-nB-4FW">
@@ -498,6 +498,13 @@
                                                             </constraints>
                                                         </collectionViewCellContentView>
                                                         <size key="customSize" width="200" height="223"/>
+                                                        <connections>
+                                                            <outlet property="headerImage" destination="cl1-Ku-jia" id="bMp-fc-9bZ"/>
+                                                            <outlet property="priceLabel" destination="xFf-Dk-qcz" id="QH3-6O-8kq"/>
+                                                            <outlet property="reviewLabel" destination="a77-lI-dfR" id="2Ez-H3-g0P"/>
+                                                            <outlet property="starLabel" destination="Hxm-fr-xoR" id="IFW-TL-2Pj"/>
+                                                            <outlet property="titleLabel" destination="VPq-f7-C3g" id="l2S-fc-in0"/>
+                                                        </connections>
                                                     </collectionViewCell>
                                                 </cells>
                                             </collectionView>
@@ -656,90 +663,11 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="512"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DZq-Fv-DwH">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="서비스 설명" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DZq-Fv-DwH">
                                 <rect key="frame" x="20" y="84" width="374" height="36"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="36" id="ZK7-LK-y9I"/>
                                 </constraints>
-                                <string key="text">안녕하세요
-디자인, 미술, 포토그래퍼가 모여있는 로고 회사입니다</string>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5CW-C2-Aeu">
-                                <rect key="frame" x="20" y="140" width="374" height="36"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="36" id="EbF-pv-F3C"/>
-                                </constraints>
-                                <string key="text">다양한 분야에서 다양한 시선으로 고객님을 이해하며 
-소통하는 감각입니다</string>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="psd-fk-dRL">
-                                <rect key="frame" x="20" y="196" width="374" height="36"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="36" id="HS4-ZT-TF8"/>
-                                </constraints>
-                                <string key="text">브랜드의 첫인상인 로고를 끝까지 책임지고 
-만들어드리겠습니다</string>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zjV-Wy-WUd">
-                                <rect key="frame" x="20" y="252" width="374" height="36"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="36" id="htQ-1M-aTU"/>
-                                </constraints>
-                                <string key="text">오직 로고만을 위해 모인 전문가들이 고객님과 소통하며
-감각적인 최고의 디자인을 선사해드리겠습니다</string>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LsV-0F-JrH">
-                                <rect key="frame" x="20" y="308" width="374" height="36"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="36" id="dNE-PU-5CB"/>
-                                </constraints>
-                                <string key="text">안녕하세요
-디자인, 미술, 포토그래퍼가 모여있는 로고 회사입니다</string>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PQZ-xq-UCU">
-                                <rect key="frame" x="20" y="364" width="374" height="36"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="36" id="DwX-iS-7qc"/>
-                                </constraints>
-                                <string key="text">다양한 분야에서 다양한 시선으로 고객님을 이해하며 
-소통하는 감각입니다</string>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JSj-7S-fUe">
-                                <rect key="frame" x="20" y="420" width="374" height="36"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="36" id="XYf-Bm-DS4"/>
-                                </constraints>
-                                <string key="text">브랜드의 첫인상인 로고를 끝까지 책임지고 
-만들어드리겠습니다</string>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9oa-hw-Ii9">
-                                <rect key="frame" x="20" y="476" width="374" height="36"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="36" id="lOp-SG-UeD"/>
-                                </constraints>
-                                <string key="text">오직 로고만을 위해 모인 전문가들이 고객님과 소통하며
-감각적인 최고의 디자인을 선사해드리겠습니다</string>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -749,32 +677,14 @@
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="DZq-Fv-DwH" firstAttribute="top" secondItem="V0Q-BB-ifu" secondAttribute="top" constant="40" id="21f-yp-lEI"/>
-                            <constraint firstItem="V0Q-BB-ifu" firstAttribute="trailing" secondItem="LsV-0F-JrH" secondAttribute="trailing" constant="20" id="2jC-Go-gjC"/>
-                            <constraint firstItem="JSj-7S-fUe" firstAttribute="leading" secondItem="V0Q-BB-ifu" secondAttribute="leading" constant="20" id="2xc-jj-Ogu"/>
-                            <constraint firstItem="9oa-hw-Ii9" firstAttribute="top" secondItem="JSj-7S-fUe" secondAttribute="bottom" constant="20" id="31d-B2-H1M"/>
-                            <constraint firstItem="V0Q-BB-ifu" firstAttribute="trailing" secondItem="PQZ-xq-UCU" secondAttribute="trailing" constant="20" id="7Gz-9p-PlF"/>
-                            <constraint firstItem="zjV-Wy-WUd" firstAttribute="top" secondItem="psd-fk-dRL" secondAttribute="bottom" constant="20" id="APe-F5-4dY"/>
-                            <constraint firstItem="V0Q-BB-ifu" firstAttribute="trailing" secondItem="5CW-C2-Aeu" secondAttribute="trailing" constant="20" id="CYB-He-c2t"/>
-                            <constraint firstItem="zjV-Wy-WUd" firstAttribute="leading" secondItem="V0Q-BB-ifu" secondAttribute="leading" constant="20" id="EX4-30-BAe"/>
-                            <constraint firstItem="V0Q-BB-ifu" firstAttribute="trailing" secondItem="JSj-7S-fUe" secondAttribute="trailing" constant="20" id="EgH-Dx-ZLN"/>
-                            <constraint firstItem="9oa-hw-Ii9" firstAttribute="leading" secondItem="V0Q-BB-ifu" secondAttribute="leading" constant="20" id="Jhc-Gh-q6B"/>
-                            <constraint firstItem="V0Q-BB-ifu" firstAttribute="trailing" secondItem="zjV-Wy-WUd" secondAttribute="trailing" constant="20" id="NoE-yq-I0o"/>
-                            <constraint firstItem="psd-fk-dRL" firstAttribute="leading" secondItem="V0Q-BB-ifu" secondAttribute="leading" constant="20" id="PLf-al-RfT"/>
-                            <constraint firstItem="LsV-0F-JrH" firstAttribute="leading" secondItem="V0Q-BB-ifu" secondAttribute="leading" constant="20" id="QXY-Lx-G9O"/>
                             <constraint firstItem="V0Q-BB-ifu" firstAttribute="trailing" secondItem="DZq-Fv-DwH" secondAttribute="trailing" constant="20" id="VMI-eN-BAo"/>
                             <constraint firstItem="DZq-Fv-DwH" firstAttribute="leading" secondItem="V0Q-BB-ifu" secondAttribute="leading" constant="20" id="WFS-zL-CYZ"/>
-                            <constraint firstItem="V0Q-BB-ifu" firstAttribute="trailing" secondItem="psd-fk-dRL" secondAttribute="trailing" constant="20" id="WKm-zr-CE7"/>
-                            <constraint firstItem="5CW-C2-Aeu" firstAttribute="leading" secondItem="V0Q-BB-ifu" secondAttribute="leading" constant="20" id="Z2x-5l-GUO"/>
-                            <constraint firstItem="PQZ-xq-UCU" firstAttribute="leading" secondItem="V0Q-BB-ifu" secondAttribute="leading" constant="20" id="ZFZ-jf-bdL"/>
-                            <constraint firstItem="JSj-7S-fUe" firstAttribute="top" secondItem="PQZ-xq-UCU" secondAttribute="bottom" constant="20" id="bvP-EX-hs1"/>
-                            <constraint firstItem="5CW-C2-Aeu" firstAttribute="top" secondItem="DZq-Fv-DwH" secondAttribute="bottom" constant="20" id="f1u-Rn-ABY"/>
-                            <constraint firstItem="psd-fk-dRL" firstAttribute="top" secondItem="5CW-C2-Aeu" secondAttribute="bottom" constant="20" id="p0P-4F-xTe"/>
-                            <constraint firstItem="LsV-0F-JrH" firstAttribute="top" secondItem="zjV-Wy-WUd" secondAttribute="bottom" constant="20" id="q3Q-Lj-wUB"/>
-                            <constraint firstItem="PQZ-xq-UCU" firstAttribute="top" secondItem="LsV-0F-JrH" secondAttribute="bottom" constant="20" id="sf4-XP-siy"/>
-                            <constraint firstItem="V0Q-BB-ifu" firstAttribute="trailing" secondItem="9oa-hw-Ii9" secondAttribute="trailing" constant="20" id="zai-wt-fKf"/>
                         </constraints>
                     </view>
                     <size key="freeformSize" width="414" height="512"/>
+                    <connections>
+                        <outlet property="textLabel" destination="DZq-Fv-DwH" id="mwI-4t-VXM"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="yCd-xB-0VP" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>

@@ -24,11 +24,16 @@ class DetailVC: UIViewController, UICollectionViewDataSource,HeightDelegate {
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         
-        let cell = cardCollectionView.dequeueReusableCell(withReuseIdentifier: "CardCollectionViewCell", for: indexPath)
+        guard let cell = cardCollectionView.dequeueReusableCell(withReuseIdentifier: SimilarServiceCVC.identifier, for: indexPath) as? SimilarServiceCVC else {
+            
+            return UICollectionViewCell()
+        }
 
         cell.layer.borderColor = UIColor(red: 229/255, green: 229/255, blue: 229/255, alpha: 1).cgColor
         cell.layer.borderWidth = 1
         cell.layer.cornerRadius = 5
+        
+        
         
         return cell
     }
@@ -47,6 +52,7 @@ class DetailVC: UIViewController, UICollectionViewDataSource,HeightDelegate {
     @IBOutlet weak var priceLabel: UILabel!
     @IBOutlet weak var layerLabel: UILabel!
     @IBOutlet weak var imageNumber: UILabel!
+    
     
     var headerImages: [ServiceImg] = []
     var upperData: ServiceUpperData?
@@ -72,7 +78,7 @@ class DetailVC: UIViewController, UICollectionViewDataSource,HeightDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        DetailServiceUpper.shared.ServiceUpper() { (networkResult) -> (Void) in
+        DetailServiceUpper.shared.serviceUpper() { (networkResult) -> (Void) in
             switch networkResult {
             case .success(let data):
                 if let serviceUpperData = data as? ServiceUpperData {
