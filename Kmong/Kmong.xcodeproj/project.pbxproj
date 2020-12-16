@@ -23,6 +23,7 @@
 		373A48CD2578EA3000C069E3 /* ReviewTVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 373A48CC2578EA3000C069E3 /* ReviewTVC.swift */; };
 		373A48D02578EADD00C069E3 /* ReviewStruct.swift in Sources */ = {isa = PBXBuildFile; fileRef = 373A48CF2578EADD00C069E3 /* ReviewStruct.swift */; };
 		3741F5992567DA9A00729AEA /* HomeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3741F5982567DA9A00729AEA /* HomeVC.swift */; };
+		3794FBF7258A22C400FCF594 /* HomeExpertRec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3794FBF6258A22C400FCF594 /* HomeExpertRec.swift */; };
 		37EAC25B2572AD1100474877 /* HomeTableViewHeaderTVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37EAC25A2572AD1100474877 /* HomeTableViewHeaderTVC.swift */; };
 		37EAC25F2572B01700474877 /* HomeRecServiceTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37EAC25E2572B01700474877 /* HomeRecServiceTableViewCell.swift */; };
 		37EAC2632572B15C00474877 /* HomeRecommendedServiceCVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37EAC2622572B15C00474877 /* HomeRecommendedServiceCVC.swift */; };
@@ -68,6 +69,7 @@
 		373A48CC2578EA3000C069E3 /* ReviewTVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReviewTVC.swift; sourceTree = "<group>"; };
 		373A48CF2578EADD00C069E3 /* ReviewStruct.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReviewStruct.swift; sourceTree = "<group>"; };
 		3741F5982567DA9A00729AEA /* HomeVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = HomeVC.swift; path = Kmong/Sources/HomeVC.swift; sourceTree = SOURCE_ROOT; };
+		3794FBF6258A22C400FCF594 /* HomeExpertRec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeExpertRec.swift; sourceTree = "<group>"; };
 		37EAC25A2572AD1100474877 /* HomeTableViewHeaderTVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = HomeTableViewHeaderTVC.swift; path = Kmong/Sources/Cells/HomeTableViewHeaderTVC.swift; sourceTree = SOURCE_ROOT; };
 		37EAC25E2572B01700474877 /* HomeRecServiceTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = HomeRecServiceTableViewCell.swift; path = Kmong/Sources/Cells/HomeRecServiceTableViewCell.swift; sourceTree = SOURCE_ROOT; };
 		37EAC2622572B15C00474877 /* HomeRecommendedServiceCVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = HomeRecommendedServiceCVC.swift; path = Kmong/Sources/Cells/HomeRecommendedServiceCVC.swift; sourceTree = SOURCE_ROOT; };
@@ -229,7 +231,6 @@
 				63487ACC2567E3150005BC68 /* DetailOptionTVC.swift */,
 				37EAC25A2572AD1100474877 /* HomeTableViewHeaderTVC.swift */,
 				373A48AF2577419400C069E3 /* HomeHeaderCVC.swift */,
-				37EAC2672572BC7A00474877 /* HomeExpert.swift */,
 				37EAC25E2572B01700474877 /* HomeRecServiceTableViewCell.swift */,
 				37EAC2622572B15C00474877 /* HomeRecommendedServiceCVC.swift */,
 				373A48B52577F43300C069E3 /* HomeExpertType.swift */,
@@ -243,6 +244,8 @@
 				639C950B2579165300A14D0B /* DetailHeaderImage.swift */,
 				37FBC853258254D100C7B572 /* GenericResponse.swift */,
 				37FBC8562582569100C7B572 /* HomeHeaderImage.swift */,
+				37EAC2672572BC7A00474877 /* HomeExpert.swift */,
+				3794FBF6258A22C400FCF594 /* HomeExpertRec.swift */,
 				1F1890AA2587A97A00592462 /* DetailServiceUpperData.swift */,
 			);
 			path = Models;
@@ -395,6 +398,7 @@
 				1F19AC62256400F5001FF5D1 /* DetailExpertInfoVC.swift in Sources */,
 				1F19AC652564016A001FF5D1 /* DetailReviewVC.swift in Sources */,
 				37FBC854258254D100C7B572 /* GenericResponse.swift in Sources */,
+				3794FBF7258A22C400FCF594 /* HomeExpertRec.swift in Sources */,
 				373A48B32577CC0C00C069E3 /* CustomTabBarController.swift in Sources */,
 				37EAC25F2572B01700474877 /* HomeRecServiceTableViewCell.swift in Sources */,
 				1F1890AB2587A97A00592462 /* DetailServiceUpperData.swift in Sources */,

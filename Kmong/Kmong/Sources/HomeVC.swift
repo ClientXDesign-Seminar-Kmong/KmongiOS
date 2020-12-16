@@ -144,12 +144,14 @@ extension HomeVC : UITableViewDataSource {
         guard let cell = tableView.dequeueReusableCell(withIdentifier: HomeRecServiceTableViewCell.identifier) as? HomeRecServiceTableViewCell else {
             return UITableViewCell()
         }
-        if indexPath.row == 0 {
-            cell.setDesignerData()
-        }
-        else {
-            cell.setProgrammerData()
-        }
+//        if indexPath.row == 0 {
+//            cell.callHomeAuthService(index: indexPath.row)
+//        }
+//        else {
+//            cell.setProgrammerData()
+//        }
+        cell.callHomeAuthService(index: indexPath.row)
+        
         cell.setCell(type: expertType[indexPath.item])
         cell.vcHere = self
         return cell
@@ -178,7 +180,6 @@ extension HomeVC: UICollectionViewDataSource {
         guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: HomeHeaderCVC.identifier, for: indexPath) as? HomeHeaderCVC else {
             return UICollectionViewCell()
         }
-        print(homeData)
         
         let realIndex = self.homeHeaderCollectionView.indexPath(from: indexPath).row
         

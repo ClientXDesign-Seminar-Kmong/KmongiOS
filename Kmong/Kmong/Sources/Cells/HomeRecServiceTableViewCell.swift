@@ -15,8 +15,9 @@ class HomeRecServiceTableViewCell: UITableViewCell, UICollectionViewDelegate {
     @IBOutlet var ServiceCollectionView: UICollectionView!
     
     var ServiceCells : [String] = ["디자인", "프로그래밍"]
-    var experts : [Expert] = []
+    var experts : [Service] = []
     var vcHere : HomeVC?
+    var expertTypes : [HomeExpertData] = []
     //    var programmingExperts : [Expert] = []
     
     
@@ -24,8 +25,43 @@ class HomeRecServiceTableViewCell: UITableViewCell, UICollectionViewDelegate {
         super.awakeFromNib()
         ServiceCollectionView.delegate = self
         ServiceCollectionView.dataSource = self
-        setDesignerData()
-        setProgrammerData()
+        callHomeAuthService(index: 0)
+    }
+    
+    func callHomeAuthService(index : Int) {
+        HomeAuthService.shared.homeRecService() { (networkResult) -> (Void) in
+            switch networkResult {
+            case .success(let data):
+                if let homeRecommendData = data as? [HomeExpertData] {
+                    self.expertTypes = homeRecommendData
+                    print(homeRecommendData)
+                    print(">>>> 0 >>>>\n",homeRecommendData[0],">>>>>\n")
+                    print(">>>> 1 >>>>\n",homeRecommendData[1],">>>>>\n")
+                    
+                    if index == 0 {
+                        self.experts = homeRecommendData[0].services
+                    }
+                    if index == 1 {
+                        self.experts = homeRecommendData[1].services
+                    }
+                    
+                    DispatchQueue.main.async{
+                        self.ServiceCollectionView.reloadData()
+                    }
+                }
+            case .requestErr(let msg):
+                if let message = msg as? String {
+                    print(message)
+                }
+            case .pathErr:
+                print("pathErr")
+            case .serverErr:
+                print("serverErr")
+            case .networkFail:
+                print("networkFail")
+            }
+            
+        }
     }
     
     override func setSelected(_ selected: Bool, animated: Bool) {
@@ -37,21 +73,6 @@ class HomeRecServiceTableViewCell: UITableViewCell, UICollectionViewDelegate {
     func setCell(type : ExpertType) {
         serviceType.text = "\(type.type) 추천 서비스"
     }
-    
-    func setDesignerData() {
-        experts = [
-            Expert(expertImageName: "designerMinju", description: "사랑받는 디자이너로 성장하는 방법 알려드립니다.", reviewCount: 152, star: 5.0),
-            Expert(expertImageName: "mediaHanwool", description: "절대 실패없는 유튜브 영상 촬영 방법에 대해 알려드립니다.", reviewCount: 86, star: 5)
-        ]
-    }
-    
-    func setProgrammerData() {
-        experts = [
-            Expert(expertImageName: "androidMing", description: "안드로이드의 “모든 것”에 대해서 알려드립니다.", reviewCount: 126, star: 5.0),
-            Expert(expertImageName: "serverYH", description: "iOS, 애플 감성 살려서 개발하는 방법을 스윗하게 알려드립니다.", reviewCount: 126, star: 5)
-        ]
-    }
-    
     
 }
 
@@ -67,7 +88,7 @@ extension HomeRecServiceTableViewCell: UICollectionViewDataSource {
             return UICollectionViewCell()
         }
         
-        cell.setData(expert: experts[indexPath.item])
+        cell.setData(description: experts[indexPath.item].title, url: experts[indexPath.item].image, star: experts[indexPath.item].star, review: experts[indexPath.item].review)
         
         cell.layer.borderColor = CGColor(red: 204/255, green: 204/255, blue: 204/255, alpha: 1)
         cell.layer.borderWidth = 1.0
