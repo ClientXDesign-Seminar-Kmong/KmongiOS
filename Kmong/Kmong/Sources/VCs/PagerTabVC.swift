@@ -72,7 +72,7 @@ class PagerTabVC: ButtonBarPagerTabStripViewController {
             print("xx",x)
             let width = containerView.frame.width
             if 0.0<=x && x<width/2{
-                self.heightDelegate?.setHeight(512.0)
+                self.heightDelegate?.setHeight(200.0)
             }
             else if x == width{
                 self.heightDelegate?.setHeight(569.0)

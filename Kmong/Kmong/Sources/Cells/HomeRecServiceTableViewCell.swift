@@ -18,9 +18,7 @@ class HomeRecServiceTableViewCell: UITableViewCell, UICollectionViewDelegate {
     var experts : [Service] = []
     var vcHere : HomeVC?
     var expertTypes : [HomeExpertData] = []
-    //    var programmingExperts : [Expert] = []
-    
-    
+       
     override func awakeFromNib() {
         super.awakeFromNib()
         ServiceCollectionView.delegate = self
@@ -34,9 +32,6 @@ class HomeRecServiceTableViewCell: UITableViewCell, UICollectionViewDelegate {
             case .success(let data):
                 if let homeRecommendData = data as? [HomeExpertData] {
                     self.expertTypes = homeRecommendData
-                    print(homeRecommendData)
-                    print(">>>> 0 >>>>\n",homeRecommendData[0],">>>>>\n")
-                    print(">>>> 1 >>>>\n",homeRecommendData[1],">>>>>\n")
                     
                     if index == 0 {
                         self.experts = homeRecommendData[0].services
@@ -60,14 +55,12 @@ class HomeRecServiceTableViewCell: UITableViewCell, UICollectionViewDelegate {
             case .networkFail:
                 print("networkFail")
             }
-            
         }
     }
     
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
-        
-        // Configure the view for the selected state
+
     }
 
     func setCell(type : ExpertType) {
@@ -79,7 +72,6 @@ class HomeRecServiceTableViewCell: UITableViewCell, UICollectionViewDelegate {
 extension HomeRecServiceTableViewCell: UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return experts.count
-        
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
@@ -100,21 +92,7 @@ extension HomeRecServiceTableViewCell: UICollectionViewDataSource {
 }
 
 extension HomeRecServiceTableViewCell: UICollectionViewDelegateFlowLayout {
-//    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout:
-//                            UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-//        return CGSize(width: collectionView.frame.width, height: collectionView.frame.height)
-//    }
-//
-//    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAt section: Int) -> CGFloat {
-//        return 12
-//    }
-//
-//    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumInteritemSpacingForSectionAt section: Int) -> CGFloat {
-//        return 0
-//    }
-//    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, insetForSectionAt section: Int) -> UIEdgeInsets {
-//        return UIEdgeInsets(top: 11, left: 20, bottom: 16, right: 20)
-//    }
+
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         let storyboard = UIStoryboard(name: "Detail", bundle: nil)
         
