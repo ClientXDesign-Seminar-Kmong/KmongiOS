@@ -17,4 +17,7 @@ struct APIConstants {
     
     //서비스 설명
     static let detailDescriptionURL = baseURL + "/service/5/description"
+    
+    //비슷한 서비스
+    static let similarServiceURL = baseURL + "/service/5/similar"
 }

@@ -10,32 +10,41 @@ import XLPagerTabStrip
 import InfiniteCarouselCollectionView
 
 // CardCollectionView DataSource
-class DetailVC: UIViewController, UICollectionViewDataSource,HeightDelegate {
+class DetailVC: UIViewController,HeightDelegate {
     func setHeight(_ height: CGFloat) {
         self.height.constant = height
         self.view.layoutIfNeeded()
     }
     
     @IBOutlet weak var height: NSLayoutConstraint!
-    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        
-        return 10
-    }
     
-    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+    func similar() {
         
-        guard let cell = cardCollectionView.dequeueReusableCell(withReuseIdentifier: SimilarServiceCVC.identifier, for: indexPath) as? SimilarServiceCVC else {
-            
-            return UICollectionViewCell()
+        SimilarService.shared.similarService() { (networkResult) -> (Void) in
+            switch networkResult {
+            case .success(let data):
+                if let similarServiceData = data as? [SimilarServiceData] {
+                    self.similarData = similarServiceData
+                    
+                    DispatchQueue.main.async {
+                        
+                        self.cardCollectionView.reloadData()
+                    }
+                    
+                    print(similarServiceData)
+                }
+            case .requestErr(let msg):
+                if let message = msg as? String {
+                    print(message)
+                }
+            case .pathErr:
+                print("pathErr")
+            case .serverErr:
+                print("serverErr")
+            case .networkFail:
+                print("networkFail")
+            }
         }
-
-        cell.layer.borderColor = UIColor(red: 229/255, green: 229/255, blue: 229/255, alpha: 1).cgColor
-        cell.layer.borderWidth = 1
-        cell.layer.cornerRadius = 5
-        
-        
-        
-        return cell
     }
     
     @IBOutlet weak var headerCollectionView: CarouselCollectionView!
@@ -56,6 +65,7 @@ class DetailVC: UIViewController, UICollectionViewDataSource,HeightDelegate {
     
     var headerImages: [ServiceImg] = []
     var upperData: ServiceUpperData?
+    var similarData: [SimilarServiceData] = []
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
             if segue.identifier == "segue" {
@@ -75,9 +85,12 @@ class DetailVC: UIViewController, UICollectionViewDataSource,HeightDelegate {
         heartLabel.text = String(upperData!.heart)
     }
     
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        similar()
         DetailServiceUpper.shared.serviceUpper() { (networkResult) -> (Void) in
             switch networkResult {
             case .success(let data):
@@ -109,7 +122,7 @@ class DetailVC: UIViewController, UICollectionViewDataSource,HeightDelegate {
         let cardFlowLayout = UICollectionViewFlowLayout()
         
         cardFlowLayout.itemSize = CGSize(width: 200, height: 223)
-        cardFlowLayout.sectionInset = UIEdgeInsets(top: 0, left: 0, bottom: 0, right: 0)
+        cardFlowLayout.sectionInset = UIEdgeInsets(top: 0, left: 20, bottom: 0, right: 20)
         cardFlowLayout.minimumInteritemSpacing = 0
         cardFlowLayout.minimumLineSpacing = 12
         cardFlowLayout.scrollDirection = .horizontal
@@ -121,9 +134,9 @@ class DetailVC: UIViewController, UICollectionViewDataSource,HeightDelegate {
         let size = UIScreen.main.bounds.size
         headerCollectionView.flowLayout.itemSize = CGSize(width: size.width, height: size.width/375*270)
 
-        scrollView.delegate = self
+//        scrollView.delegate = self
         
-        cardCollectionView.delegate = self
+//        cardCollectionView.delegate = self
         cardCollectionView.dataSource = self
         
         setInitLayout()
@@ -269,7 +282,26 @@ extension DetailVC: CarouselCollectionViewDataSource {
     }
 }
 
-extension DetailVC: UICollectionViewDelegate {
+extension DetailVC: UICollectionViewDataSource {
     
+    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        
+        return similarData.count
+    }
     
+    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        
+        guard let cell = cardCollectionView.dequeueReusableCell(withReuseIdentifier: SimilarServiceCVC.identifier, for: indexPath) as? SimilarServiceCVC else {
+            
+            return UICollectionViewCell()
+        }
+        
+        cell.setSimilarService(url: similarData[indexPath.item].image, title: similarData[indexPath.item].title, star: similarData[indexPath.item].star, review: similarData[indexPath.item].review, price: similarData[indexPath.item].price)
+        
+        cell.layer.borderColor = UIColor(red: 229/255, green: 229/255, blue: 229/255, alpha: 1).cgColor
+        cell.layer.borderWidth = 1
+        cell.layer.cornerRadius = 5
+        
+        return cell
+    }
 }

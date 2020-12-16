@@ -14,5 +14,5 @@ struct DetailDescriptionData: Codable {
     enum CodingKeys: String, CodingKey {
             case id
             case dataDescription = "description"
-        }
+    }
 }

@@ -16,12 +16,12 @@ class SimilarServiceCVC: UICollectionViewCell {
     @IBOutlet weak var reviewLabel: UILabel!
     @IBOutlet weak var priceLabel: UILabel!
     
-    func setSimilarService(imageName: String, title: String, star: String, review: String, price: String) {
+    func setSimilarService(url: String, title: String, star: Int, review: Int, price: Int) {
         
-        headerImage.image = UIImage(named: imageName)
+        headerImage.imageFromUrl(url)
         titleLabel.text = title
-        starLabel.text = star
-        reviewLabel.text = review
-        priceLabel.text = price
+        starLabel.text = String(star)
+        reviewLabel.text = String(review)
+        priceLabel.text = String(price)
     }
 }

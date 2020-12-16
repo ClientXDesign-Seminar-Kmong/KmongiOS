@@ -379,7 +379,7 @@
                                                 </constraints>
                                             </view>
                                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="IbI-s4-ibu">
-                                                <rect key="frame" x="20" y="1085.5" width="394" height="223"/>
+                                                <rect key="frame" x="0.0" y="1085.5" width="414" height="223"/>
                                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="223" id="TkX-Eu-FPg"/>
@@ -398,7 +398,7 @@
                                                             <rect key="frame" x="0.0" y="0.0" width="200" height="223"/>
                                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                             <subviews>
-                                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="img_service_thumbnail" translatesAutoresizingMaskIntoConstraints="NO" id="cl1-Ku-jia">
+                                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="img_service_thumbnail" translatesAutoresizingMaskIntoConstraints="NO" id="cl1-Ku-jia">
                                                                     <rect key="frame" x="0.0" y="0.0" width="200" height="112"/>
                                                                     <constraints>
                                                                         <constraint firstAttribute="height" constant="112" id="f1e-HR-aNT"/>
@@ -500,7 +500,7 @@
                                                         <size key="customSize" width="200" height="223"/>
                                                         <connections>
                                                             <outlet property="headerImage" destination="cl1-Ku-jia" id="bMp-fc-9bZ"/>
-                                                            <outlet property="priceLabel" destination="xFf-Dk-qcz" id="QH3-6O-8kq"/>
+                                                            <outlet property="priceLabel" destination="xFf-Dk-qcz" id="XKC-30-Knd"/>
                                                             <outlet property="reviewLabel" destination="a77-lI-dfR" id="2Ez-H3-g0P"/>
                                                             <outlet property="starLabel" destination="Hxm-fr-xoR" id="IFW-TL-2Pj"/>
                                                             <outlet property="titleLabel" destination="VPq-f7-C3g" id="l2S-fc-in0"/>
@@ -540,7 +540,7 @@
                                             <constraint firstItem="fkX-Yw-AMh" firstAttribute="leading" secondItem="Nod-yf-drQ" secondAttribute="leading" id="2Mt-sP-6uD"/>
                                             <constraint firstAttribute="trailing" secondItem="aKb-Td-XnM" secondAttribute="trailing" id="2a8-CT-TdY"/>
                                             <constraint firstItem="7jE-hk-Yrg" firstAttribute="leading" secondItem="Nod-yf-drQ" secondAttribute="leading" id="592-hw-HBM"/>
-                                            <constraint firstItem="IbI-s4-ibu" firstAttribute="leading" secondItem="Nod-yf-drQ" secondAttribute="leading" constant="20" id="5A7-rH-J2J"/>
+                                            <constraint firstItem="IbI-s4-ibu" firstAttribute="leading" secondItem="Nod-yf-drQ" secondAttribute="leading" id="5A7-rH-J2J"/>
                                             <constraint firstItem="7jE-hk-Yrg" firstAttribute="top" secondItem="aKb-Td-XnM" secondAttribute="bottom" id="6Oa-gf-Xim"/>
                                             <constraint firstAttribute="trailing" secondItem="fkX-Yw-AMh" secondAttribute="trailing" id="8av-pi-2D9"/>
                                             <constraint firstItem="bSz-cd-VfD" firstAttribute="leading" secondItem="Nod-yf-drQ" secondAttribute="leading" id="8zj-7S-hK4"/>

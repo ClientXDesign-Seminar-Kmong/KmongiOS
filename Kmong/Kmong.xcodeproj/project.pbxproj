@@ -18,7 +18,8 @@
 		1F6DD1CB258A202E00AF02DB /* DetailDescriptionData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F6DD1CA258A202E00AF02DB /* DetailDescriptionData.swift */; };
 		1F6DD1CE258A20C100AF02DB /* DetailDescription.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F6DD1CD258A20C100AF02DB /* DetailDescription.swift */; };
 		1F6DD1D7258A293700AF02DB /* SimilarServiceCVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F6DD1D6258A293700AF02DB /* SimilarServiceCVC.swift */; };
-		1F6DD1DA258A296F00AF02DB /* SimilarImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F6DD1D9258A296F00AF02DB /* SimilarImage.swift */; };
+		1F6DD1DA258A296F00AF02DB /* SimilarServiceData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F6DD1D9258A296F00AF02DB /* SimilarServiceData.swift */; };
+		1F6DD1DF258A368200AF02DB /* SimilarService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F6DD1DE258A368200AF02DB /* SimilarService.swift */; };
 		373A48B02577419400C069E3 /* HomeHeaderCVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 373A48AF2577419400C069E3 /* HomeHeaderCVC.swift */; };
 		373A48B32577CC0C00C069E3 /* CustomTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 373A48B22577CC0C00C069E3 /* CustomTabBarController.swift */; };
 		373A48B62577F43300C069E3 /* HomeExpertType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 373A48B52577F43300C069E3 /* HomeExpertType.swift */; };
@@ -65,7 +66,8 @@
 		1F6DD1CA258A202E00AF02DB /* DetailDescriptionData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailDescriptionData.swift; sourceTree = "<group>"; };
 		1F6DD1CD258A20C100AF02DB /* DetailDescription.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailDescription.swift; sourceTree = "<group>"; };
 		1F6DD1D6258A293700AF02DB /* SimilarServiceCVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SimilarServiceCVC.swift; sourceTree = "<group>"; };
-		1F6DD1D9258A296F00AF02DB /* SimilarImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SimilarImage.swift; sourceTree = "<group>"; };
+		1F6DD1D9258A296F00AF02DB /* SimilarServiceData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SimilarServiceData.swift; sourceTree = "<group>"; };
+		1F6DD1DE258A368200AF02DB /* SimilarService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SimilarService.swift; sourceTree = "<group>"; };
 		29B34A15E7E269D7E63C6034 /* Pods_Kmong.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Kmong.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		373A48AF2577419400C069E3 /* HomeHeaderCVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeHeaderCVC.swift; sourceTree = "<group>"; };
 		373A48B22577CC0C00C069E3 /* CustomTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTabBarController.swift; sourceTree = "<group>"; };
@@ -127,9 +129,10 @@
 		3716CDD825876129006D7FBA /* APIService */ = {
 			isa = PBXGroup;
 			children = (
+				1F1890AD2587AB4400592462 /* DetailServiceUpper.swift */,
+				1F6DD1DE258A368200AF02DB /* SimilarService.swift */,
 				37FBC85C2582573500C7B572 /* HomeAuthService.swift */,
 				1F6DD1CD258A20C100AF02DB /* DetailDescription.swift */,
-				1F1890AD2587AB4400592462 /* DetailServiceUpper.swift */,
 				37FBC859258256E600C7B572 /* NetworkResult.swift */,
 				37FBC8502582544B00C7B572 /* APIConstants.swift */,
 			);
@@ -250,9 +253,9 @@
 			children = (
 				37FBC853258254D100C7B572 /* GenericResponse.swift */,
 				37FBC8562582569100C7B572 /* HomeHeaderImage.swift */,
-				1F1890AA2587A97A00592462 /* DetailServiceUpperData.swift */,
 				1F6DD1CA258A202E00AF02DB /* DetailDescriptionData.swift */,
-				1F6DD1D9258A296F00AF02DB /* SimilarImage.swift */,
+				1F1890AA2587A97A00592462 /* DetailServiceUpperData.swift */,
+				1F6DD1D9258A296F00AF02DB /* SimilarServiceData.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -390,7 +393,7 @@
 				37EAC2632572B15C00474877 /* HomeRecommendedServiceCVC.swift in Sources */,
 				37EAC25B2572AD1100474877 /* HomeTableViewHeaderTVC.swift in Sources */,
 				37FBC85A258256E600C7B572 /* NetworkResult.swift in Sources */,
-				1F6DD1DA258A296F00AF02DB /* SimilarImage.swift in Sources */,
+				1F6DD1DA258A296F00AF02DB /* SimilarServiceData.swift in Sources */,
 				1F1890AE2587AB4400592462 /* DetailServiceUpper.swift in Sources */,
 				373A48CD2578EA3000C069E3 /* ReviewTVC.swift in Sources */,
 				1F19AC5B2563FB9C001FF5D1 /* DetailDescVC.swift in Sources */,
@@ -402,6 +405,7 @@
 				373A48D02578EADD00C069E3 /* ReviewStruct.swift in Sources */,
 				1F6DD1CB258A202E00AF02DB /* DetailDescriptionData.swift in Sources */,
 				63B9B5642588C9CC00595534 /* UIImageVIew+Extensions.swift in Sources */,
+				1F6DD1DF258A368200AF02DB /* SimilarService.swift in Sources */,
 				37FBC85D2582573500C7B572 /* HomeAuthService.swift in Sources */,
 				1F6DD1CE258A20C100AF02DB /* DetailDescription.swift in Sources */,
 				1F19AC62256400F5001FF5D1 /* DetailExpertInfoVC.swift in Sources */,
