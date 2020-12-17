@@ -10,7 +10,7 @@ import XLPagerTabStrip
 import InfiniteCarouselCollectionView
 
 // CardCollectionView DataSource
-class DetailVC: UIViewController,HeightDelegate {
+class DetailVC: UIViewController,HeightDelegate, UICollectionViewDelegate {
     func setHeight(_ height: CGFloat) {
         self.height.constant = height
         self.view.layoutIfNeeded()
@@ -66,6 +66,7 @@ class DetailVC: UIViewController,HeightDelegate {
     var headerImages: [ServiceImg] = []
     var upperData: ServiceUpperData?
     var similarData: [SimilarServiceData] = []
+    var btnStatus: Int?
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
             if segue.identifier == "segue" {
@@ -134,9 +135,9 @@ class DetailVC: UIViewController,HeightDelegate {
         let size = UIScreen.main.bounds.size
         headerCollectionView.flowLayout.itemSize = CGSize(width: size.width, height: size.width/375*270)
 
-//        scrollView.delegate = self
+        scrollView.delegate = self
         
-//        cardCollectionView.delegate = self
+        cardCollectionView.delegate = self
         cardCollectionView.dataSource = self
         
         setInitLayout()
@@ -188,27 +189,51 @@ class DetailVC: UIViewController,HeightDelegate {
         heartView.layer.cornerRadius = 6
     }
     
+    func setSelectedBtn() {
+        
+        heartView.setImage(UIImage(named: "icLikeSelected"), for: .normal)
+        heartView.layer.borderColor = UIColor.yellow.cgColor
+        heartView.layer.borderColor = UIColor(red: 249/255, green: 212/255, blue: 72/255, alpha: 1).cgColor
+    }
+    
     // Like Button설정
     var bRec:Bool = false
     
     @IBAction func heartBtn(_ sender: Any) {
        
-        bRec = !bRec
-        
-        if bRec {
-            
-            heartView.setImage(UIImage(named: "icLikeSelected"), for: .normal)
-            heartView.layer.borderColor = UIColor.yellow.cgColor
-            heartView.layer.borderColor = UIColor(red: 249/255, green: 212/255, blue: 72/255, alpha: 1).cgColor
-        } else {
-            
-            heartView.setImage(UIImage(named: "icLikeUnselected"), for: .normal)
-            heartView.layer.borderColor = UIColor(red: 229/255, green: 229/255, blue: 229/255, alpha: 1).cgColor
+        DetailLikeBtn.shared.detialLikeBtn(like: bRec, userId: 2)  { (networkResult) -> (Void) in
+            switch networkResult {
+            case .success(let data):
+                self.bRec = !self.bRec
+                
+                if self.bRec {
+                    self.setSelectedBtn()
+                } else {
+                    self.heartView.setImage(UIImage(named: "icLikeUnselected"), for: .normal)
+                    self.heartView.layer.borderColor = UIColor(red: 229/255, green: 229/255, blue: 229/255, alpha: 1).cgColor
+                    }
+                print(data)
+                
+            case .requestErr(let msg):
+                if let message = msg as? String {
+                    print(message)
+                }
+            case .pathErr:
+                print("pathErr")
+            case .serverErr:
+                print("serverErr")
+            case .networkFail:
+                print("networkFail")
+            }
         }
-    }
+        
+        
+        
+        }
     @IBAction func touchUpBack(_ sender: Any){
         self.dismiss(animated: true, completion: nil)
     }
+    
     var statusBarFrame: CGRect!
     var statusBarView: UIView!
     var offset: CGFloat!
@@ -220,7 +245,7 @@ class DetailVC: UIViewController,HeightDelegate {
         // targetHeight에 맞춰 얼마나 스크롤 됐는지 계산
         offset = scrollView.contentOffset.y / targetHeight
                 
-        print(String(describing: targetHeight), String(describing: offset))
+//        print(String(describing: targetHeight), String(describing: offset))
                 
         //오프셋 1로 만들기
         if offset > 1 {

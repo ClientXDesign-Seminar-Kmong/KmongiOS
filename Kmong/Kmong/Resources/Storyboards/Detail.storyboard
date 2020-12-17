@@ -672,13 +672,111 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ya2-cZ-HKo">
+                                <rect key="frame" x="20" y="140" width="374" height="36"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="36" id="fWH-78-ajR"/>
+                                </constraints>
+                                <string key="text">서비스 다양한 분야에서 다양한 시선으로 고객님을 이해하며 
+소통하는 감각입니다</string>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="utk-YE-nKQ">
+                                <rect key="frame" x="20" y="196" width="374" height="36"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="36" id="1LG-6M-qZh"/>
+                                </constraints>
+                                <string key="text">브랜드의 첫인상인 로고를 끝까지 책임지고 
+만들어드리겠습니다</string>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wFA-cP-SNB">
+                                <rect key="frame" x="20" y="252" width="374" height="36"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="36" id="vpp-uD-BT7"/>
+                                </constraints>
+                                <string key="text">오직 로고만을 위해 모인 전문가들이 고객님과 소통하며
+감각적인 최고의 디자인을 선사해드리겠습니다</string>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4rn-an-9dm">
+                                <rect key="frame" x="20" y="308" width="374" height="36"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="36" id="O4n-E4-7Tc"/>
+                                </constraints>
+                                <string key="text">안녕하세요
+디자인, 미술, 포토그래퍼가 모여있는 로고 회사입니다</string>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jw9-W9-mvW">
+                                <rect key="frame" x="20" y="364" width="374" height="36"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="36" id="UH5-ge-MMe"/>
+                                </constraints>
+                                <string key="text">다양한 분야에서 다양한 시선으로 고객님을 이해하며 
+소통하는 감각입니다</string>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zSH-d5-CQY">
+                                <rect key="frame" x="20" y="420" width="374" height="36"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="36" id="Jj0-RI-sVO"/>
+                                </constraints>
+                                <string key="text">브랜드의 첫인상인 로고를 끝까지 책임지고 
+만들어드리겠습니다</string>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="edG-zj-vyZ">
+                                <rect key="frame" x="20" y="476" width="374" height="36"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="36" id="bjP-4x-TZN"/>
+                                </constraints>
+                                <string key="text">오직 로고만을 위해 모인 전문가들이 고객님과 소통하며
+감각적인 최고의 디자인을 선사해드리겠습니다</string>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="V0Q-BB-ifu"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
+                            <constraint firstItem="ya2-cZ-HKo" firstAttribute="leading" secondItem="V0Q-BB-ifu" secondAttribute="leading" constant="20" id="1pi-wr-F4O"/>
                             <constraint firstItem="DZq-Fv-DwH" firstAttribute="top" secondItem="V0Q-BB-ifu" secondAttribute="top" constant="40" id="21f-yp-lEI"/>
+                            <constraint firstItem="wFA-cP-SNB" firstAttribute="top" secondItem="utk-YE-nKQ" secondAttribute="bottom" constant="20" id="2yi-8b-kSg"/>
+                            <constraint firstItem="zSH-d5-CQY" firstAttribute="top" secondItem="jw9-W9-mvW" secondAttribute="bottom" constant="20" id="3Hu-ey-Zvj"/>
+                            <constraint firstItem="utk-YE-nKQ" firstAttribute="leading" secondItem="V0Q-BB-ifu" secondAttribute="leading" constant="20" id="CUK-dK-SK8"/>
+                            <constraint firstItem="utk-YE-nKQ" firstAttribute="top" secondItem="ya2-cZ-HKo" secondAttribute="bottom" constant="20" id="GCy-hu-dWr"/>
+                            <constraint firstItem="wFA-cP-SNB" firstAttribute="leading" secondItem="V0Q-BB-ifu" secondAttribute="leading" constant="20" id="IOz-aF-mA5"/>
+                            <constraint firstItem="4rn-an-9dm" firstAttribute="leading" secondItem="PVm-8C-V8e" secondAttribute="leading" constant="20" id="JWU-bt-dy5"/>
+                            <constraint firstItem="V0Q-BB-ifu" firstAttribute="trailing" secondItem="ya2-cZ-HKo" secondAttribute="trailing" constant="20" id="KkN-je-Ywy"/>
                             <constraint firstItem="V0Q-BB-ifu" firstAttribute="trailing" secondItem="DZq-Fv-DwH" secondAttribute="trailing" constant="20" id="VMI-eN-BAo"/>
                             <constraint firstItem="DZq-Fv-DwH" firstAttribute="leading" secondItem="V0Q-BB-ifu" secondAttribute="leading" constant="20" id="WFS-zL-CYZ"/>
+                            <constraint firstItem="4rn-an-9dm" firstAttribute="top" secondItem="wFA-cP-SNB" secondAttribute="bottom" constant="20" id="XJF-QA-bEY"/>
+                            <constraint firstItem="V0Q-BB-ifu" firstAttribute="trailing" secondItem="wFA-cP-SNB" secondAttribute="trailing" constant="20" id="aJY-XM-rkI"/>
+                            <constraint firstItem="edG-zj-vyZ" firstAttribute="top" secondItem="zSH-d5-CQY" secondAttribute="bottom" constant="20" id="bYq-Qo-H8F"/>
+                            <constraint firstItem="V0Q-BB-ifu" firstAttribute="trailing" secondItem="edG-zj-vyZ" secondAttribute="trailing" constant="20" id="kB3-jn-HlO"/>
+                            <constraint firstItem="edG-zj-vyZ" firstAttribute="leading" secondItem="PVm-8C-V8e" secondAttribute="leading" constant="20" id="q5M-kA-h8e"/>
+                            <constraint firstItem="jw9-W9-mvW" firstAttribute="top" secondItem="4rn-an-9dm" secondAttribute="bottom" constant="20" id="rJN-s1-rG3"/>
+                            <constraint firstItem="jw9-W9-mvW" firstAttribute="leading" secondItem="PVm-8C-V8e" secondAttribute="leading" constant="20" id="rS4-OG-e2T"/>
+                            <constraint firstItem="V0Q-BB-ifu" firstAttribute="trailing" secondItem="jw9-W9-mvW" secondAttribute="trailing" constant="20" id="sXL-g3-8GZ"/>
+                            <constraint firstItem="ya2-cZ-HKo" firstAttribute="top" secondItem="DZq-Fv-DwH" secondAttribute="bottom" constant="20" id="sqc-uA-kPs"/>
+                            <constraint firstAttribute="trailing" secondItem="utk-YE-nKQ" secondAttribute="trailing" constant="20" id="v6q-eu-o1a"/>
+                            <constraint firstItem="V0Q-BB-ifu" firstAttribute="trailing" secondItem="4rn-an-9dm" secondAttribute="trailing" constant="20" id="vXX-Fu-N9g"/>
+                            <constraint firstItem="V0Q-BB-ifu" firstAttribute="trailing" secondItem="zSH-d5-CQY" secondAttribute="trailing" constant="20" id="vtO-Wy-PfV"/>
+                            <constraint firstItem="zSH-d5-CQY" firstAttribute="leading" secondItem="PVm-8C-V8e" secondAttribute="leading" constant="20" id="wmT-ZQ-3wF"/>
                         </constraints>
                     </view>
                     <size key="freeformSize" width="414" height="512"/>

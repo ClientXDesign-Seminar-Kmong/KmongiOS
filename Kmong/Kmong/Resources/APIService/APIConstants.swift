@@ -20,4 +20,7 @@ struct APIConstants {
     
     //비슷한 서비스
     static let similarServiceURL = baseURL + "/service/5/similar"
+    
+    //Like Btn
+    static let likeBtnURL = baseURL + "/service/5/like"
 }
