@@ -16,7 +16,8 @@ class DetailServiceOptionVC: UIViewController, IndicatorInfoProvider {
     // MARK: - Custom Properties
     let deselectedCheckImage = UIImage(named:"icOptionUnselected")
     let selectedCheckImage = UIImage(named:"icOptionSelected")
-    let optionTitleList = ["텍스트형 로고","심볼/엠블럼형 로고","프리미엄 로고"]
+    
+    var detailOptionList: [DetailOptionData] = []
     
     // MARK: - LifeCycle Methods
     override func viewDidLoad() {
@@ -24,15 +25,9 @@ class DetailServiceOptionVC: UIViewController, IndicatorInfoProvider {
         detailOptionTableView.delegate = self
         detailOptionTableView.dataSource = self
         detailOptionTableView.contentInset.bottom = 0
-        DispatchQueue.main.async {
-            self.detailOptionTableView.selectRow(at: IndexPath(row:0, section:0), animated: false, scrollPosition: .none)
-        }
-        
+        callDetailOption()
         setLayout()
         setContext()
-    }
-    override func viewWillAppear(_ animated: Bool) {
-        
     }
     
     // MARK: - Custom Methods
@@ -41,6 +36,31 @@ class DetailServiceOptionVC: UIViewController, IndicatorInfoProvider {
         newSignUpButton.layer.cornerRadius = 6
         newSignUpButton.layer.borderColor = UIColor(red: 221/255, green: 221/255, blue: 221/255, alpha: 1).cgColor
         newSignUpButton.setTitleColor(.brownishGrey, for: .normal)
+    }
+    func callDetailOption(){
+        DetailServiceOptionService.shared.getDetailServiceOption(){ networkResult in
+            switch networkResult{
+            case .success(let data):
+                print("Detail Option : 200")
+                if let list = data as? [DetailOptionData]{
+                    self.detailOptionList = list
+                    print("Detail Option : 네트워크 성공")
+                    DispatchQueue.main.async{
+                        self.detailOptionTableView.reloadData()
+                    }
+                }
+                    else { print("데이터 - 모델 대응 오류")}
+            case .requestErr(let message):
+                print("requestErr",message)
+            case .pathErr:
+                print("pathErr")
+            case .serverErr:
+                print("serverErr")
+            case .networkFail:
+                print("networkFail")
+                }
+            
+        }
     }
     func setContext(){
         //label의 텍스트에 부분적인 효과를 주기 위해서 NSAttributedString 이용
@@ -61,7 +81,7 @@ class DetailServiceOptionVC: UIViewController, IndicatorInfoProvider {
     func setSelectedCell(_ cell: DetailOptionTVC){
         cell.borderView.layer.borderColor = UIColor.sunYellow.cgColor
         cell.selectedOptionView.isHidden = false
-        cell.selectedOptionViewHeightConstraint.constant = 202
+        cell.selectedOptionViewHeightConstraint.constant = 217
         cell.optionCheckBox.image = selectedCheckImage
         
     }
@@ -78,6 +98,7 @@ class DetailServiceOptionVC: UIViewController, IndicatorInfoProvider {
 // MARK: - UITableViewDelegate
 extension DetailServiceOptionVC: UITableViewDelegate{
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        
         if let cell = tableView.cellForRow(at: indexPath) as? DetailOptionTVC{
             //레이아웃 업데이트되는 애니메이션 없이
             UIView.performWithoutAnimation {
@@ -89,6 +110,7 @@ extension DetailServiceOptionVC: UITableViewDelegate{
     }
     
     func tableView(_ tableView: UITableView, didDeselectRowAt indexPath: IndexPath) {
+
         if let cell = tableView.cellForRow(at: indexPath) as? DetailOptionTVC{
             UIView.performWithoutAnimation {
                 tableView.performBatchUpdates({setDeselectedCell(cell)}, completion: nil)
@@ -102,7 +124,7 @@ extension DetailServiceOptionVC: UITableViewDelegate{
 // MARK: - UITableViewDataSource
 extension DetailServiceOptionVC: UITableViewDataSource{
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 3
+        return detailOptionList.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -113,10 +135,10 @@ extension DetailServiceOptionVC: UITableViewDataSource{
         cell.selectionStyle = .none
         //초기에 첫번재 옵션이 선택되어 있도록 함
         if indexPath.row == 0{
-            cell.isSelected = true
+            tableView.selectRow(at: [0,0], animated: true, scrollPosition: .none)
             setSelectedCell(cell)
         }
-        cell.optionTitleLabel.text = self.optionTitleList[indexPath.row]
+        cell.setContext(detailOptionList[indexPath.row])
         return cell
     }
     

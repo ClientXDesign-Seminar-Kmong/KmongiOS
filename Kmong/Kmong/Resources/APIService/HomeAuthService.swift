@@ -10,7 +10,7 @@ import Alamofire
 
 struct HomeAuthService {
     static let shared = HomeAuthService()
-    
+
     func homeHeader(completion: @escaping (NetworkResult<Any>) -> (Void)) {
         let url = APIConstants.homeBannerURL
 
@@ -69,7 +69,9 @@ struct HomeAuthService {
                 guard let data = response.value else {
                     return
                 }
+
                 completion(judgeRecommendData(status: statusCode, data: data))
+
             case .failure(let err):
                 print(err)
                 completion(.networkFail)

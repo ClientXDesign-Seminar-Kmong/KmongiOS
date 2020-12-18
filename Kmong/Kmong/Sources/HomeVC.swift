@@ -16,6 +16,7 @@ class HomeVC: UIViewController, UIGestureRecognizerDelegate {
     var expertType : [ExpertType] = []
     var timer = Timer()
     var counter = 0
+
 //    let imgArr = [UIImage(named: "homeCard2"), UIImage(named: "homeCard2")]
     var homeData : [HomeHeaderImage] = []
 
@@ -37,6 +38,7 @@ class HomeVC: UIViewController, UIGestureRecognizerDelegate {
         
         
         self.navigationController?.interactivePopGestureRecognizer?.delegate = self
+        
         
         DispatchQueue.main.async {
             self.timer = Timer.scheduledTimer(timeInterval: 2.0, target: self, selector: #selector(self.changeIMG), userInfo: nil, repeats: true)
