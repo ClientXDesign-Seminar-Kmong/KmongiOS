@@ -80,6 +80,7 @@ class DetailServiceOptionVC: UIViewController, IndicatorInfoProvider {
     }
     func setSelectedCell(_ cell: DetailOptionTVC){
         cell.borderView.layer.borderColor = UIColor.sunYellow.cgColor
+        cell.optionTitleLabel.textColor = .black
         cell.selectedOptionView.isHidden = false
         cell.selectedOptionViewHeightConstraint.constant = 217
         cell.optionCheckBox.image = selectedCheckImage
@@ -88,6 +89,7 @@ class DetailServiceOptionVC: UIViewController, IndicatorInfoProvider {
     func setDeselectedCell(_ cell: DetailOptionTVC){
         
         cell.borderView.layer.borderColor = UIColor.veryLightPink.cgColor
+        cell.optionTitleLabel.textColor = .brownishGrey
         cell.selectedOptionView.isHidden = true
         cell.selectedOptionViewHeightConstraint.constant = 0
         cell.optionCheckBox.image = deselectedCheckImage
@@ -137,6 +139,9 @@ extension DetailServiceOptionVC: UITableViewDataSource{
         if indexPath.row == 0{
             tableView.selectRow(at: [0,0], animated: true, scrollPosition: .none)
             setSelectedCell(cell)
+        }
+        else{
+            setDeselectedCell(cell)
         }
         cell.setContext(detailOptionList[indexPath.row])
         return cell
