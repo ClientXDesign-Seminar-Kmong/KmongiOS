@@ -15,10 +15,11 @@ class HomeRecommendedServiceCVC: UICollectionViewCell {
     @IBOutlet var expertDescription: UILabel!
     @IBOutlet var expertReview: UILabel!
     
-    func setData (expert : Expert) {
-        expertDescription.text = expert.description
-        ExpertPhoto.image = expert.makeExpertImage()
-        expertReview.text = "\(String(format: "%.1f", expert.star)) | \(String(expert.reviewCount))개의 평가"
+    func setData (description : String, url : String, star : Int, review : Int) {
+        
+        expertDescription.text = description
+        ExpertPhoto.imageFromUrl(url)
+        expertReview.text = "\(String(format: "%d.0", star)) | \(String(review))개의 평가"
     }
     
 }

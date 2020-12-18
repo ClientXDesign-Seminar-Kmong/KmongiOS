@@ -12,9 +12,9 @@ class HomeHeaderCVC: UICollectionViewCell {
     
     @IBOutlet var headerImageView: UIImageView!
     
-    func setImage(imageName: String) {
+    func setImage(url : String) {
         
-        headerImageView.image = UIImage(named: imageName)
+        headerImageView.imageFromUrl(url)
     }
     
 }

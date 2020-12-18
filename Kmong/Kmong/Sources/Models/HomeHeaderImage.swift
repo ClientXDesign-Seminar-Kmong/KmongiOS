@@ -6,7 +6,6 @@
 //
 
 import Foundation
-import UIKit
 
 struct HomeHeaderImage: Codable {
     var id : Int
