@@ -37,6 +37,8 @@
 		63487AD12567E35F0005BC68 /* UIColor+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63487AD02567E35F0005BC68 /* UIColor+Extensions.swift */; };
 		636AC8BC258B4FBE008998B7 /* DetailOptionData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 636AC8BB258B4FBE008998B7 /* DetailOptionData.swift */; };
 		636AC8BF258B5115008998B7 /* DetailServiceOptionService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 636AC8BE258B5115008998B7 /* DetailServiceOptionService.swift */; };
+		636AC8E0258C8764008998B7 /* DetailExpertData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 636AC8DF258C8764008998B7 /* DetailExpertData.swift */; };
+		636AC8E3258C8A95008998B7 /* DetailExpertService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 636AC8E2258C8A95008998B7 /* DetailExpertService.swift */; };
 		639C94F32578BCE100A14D0B /* DetailExpertTVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 639C94F22578BCE100A14D0B /* DetailExpertTVC.swift */; };
 		639C95062579162C00A14D0B /* DetailHeaderCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 639C95052579162C00A14D0B /* DetailHeaderCell.swift */; };
 		639C950C2579165300A14D0B /* DetailHeaderImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 639C950B2579165300A14D0B /* DetailHeaderImage.swift */; };
@@ -85,6 +87,8 @@
 		636AC8BB258B4FBE008998B7 /* DetailOptionData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailOptionData.swift; sourceTree = "<group>"; };
 		636AC8BE258B5115008998B7 /* DetailServiceOptionService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailServiceOptionService.swift; sourceTree = "<group>"; };
 		636AC8C6258B8119008998B7 /* Pods.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; path = Pods.xcodeproj; sourceTree = "<group>"; };
+		636AC8DF258C8764008998B7 /* DetailExpertData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailExpertData.swift; sourceTree = "<group>"; };
+		636AC8E2258C8A95008998B7 /* DetailExpertService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailExpertService.swift; sourceTree = "<group>"; };
 		639C94F22578BCE100A14D0B /* DetailExpertTVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailExpertTVC.swift; sourceTree = "<group>"; };
 		639C95052579162C00A14D0B /* DetailHeaderCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailHeaderCell.swift; sourceTree = "<group>"; };
 		639C950B2579165300A14D0B /* DetailHeaderImage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailHeaderImage.swift; sourceTree = "<group>"; };
@@ -126,10 +130,11 @@
 		3716CDD825876129006D7FBA /* APIService */ = {
 			isa = PBXGroup;
 			children = (
-				1F1890AD2587AB4400592462 /* DetailServiceUpper.swift */,
-				37FBC859258256E600C7B572 /* NetworkResult.swift */,
 				37FBC8502582544B00C7B572 /* APIConstants.swift */,
+				37FBC859258256E600C7B572 /* NetworkResult.swift */,
+				1F1890AD2587AB4400592462 /* DetailServiceUpper.swift */,
 				636AC8BE258B5115008998B7 /* DetailServiceOptionService.swift */,
+				636AC8E2258C8A95008998B7 /* DetailExpertService.swift */,
 			);
 			path = APIService;
 			sourceTree = "<group>";
@@ -251,6 +256,7 @@
 				37FBC85C2582573500C7B572 /* HomeAuthService.swift */,
 				1F1890AA2587A97A00592462 /* DetailServiceUpperData.swift */,
 				636AC8BB258B4FBE008998B7 /* DetailOptionData.swift */,
+				636AC8DF258C8764008998B7 /* DetailExpertData.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -412,9 +418,11 @@
 				63487ACD2567E3150005BC68 /* DetailOptionTVC.swift in Sources */,
 				636AC8BF258B5115008998B7 /* DetailServiceOptionService.swift in Sources */,
 				B8218ADB255F968F003AA1AA /* AppDelegate.swift in Sources */,
+				636AC8E3258C8A95008998B7 /* DetailExpertService.swift in Sources */,
 				37EAC2682572BC7A00474877 /* HomeExpert.swift in Sources */,
 				373A48C62578DC0300C069E3 /* ReviewVC.swift in Sources */,
 				63487AD12567E35F0005BC68 /* UIColor+Extensions.swift in Sources */,
+				636AC8E0258C8764008998B7 /* DetailExpertData.swift in Sources */,
 				639C94F32578BCE100A14D0B /* DetailExpertTVC.swift in Sources */,
 				B8218ADD255F968F003AA1AA /* SceneDelegate.swift in Sources */,
 				1F0FBA9725610F8000D41323 /* DetailVC.swift in Sources */,

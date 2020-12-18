@@ -120,7 +120,6 @@
                         <outlet property="expertName" destination="Fhv-8d-tex" id="ggV-4e-TdE"/>
                         <outlet property="expertTableView" destination="v8X-Q8-eyV" id="Der-sq-AZh"/>
                         <outlet property="isExpertOn" destination="yaT-Pb-fgU" id="uJF-av-2GB"/>
-                        <outlet property="tableHeight" destination="gyR-LQ-l5g" id="7tw-OP-M8t"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="VOw-YW-EOR" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
