@@ -84,6 +84,7 @@
 		63487AD02567E35F0005BC68 /* UIColor+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+Extensions.swift"; sourceTree = "<group>"; };
 		636AC8BB258B4FBE008998B7 /* DetailOptionData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailOptionData.swift; sourceTree = "<group>"; };
 		636AC8BE258B5115008998B7 /* DetailServiceOptionService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailServiceOptionService.swift; sourceTree = "<group>"; };
+		636AC8C6258B8119008998B7 /* Pods.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; path = Pods.xcodeproj; sourceTree = "<group>"; };
 		639C94F22578BCE100A14D0B /* DetailExpertTVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailExpertTVC.swift; sourceTree = "<group>"; };
 		639C95052579162C00A14D0B /* DetailHeaderCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailHeaderCell.swift; sourceTree = "<group>"; };
 		639C950B2579165300A14D0B /* DetailHeaderImage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailHeaderImage.swift; sourceTree = "<group>"; };
@@ -257,6 +258,7 @@
 		C8F96D3457848969D06FB0AB /* Pods */ = {
 			isa = PBXGroup;
 			children = (
+				636AC8C6258B8119008998B7 /* Pods.xcodeproj */,
 				A041FD1B043DBD45F4AE2B5D /* Pods-Kmong.debug.xcconfig */,
 				8006D2A8C3B9EB3ED014F779 /* Pods-Kmong.release.xcconfig */,
 			);

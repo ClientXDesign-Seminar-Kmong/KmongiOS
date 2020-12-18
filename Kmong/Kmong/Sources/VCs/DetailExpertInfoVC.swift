@@ -24,9 +24,10 @@ class DetailExpertInfoVC: UIViewController, IndicatorInfoProvider {
         expertTableView.delegate = self
         expertTableView.dataSource = self
         setLayout()
-        DispatchQueue.main.async {
-            self.tableHeight.constant = self.expertTableView.contentSize.height
-        }
+        expertTableView.contentInset.top = 0
+//        DispatchQueue.main.async {
+//            self.tableHeight.constant = self.expertTableView.contentSize.height
+//        }
         
     }
     func setLayout(){
@@ -40,6 +41,18 @@ class DetailExpertInfoVC: UIViewController, IndicatorInfoProvider {
 extension DetailExpertInfoVC: UITableViewDelegate{
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         tableView.cellForRow(at: indexPath)?.selectionStyle = .none
+    }
+    func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
+        return 0
+    }
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return 45
+    }
+    func tableView(_ tableView: UITableView, heightForFooterInSection section: Int) -> CGFloat {
+        return 1
+    }
+    func tableView(_ tableView: UITableView, viewForFooterInSection section: Int) -> UIView? {
+        return UIView(frame: CGRect(x: 0, y: 0, width: tableView.frame.size.width, height: 1))
     }
 }
 extension DetailExpertInfoVC: UITableViewDataSource{
