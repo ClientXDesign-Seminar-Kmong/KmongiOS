@@ -174,18 +174,19 @@ open class PagerTabStripViewController: UIViewController, UIScrollViewDelegate {
             (navigationController?.view ?? view).isUserInteractionEnabled = !animated
             containerView.setContentOffset(CGPoint(x: pageOffsetForChild(at: index), y: 0), animated: animated)
         }
+        //MARK: - 페이지별 높이 지정
         if index == 0{
             print("000")
-            self.heightDelegate?.setHeight(590.0)
+            self.heightDelegate?.setHeight(512.0)
         }
         else if index == 1{
-            self.heightDelegate?.setHeight(569.0)
+            self.heightDelegate?.setHeight(573.0)
         }
         else if index == 2{
             self.heightDelegate?.setHeight(360.0)
         }
         else if index == 3{
-            self.heightDelegate?.setHeight(725.0)    }
+            self.heightDelegate?.setHeight(728.0)    }
         
     }
 

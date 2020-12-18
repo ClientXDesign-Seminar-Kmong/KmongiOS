@@ -14,4 +14,8 @@ struct APIConstants {
     
     //서비스 상단
     static let serviceUpperURL = baseURL + "/service/5"
+    //서비스 옵션
+    static let serviceOptionURL = baseURL + "/service/5/option"
+    //전문가 정보
+    static let serviceExpertURL = baseURL + "/service/5/expert"
 }
