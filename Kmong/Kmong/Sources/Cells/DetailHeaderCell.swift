@@ -13,8 +13,8 @@ class DetailHeaderCell: UICollectionViewCell {
     
     @IBOutlet weak var headerImageView: UIImageView!
     
-    func setCell(headerImage: HeaderImages) {
+    func setCell(url: String) {
         
-        headerImageView.image = headerImage.makeHeaderImage()
+        headerImageView.imageFromUrl(url)
     }
 }

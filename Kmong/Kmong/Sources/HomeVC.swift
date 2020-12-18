@@ -17,7 +17,6 @@ class HomeVC: UIViewController, UIGestureRecognizerDelegate {
     var timer = Timer()
     var counter = 0
     let imgArr = [UIImage(named: "homeCard2"), UIImage(named: "homeCard2")]
-
     
     
     override func viewDidLoad() {
@@ -32,6 +31,7 @@ class HomeVC: UIViewController, UIGestureRecognizerDelegate {
         homeHeaderCollectionView.velocityMultiplier = 1
         homeHeaderCollectionView.preferredCenteredIndexPath = [0,0]
         self.navigationController?.interactivePopGestureRecognizer?.delegate = self
+        
         
         DispatchQueue.main.async {
             self.timer = Timer.scheduledTimer(timeInterval: 2.0, target: self, selector: #selector(self.changeIMG), userInfo: nil, repeats: true)

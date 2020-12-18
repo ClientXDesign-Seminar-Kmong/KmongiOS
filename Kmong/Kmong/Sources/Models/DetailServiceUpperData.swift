@@ -12,10 +12,10 @@ struct ServiceUpperData: Codable {
     var id, star, review, heart: Int
     var price: Int
     var layer: String
-    var serviceImgs: [serviceImg]
+    var serviceImgs: [ServiceImg]
 }
 
-struct serviceImg: Codable {
+struct ServiceImg: Codable {
     var id: Int
     var img: String
 }

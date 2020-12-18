@@ -10,27 +10,41 @@ import XLPagerTabStrip
 import InfiniteCarouselCollectionView
 
 // CardCollectionView DataSource
-class DetailVC: UIViewController, UICollectionViewDataSource,HeightDelegate {
+class DetailVC: UIViewController,HeightDelegate, UICollectionViewDelegate {
     func setHeight(_ height: CGFloat) {
         self.height.constant = height
         self.view.layoutIfNeeded()
     }
     
     @IBOutlet weak var height: NSLayoutConstraint!
-    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        
-        return 10
-    }
     
-    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+    func similar() {
         
-        let cell = cardCollectionView.dequeueReusableCell(withReuseIdentifier: "CardCollectionViewCell", for: indexPath)
-
-        cell.layer.borderColor = UIColor(red: 229/255, green: 229/255, blue: 229/255, alpha: 1).cgColor
-        cell.layer.borderWidth = 1
-        cell.layer.cornerRadius = 5
-        
-        return cell
+        SimilarService.shared.similarService() { (networkResult) -> (Void) in
+            switch networkResult {
+            case .success(let data):
+                if let similarServiceData = data as? [SimilarServiceData] {
+                    self.similarData = similarServiceData
+                    
+                    DispatchQueue.main.async {
+                        
+                        self.cardCollectionView.reloadData()
+                    }
+                    
+                    print(similarServiceData)
+                }
+            case .requestErr(let msg):
+                if let message = msg as? String {
+                    print(message)
+                }
+            case .pathErr:
+                print("pathErr")
+            case .serverErr:
+                print("serverErr")
+            case .networkFail:
+                print("networkFail")
+            }
+        }
     }
     
     @IBOutlet weak var headerCollectionView: CarouselCollectionView!
@@ -46,10 +60,13 @@ class DetailVC: UIViewController, UICollectionViewDataSource,HeightDelegate {
     @IBOutlet weak var heartLabel: UILabel!
     @IBOutlet weak var priceLabel: UILabel!
     @IBOutlet weak var layerLabel: UILabel!
+    @IBOutlet weak var imageNumber: UILabel!
     
     
-    var headerImages: [HeaderImages] = []
+    var headerImages: [ServiceImg] = []
     var upperData: ServiceUpperData?
+    var similarData: [SimilarServiceData] = []
+    var btnStatus: Int?
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
             if segue.identifier == "segue" {
@@ -64,19 +81,28 @@ class DetailVC: UIViewController, UICollectionViewDataSource,HeightDelegate {
         reviewLabel.text = String(upperData!.review)
         priceLabel.text = String(upperData!.price)
         layerLabel.text = upperData?.layer
-        
+        headerImages = upperData!.serviceImgs
+        imageNumber.text = String(headerImages.count)
+        heartLabel.text = String(upperData!.heart)
     }
+    
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        DetailServiceUpper.shared.ServiceUpper() { (networkResult) -> (Void) in
+        similar()
+        DetailServiceUpper.shared.serviceUpper() { (networkResult) -> (Void) in
             switch networkResult {
             case .success(let data):
                 if let serviceUpperData = data as? ServiceUpperData {
                     self.upperData = serviceUpperData
-                    
                     self.setUpper()
+                    
+                    DispatchQueue.main.async {
+                        
+                        self.headerCollectionView.reloadData()
+                    }
                     
                     print(serviceUpperData)
                 }
@@ -97,7 +123,7 @@ class DetailVC: UIViewController, UICollectionViewDataSource,HeightDelegate {
         let cardFlowLayout = UICollectionViewFlowLayout()
         
         cardFlowLayout.itemSize = CGSize(width: 200, height: 223)
-        cardFlowLayout.sectionInset = UIEdgeInsets(top: 0, left: 0, bottom: 0, right: 0)
+        cardFlowLayout.sectionInset = UIEdgeInsets(top: 0, left: 20, bottom: 0, right: 20)
         cardFlowLayout.minimumInteritemSpacing = 0
         cardFlowLayout.minimumLineSpacing = 12
         cardFlowLayout.scrollDirection = .horizontal
@@ -115,7 +141,7 @@ class DetailVC: UIViewController, UICollectionViewDataSource,HeightDelegate {
         cardCollectionView.dataSource = self
         
         setInitLayout()
-        setHeaderData()
+//        setHeaderData()
         
         self.navigationController?.navigationBar.setBackgroundImage(UIImage(), for: .default)
         self.navigationController?.navigationBar.shadowImage = UIImage()
@@ -146,33 +172,6 @@ class DetailVC: UIViewController, UICollectionViewDataSource,HeightDelegate {
         statusBarView.backgroundColor = .clear
         view.addSubview(statusBarView)
     }
-    
-    //헤더컬렉션뷰 셀 이미지 세팅
-    func setHeaderData() {
-        
-        headerImages.append(contentsOf: [
-            HeaderImages(headerImage: "imgHeader"),
-            HeaderImages(headerImage: "imgHeader"),
-            HeaderImages(headerImage: "imgHeader"),
-            HeaderImages(headerImage: "imgHeader"),
-            HeaderImages(headerImage: "imgHeader"),
-            HeaderImages(headerImage: "imgHeader"),
-            HeaderImages(headerImage: "imgHeader"),
-            HeaderImages(headerImage: "imgHeader"),
-            HeaderImages(headerImage: "imgHeader"),
-            HeaderImages(headerImage: "imgHeader"),
-            HeaderImages(headerImage: "imgHeader"),
-            HeaderImages(headerImage: "imgHeader"),
-            HeaderImages(headerImage: "imgHeader"),
-            HeaderImages(headerImage: "imgHeader"),
-            HeaderImages(headerImage: "imgHeader"),
-            HeaderImages(headerImage: "imgHeader"),
-            HeaderImages(headerImage: "imgHeader"),
-            HeaderImages(headerImage: "imgHeader"),
-            HeaderImages(headerImage: "imgHeader"),
-            HeaderImages(headerImage: "imgHeader")
-        ])
-    }
 
     // 문의, 구매, 하트 버튼 레이아웃 구성
     func setInitLayout() {
@@ -190,27 +189,51 @@ class DetailVC: UIViewController, UICollectionViewDataSource,HeightDelegate {
         heartView.layer.cornerRadius = 6
     }
     
+    func setSelectedBtn() {
+        
+        heartView.setImage(UIImage(named: "icLikeSelected"), for: .normal)
+        heartView.layer.borderColor = UIColor.yellow.cgColor
+        heartView.layer.borderColor = UIColor(red: 249/255, green: 212/255, blue: 72/255, alpha: 1).cgColor
+    }
+    
     // Like Button설정
     var bRec:Bool = false
     
     @IBAction func heartBtn(_ sender: Any) {
        
-        bRec = !bRec
-        
-        if bRec {
-            
-            heartView.setImage(UIImage(named: "icLikeSelected"), for: .normal)
-            heartView.layer.borderColor = UIColor.yellow.cgColor
-            heartView.layer.borderColor = UIColor(red: 249/255, green: 212/255, blue: 72/255, alpha: 1).cgColor
-        } else {
-            
-            heartView.setImage(UIImage(named: "icLikeUnselected"), for: .normal)
-            heartView.layer.borderColor = UIColor(red: 229/255, green: 229/255, blue: 229/255, alpha: 1).cgColor
+        DetailLikeBtn.shared.detialLikeBtn(like: bRec, userId: 2)  { (networkResult) -> (Void) in
+            switch networkResult {
+            case .success(let data):
+                self.bRec = !self.bRec
+                
+                if self.bRec {
+                    self.setSelectedBtn()
+                } else {
+                    self.heartView.setImage(UIImage(named: "icLikeUnselected"), for: .normal)
+                    self.heartView.layer.borderColor = UIColor(red: 229/255, green: 229/255, blue: 229/255, alpha: 1).cgColor
+                    }
+                print(data)
+                
+            case .requestErr(let msg):
+                if let message = msg as? String {
+                    print(message)
+                }
+            case .pathErr:
+                print("pathErr")
+            case .serverErr:
+                print("serverErr")
+            case .networkFail:
+                print("networkFail")
+            }
         }
-    }
+        
+        
+        
+        }
     @IBAction func touchUpBack(_ sender: Any){
         self.dismiss(animated: true, completion: nil)
     }
+    
     var statusBarFrame: CGRect!
     var statusBarView: UIView!
     var offset: CGFloat!
@@ -222,7 +245,7 @@ class DetailVC: UIViewController, UICollectionViewDataSource,HeightDelegate {
         // targetHeight에 맞춰 얼마나 스크롤 됐는지 계산
         offset = scrollView.contentOffset.y / targetHeight
                 
-        print(String(describing: targetHeight), String(describing: offset))
+//        print(String(describing: targetHeight), String(describing: offset))
                 
         //오프셋 1로 만들기
         if offset > 1 {
@@ -259,7 +282,7 @@ class DetailVC: UIViewController, UICollectionViewDataSource,HeightDelegate {
 extension DetailVC: CarouselCollectionViewDataSource {
     var numberOfItems: Int {
         
-        return 20
+        return headerImages.count
     }
     
     func carouselCollectionView(_ carouselCollectionView: CarouselCollectionView, cellForItemAt index: Int, fakeIndexPath: IndexPath) -> UICollectionViewCell {
@@ -268,7 +291,8 @@ extension DetailVC: CarouselCollectionViewDataSource {
         
                 return UICollectionViewCell()
         }
-            cell.setCell(headerImage: headerImages[index])
+//            cell.setCell(headerImage: headerImages[index])
+        cell.setCell(url: headerImages[index].img)
                 return cell
     }
     
@@ -283,7 +307,26 @@ extension DetailVC: CarouselCollectionViewDataSource {
     }
 }
 
-extension DetailVC: UICollectionViewDelegate {
+extension DetailVC: UICollectionViewDataSource {
     
+    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        
+        return similarData.count
+    }
     
+    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        
+        guard let cell = cardCollectionView.dequeueReusableCell(withReuseIdentifier: SimilarServiceCVC.identifier, for: indexPath) as? SimilarServiceCVC else {
+            
+            return UICollectionViewCell()
+        }
+        
+        cell.setSimilarService(url: similarData[indexPath.item].image, title: similarData[indexPath.item].title, star: similarData[indexPath.item].star, review: similarData[indexPath.item].review, price: similarData[indexPath.item].price)
+        
+        cell.layer.borderColor = UIColor(red: 229/255, green: 229/255, blue: 229/255, alpha: 1).cgColor
+        cell.layer.borderWidth = 1
+        cell.layer.cornerRadius = 5
+        
+        return cell
+    }
 }
